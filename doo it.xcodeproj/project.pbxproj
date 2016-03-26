@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		BA4889821CA5CBEB00271373 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4889811CA5CBEB00271373 /* main.m */; };
 		BA4889851CA5CBEB00271373 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4889841CA5CBEB00271373 /* AppDelegate.m */; };
-		BA4889881CA5CBEB00271373 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4889871CA5CBEB00271373 /* ViewController.m */; };
 		BA48898B1CA5CBEB00271373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4889891CA5CBEB00271373 /* Main.storyboard */; };
 		BA48898D1CA5CBEB00271373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA48898C1CA5CBEB00271373 /* Assets.xcassets */; };
 		BA4889901CA5CBEB00271373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA48898E1CA5CBEB00271373 /* LaunchScreen.storyboard */; };
 		BA48899B1CA5CBEB00271373 /* doo_itTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA48899A1CA5CBEB00271373 /* doo_itTests.m */; };
+		BA4889A71CA5D24200271373 /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4889A61CA5D24200271373 /* SplitViewController.m */; };
+		BA5448E01CA5E95D00DDFBD5 /* ListOfTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5448DF1CA5E95D00DDFBD5 /* ListOfTasksTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +32,6 @@
 		BA4889811CA5CBEB00271373 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA4889831CA5CBEB00271373 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BA4889841CA5CBEB00271373 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BA4889861CA5CBEB00271373 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BA4889871CA5CBEB00271373 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BA48898A1CA5CBEB00271373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA48898C1CA5CBEB00271373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA48898F1CA5CBEB00271373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +39,10 @@
 		BA4889961CA5CBEB00271373 /* doo itTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "doo itTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA48899A1CA5CBEB00271373 /* doo_itTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = doo_itTests.m; sourceTree = "<group>"; };
 		BA48899C1CA5CBEB00271373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4889A51CA5D24200271373 /* SplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewController.h; sourceTree = "<group>"; };
+		BA4889A61CA5D24200271373 /* SplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewController.m; sourceTree = "<group>"; };
+		BA5448DE1CA5E95D00DDFBD5 /* ListOfTasksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewController.h; path = ListOfTasks/ListOfTasksTableViewController.h; sourceTree = "<group>"; };
+		BA5448DF1CA5E95D00DDFBD5 /* ListOfTasksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksTableViewController.m; path = ListOfTasks/ListOfTasksTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				BA48897F1CA5CBEB00271373 /* doo it */,
-				BA4889991CA5CBEB00271373 /* doo itTests */,
+				BA4889991CA5CBEB00271373 /* doo it Tests */,
 				BA48897E1CA5CBEB00271373 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,14 +84,9 @@
 		BA48897F1CA5CBEB00271373 /* doo it */ = {
 			isa = PBXGroup;
 			children = (
-				BA4889831CA5CBEB00271373 /* AppDelegate.h */,
-				BA4889841CA5CBEB00271373 /* AppDelegate.m */,
-				BA4889861CA5CBEB00271373 /* ViewController.h */,
-				BA4889871CA5CBEB00271373 /* ViewController.m */,
-				BA4889891CA5CBEB00271373 /* Main.storyboard */,
-				BA48898C1CA5CBEB00271373 /* Assets.xcassets */,
-				BA48898E1CA5CBEB00271373 /* LaunchScreen.storyboard */,
-				BA4889911CA5CBEB00271373 /* Info.plist */,
+				BA5449191CA6BB7C00DDFBD5 /* Model */,
+				BA54491B1CA6BBBC00DDFBD5 /* View */,
+				BA54491C1CA6BBD500DDFBD5 /* Controller */,
 				BA4889801CA5CBEB00271373 /* Supporting Files */,
 			);
 			path = "doo it";
@@ -97,18 +95,58 @@
 		BA4889801CA5CBEB00271373 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BA4889831CA5CBEB00271373 /* AppDelegate.h */,
+				BA4889841CA5CBEB00271373 /* AppDelegate.m */,
+				BA48898C1CA5CBEB00271373 /* Assets.xcassets */,
+				BA48898E1CA5CBEB00271373 /* LaunchScreen.storyboard */,
+				BA4889911CA5CBEB00271373 /* Info.plist */,
 				BA4889811CA5CBEB00271373 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BA4889991CA5CBEB00271373 /* doo itTests */ = {
+		BA4889991CA5CBEB00271373 /* doo it Tests */ = {
 			isa = PBXGroup;
 			children = (
 				BA48899A1CA5CBEB00271373 /* doo_itTests.m */,
 				BA48899C1CA5CBEB00271373 /* Info.plist */,
 			);
+			name = "doo it Tests";
 			path = "doo itTests";
+			sourceTree = "<group>";
+		};
+		BA5448E11CA5E97600DDFBD5 /* List of Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				BA5448DE1CA5E95D00DDFBD5 /* ListOfTasksTableViewController.h */,
+				BA5448DF1CA5E95D00DDFBD5 /* ListOfTasksTableViewController.m */,
+			);
+			name = "List of Tasks";
+			sourceTree = "<group>";
+		};
+		BA5449191CA6BB7C00DDFBD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BA54491B1CA6BBBC00DDFBD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA4889891CA5CBEB00271373 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BA54491C1CA6BBD500DDFBD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA4889A51CA5D24200271373 /* SplitViewController.h */,
+				BA4889A61CA5D24200271373 /* SplitViewController.m */,
+				BA5448E11CA5E97600DDFBD5 /* List of Tasks */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,8 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA4889881CA5CBEB00271373 /* ViewController.m in Sources */,
 				BA4889851CA5CBEB00271373 /* AppDelegate.m in Sources */,
+				BA4889A71CA5D24200271373 /* SplitViewController.m in Sources */,
+				BA5448E01CA5E95D00DDFBD5 /* ListOfTasksTableViewController.m in Sources */,
 				BA4889821CA5CBEB00271373 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +443,7 @@
 				BA4889A11CA5CBEB00271373 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA4889A21CA5CBEB00271373 /* Build configuration list for PBXNativeTarget "doo itTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +452,7 @@
 				BA4889A41CA5CBEB00271373 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

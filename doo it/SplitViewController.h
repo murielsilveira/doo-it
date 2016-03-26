@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SplitViewController.h
 //  doo it
 //
 //  Created by Ricardo Gehrke Filho on 25/03/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SplitViewController : UISplitViewController
 
 @end
-
