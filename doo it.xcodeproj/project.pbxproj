@@ -12,12 +12,13 @@
 		BA48898B1CA5CBEB00271373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4889891CA5CBEB00271373 /* Main.storyboard */; };
 		BA48898D1CA5CBEB00271373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA48898C1CA5CBEB00271373 /* Assets.xcassets */; };
 		BA4889901CA5CBEB00271373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA48898E1CA5CBEB00271373 /* LaunchScreen.storyboard */; };
-		BA48899B1CA5CBEB00271373 /* doo_itTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA48899A1CA5CBEB00271373 /* doo_itTests.m */; };
 		BA5449241CA82EAE00DDFBD5 /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449231CA82EAE00DDFBD5 /* EditTaskViewController.m */; };
 		BA5449271CA82EED00DDFBD5 /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449261CA82EED00DDFBD5 /* SplitViewController.m */; };
 		BA54492A1CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449291CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m */; };
 		BA54492D1CA82FA900DDFBD5 /* ListOfTasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA54492C1CA82FA900DDFBD5 /* ListOfTasksTableViewCell.m */; };
 		BA5449311CA8335700DDFBD5 /* DetailTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449301CA8335700DDFBD5 /* DetailTaskViewController.m */; };
+		BA54493E1CA86FF900DDFBD5 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BA54493D1CA86FF900DDFBD5 /* Task.m */; };
+		BA5449471CA89A8400DDFBD5 /* TaskGatewayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449461CA89A8400DDFBD5 /* TaskGatewayTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		BA48898F1CA5CBEB00271373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA4889911CA5CBEB00271373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA4889961CA5CBEB00271373 /* doo itTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "doo itTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA48899A1CA5CBEB00271373 /* doo_itTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = doo_itTests.m; sourceTree = "<group>"; };
 		BA48899C1CA5CBEB00271373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA5449221CA82EAE00DDFBD5 /* EditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTaskViewController.h; path = Controller/EditTaskViewController.h; sourceTree = "<group>"; };
 		BA5449231CA82EAE00DDFBD5 /* EditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTaskViewController.m; path = Controller/EditTaskViewController.m; sourceTree = "<group>"; };
@@ -52,6 +52,10 @@
 		BA54492C1CA82FA900DDFBD5 /* ListOfTasksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksTableViewCell.m; path = Controller/ListOfTasksTableViewCell.m; sourceTree = "<group>"; };
 		BA54492F1CA8335700DDFBD5 /* DetailTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTaskViewController.h; path = Controller/DetailTaskViewController.h; sourceTree = "<group>"; };
 		BA5449301CA8335700DDFBD5 /* DetailTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTaskViewController.m; path = Controller/DetailTaskViewController.m; sourceTree = "<group>"; };
+		BA54493C1CA86FF900DDFBD5 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Model/Task.h; sourceTree = "<group>"; };
+		BA54493D1CA86FF900DDFBD5 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Model/Task.m; sourceTree = "<group>"; };
+		BA5449431CA8730700DDFBD5 /* TaskGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskGateway.h; path = Model/TaskGateway.h; sourceTree = "<group>"; };
+		BA5449461CA89A8400DDFBD5 /* TaskGatewayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskGatewayTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +121,8 @@
 		BA4889991CA5CBEB00271373 /* doo it Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BA48899A1CA5CBEB00271373 /* doo_itTests.m */,
 				BA48899C1CA5CBEB00271373 /* Info.plist */,
+				BA5449461CA89A8400DDFBD5 /* TaskGatewayTests.m */,
 			);
 			name = "doo it Tests";
 			path = "doo itTests";
@@ -138,6 +142,7 @@
 		BA5449191CA6BB7C00DDFBD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BA5449421CA872E400DDFBD5 /* Task */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -178,6 +183,32 @@
 				BA5449301CA8335700DDFBD5 /* DetailTaskViewController.m */,
 			);
 			name = "Detail Task";
+			sourceTree = "<group>";
+		};
+		BA5449421CA872E400DDFBD5 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				BA5449441CA8730F00DDFBD5 /* Entities */,
+				BA5449451CA8731900DDFBD5 /* Gateways */,
+			);
+			name = Task;
+			sourceTree = "<group>";
+		};
+		BA5449441CA8730F00DDFBD5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BA54493C1CA86FF900DDFBD5 /* Task.h */,
+				BA54493D1CA86FF900DDFBD5 /* Task.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		BA5449451CA8731900DDFBD5 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				BA5449431CA8730700DDFBD5 /* TaskGateway.h */,
+			);
+			name = Gateways;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +315,7 @@
 				BA5449311CA8335700DDFBD5 /* DetailTaskViewController.m in Sources */,
 				BA54492A1CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m in Sources */,
 				BA4889821CA5CBEB00271373 /* main.m in Sources */,
+				BA54493E1CA86FF900DDFBD5 /* Task.m in Sources */,
 				BA54492D1CA82FA900DDFBD5 /* ListOfTasksTableViewCell.m in Sources */,
 				BA5449241CA82EAE00DDFBD5 /* EditTaskViewController.m in Sources */,
 				BA5449271CA82EED00DDFBD5 /* SplitViewController.m in Sources */,
@@ -294,7 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA48899B1CA5CBEB00271373 /* doo_itTests.m in Sources */,
+				BA5449471CA89A8400DDFBD5 /* TaskGatewayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
