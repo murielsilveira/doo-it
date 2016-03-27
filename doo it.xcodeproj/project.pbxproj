@@ -13,8 +13,9 @@
 		BA48898D1CA5CBEB00271373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA48898C1CA5CBEB00271373 /* Assets.xcassets */; };
 		BA4889901CA5CBEB00271373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA48898E1CA5CBEB00271373 /* LaunchScreen.storyboard */; };
 		BA48899B1CA5CBEB00271373 /* doo_itTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA48899A1CA5CBEB00271373 /* doo_itTests.m */; };
-		BA4889A71CA5D24200271373 /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4889A61CA5D24200271373 /* SplitViewController.m */; };
-		BA5448E01CA5E95D00DDFBD5 /* ListOfTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5448DF1CA5E95D00DDFBD5 /* ListOfTasksTableViewController.m */; };
+		BA5449241CA82EAE00DDFBD5 /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449231CA82EAE00DDFBD5 /* EditTaskViewController.m */; };
+		BA5449271CA82EED00DDFBD5 /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449261CA82EED00DDFBD5 /* SplitViewController.m */; };
+		BA54492A1CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449291CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +40,12 @@
 		BA4889961CA5CBEB00271373 /* doo itTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "doo itTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA48899A1CA5CBEB00271373 /* doo_itTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = doo_itTests.m; sourceTree = "<group>"; };
 		BA48899C1CA5CBEB00271373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA4889A51CA5D24200271373 /* SplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewController.h; sourceTree = "<group>"; };
-		BA4889A61CA5D24200271373 /* SplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewController.m; sourceTree = "<group>"; };
-		BA5448DE1CA5E95D00DDFBD5 /* ListOfTasksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewController.h; path = ListOfTasks/ListOfTasksTableViewController.h; sourceTree = "<group>"; };
-		BA5448DF1CA5E95D00DDFBD5 /* ListOfTasksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksTableViewController.m; path = ListOfTasks/ListOfTasksTableViewController.m; sourceTree = "<group>"; };
+		BA5449221CA82EAE00DDFBD5 /* EditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTaskViewController.h; path = Controller/EditTaskViewController.h; sourceTree = "<group>"; };
+		BA5449231CA82EAE00DDFBD5 /* EditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTaskViewController.m; path = Controller/EditTaskViewController.m; sourceTree = "<group>"; };
+		BA5449251CA82EED00DDFBD5 /* SplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplitViewController.h; path = Controller/SplitViewController.h; sourceTree = "<group>"; };
+		BA5449261CA82EED00DDFBD5 /* SplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplitViewController.m; path = Controller/SplitViewController.m; sourceTree = "<group>"; };
+		BA5449281CA82F0A00DDFBD5 /* ListOfTasksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewController.h; path = Controller/ListOfTasksTableViewController.h; sourceTree = "<group>"; };
+		BA5449291CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksTableViewController.m; path = Controller/ListOfTasksTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +121,8 @@
 		BA5448E11CA5E97600DDFBD5 /* List of Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				BA5448DE1CA5E95D00DDFBD5 /* ListOfTasksTableViewController.h */,
-				BA5448DF1CA5E95D00DDFBD5 /* ListOfTasksTableViewController.m */,
+				BA5449281CA82F0A00DDFBD5 /* ListOfTasksTableViewController.h */,
+				BA5449291CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m */,
 			);
 			name = "List of Tasks";
 			sourceTree = "<group>";
@@ -142,11 +145,21 @@
 		BA54491C1CA6BBD500DDFBD5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BA4889A51CA5D24200271373 /* SplitViewController.h */,
-				BA4889A61CA5D24200271373 /* SplitViewController.m */,
+				BA5449251CA82EED00DDFBD5 /* SplitViewController.h */,
+				BA5449261CA82EED00DDFBD5 /* SplitViewController.m */,
 				BA5448E11CA5E97600DDFBD5 /* List of Tasks */,
+				BA5449211CA82E5000DDFBD5 /* Edit Task */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		BA5449211CA82E5000DDFBD5 /* Edit Task */ = {
+			isa = PBXGroup;
+			children = (
+				BA5449221CA82EAE00DDFBD5 /* EditTaskViewController.h */,
+				BA5449231CA82EAE00DDFBD5 /* EditTaskViewController.m */,
+			);
+			name = "Edit Task";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +263,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA4889851CA5CBEB00271373 /* AppDelegate.m in Sources */,
-				BA4889A71CA5D24200271373 /* SplitViewController.m in Sources */,
-				BA5448E01CA5E95D00DDFBD5 /* ListOfTasksTableViewController.m in Sources */,
+				BA54492A1CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m in Sources */,
 				BA4889821CA5CBEB00271373 /* main.m in Sources */,
+				BA5449241CA82EAE00DDFBD5 /* EditTaskViewController.m in Sources */,
+				BA5449271CA82EED00DDFBD5 /* SplitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
