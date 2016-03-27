@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--List-->
@@ -14,13 +15,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Task Cell" rowHeight="70" id="VQB-KV-Bjd">
-                                <rect key="frame" x="0.0" y="92" width="320" height="70"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Task Cell" rowHeight="80" id="VQB-KV-Bjd" customClass="ListOfTasksTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VQB-KV-Bjd" id="D0A-aC-BII">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open a hotel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPU-1N-lPy">
+                                            <rect key="frame" x="8" y="8" width="304" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="iPU-1N-lPy" firstAttribute="top" secondItem="D0A-aC-BII" secondAttribute="topMargin" id="2tL-nP-9pc"/>
+                                        <constraint firstItem="iPU-1N-lPy" firstAttribute="leading" secondItem="D0A-aC-BII" secondAttribute="leadingMargin" id="6z1-dV-gbz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="iPU-1N-lPy" secondAttribute="trailing" id="PuB-M6-D8C"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="taskTitleLabel" destination="iPU-1N-lPy" id="RX6-Uo-0FE"/>
+                                    <segue destination="HGe-Sl-vHa" kind="showDetail" identifier="Task Selected" id="bYu-PM-qjm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -31,7 +49,7 @@
                     <navigationItem key="navigationItem" title="List" id="cGz-HS-Zw4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cft-BB-wKE">
                             <connections>
-                                <segue destination="L1f-Tq-gaQ" kind="presentation" id="wRE-bH-tUH"/>
+                                <segue destination="L1f-Tq-gaQ" kind="presentation" identifier="" id="wRE-bH-tUH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -44,7 +62,7 @@
         <!--Detail-->
         <scene sceneID="a7u-CK-0E3">
             <objects>
-                <viewController id="mId-Fj-vsq" sceneMemberID="viewController">
+                <viewController id="mId-Fj-vsq" customClass="DetailTaskViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZiM-PQ-pqR"/>
                         <viewControllerLayoutGuide type="bottom" id="y9F-sy-Wbb"/>
@@ -52,7 +70,20 @@
                     <view key="view" contentMode="scaleToFill" id="DGp-NV-ioe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open a hotelss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6u-i4-1rK">
+                                <rect key="frame" x="16" y="64" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R6u-i4-1rK" firstAttribute="leading" secondItem="DGp-NV-ioe" secondAttribute="leadingMargin" id="0b2-oj-qP9"/>
+                            <constraint firstItem="R6u-i4-1rK" firstAttribute="top" secondItem="ZiM-PQ-pqR" secondAttribute="bottom" id="PwM-R0-RIL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R6u-i4-1rK" secondAttribute="trailing" id="R95-Ju-Yo3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="0ll-KC-tm5">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="vRI-N8-4yr">
@@ -62,6 +93,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="taskTitleLabel" destination="R6u-i4-1rK" id="AGU-mB-yQ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMF-fo-10s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +104,7 @@
         <!--Edit-->
         <scene sceneID="eoo-9E-0Kp">
             <objects>
-                <viewController id="cYt-7h-Wsa" sceneMemberID="viewController">
+                <viewController id="cYt-7h-Wsa" customClass="EditTaskViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3jB-uS-HWQ"/>
                         <viewControllerLayoutGuide type="bottom" id="Doe-Pi-OX0"/>
@@ -160,6 +194,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="bYu-PM-qjm"/>
         <segue reference="wRE-bH-tUH"/>
     </inferredMetricsTieBreakers>
 </document>

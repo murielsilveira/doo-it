@@ -7,6 +7,9 @@
 //
 
 #import "ListOfTasksTableViewController.h"
+#import "DetailTaskViewController.h"
+#import "EditTaskViewController.h"
+#import "ListOfTasksTableViewCell.h"
 
 @interface ListOfTasksTableViewController ()
 
@@ -17,12 +20,22 @@
 NSString *const CELL_IDENTIFIER = @"Task Cell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 20;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
+    ListOfTasksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
+    NSMutableString *taskTitle = [NSMutableString stringWithFormat:@"Task %d", indexPath.row];
+    cell.taskTitleLabel.text = taskTitle;
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier  isEqual: @"Task Selected"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetailTaskViewController *detailTaskViewController = (DetailTaskViewController *)[[segue destinationViewController] topViewController];
+        detailTaskViewController.titleText = [NSMutableString stringWithFormat:@"Task %d", indexPath.row];
+    }
 }
 
 @end

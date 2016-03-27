@@ -16,6 +16,8 @@
 		BA5449241CA82EAE00DDFBD5 /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449231CA82EAE00DDFBD5 /* EditTaskViewController.m */; };
 		BA5449271CA82EED00DDFBD5 /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449261CA82EED00DDFBD5 /* SplitViewController.m */; };
 		BA54492A1CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449291CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m */; };
+		BA54492D1CA82FA900DDFBD5 /* ListOfTasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA54492C1CA82FA900DDFBD5 /* ListOfTasksTableViewCell.m */; };
+		BA5449311CA8335700DDFBD5 /* DetailTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449301CA8335700DDFBD5 /* DetailTaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		BA5449261CA82EED00DDFBD5 /* SplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplitViewController.m; path = Controller/SplitViewController.m; sourceTree = "<group>"; };
 		BA5449281CA82F0A00DDFBD5 /* ListOfTasksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewController.h; path = Controller/ListOfTasksTableViewController.h; sourceTree = "<group>"; };
 		BA5449291CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksTableViewController.m; path = Controller/ListOfTasksTableViewController.m; sourceTree = "<group>"; };
+		BA54492B1CA82FA900DDFBD5 /* ListOfTasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewCell.h; path = Controller/ListOfTasksTableViewCell.h; sourceTree = "<group>"; };
+		BA54492C1CA82FA900DDFBD5 /* ListOfTasksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksTableViewCell.m; path = Controller/ListOfTasksTableViewCell.m; sourceTree = "<group>"; };
+		BA54492F1CA8335700DDFBD5 /* DetailTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTaskViewController.h; path = Controller/DetailTaskViewController.h; sourceTree = "<group>"; };
+		BA5449301CA8335700DDFBD5 /* DetailTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTaskViewController.m; path = Controller/DetailTaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,8 @@
 			children = (
 				BA5449281CA82F0A00DDFBD5 /* ListOfTasksTableViewController.h */,
 				BA5449291CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m */,
+				BA54492B1CA82FA900DDFBD5 /* ListOfTasksTableViewCell.h */,
+				BA54492C1CA82FA900DDFBD5 /* ListOfTasksTableViewCell.m */,
 			);
 			name = "List of Tasks";
 			sourceTree = "<group>";
@@ -148,6 +156,7 @@
 				BA5449251CA82EED00DDFBD5 /* SplitViewController.h */,
 				BA5449261CA82EED00DDFBD5 /* SplitViewController.m */,
 				BA5448E11CA5E97600DDFBD5 /* List of Tasks */,
+				BA54492E1CA8333100DDFBD5 /* Detail Task */,
 				BA5449211CA82E5000DDFBD5 /* Edit Task */,
 			);
 			name = Controller;
@@ -160,6 +169,15 @@
 				BA5449231CA82EAE00DDFBD5 /* EditTaskViewController.m */,
 			);
 			name = "Edit Task";
+			sourceTree = "<group>";
+		};
+		BA54492E1CA8333100DDFBD5 /* Detail Task */ = {
+			isa = PBXGroup;
+			children = (
+				BA54492F1CA8335700DDFBD5 /* DetailTaskViewController.h */,
+				BA5449301CA8335700DDFBD5 /* DetailTaskViewController.m */,
+			);
+			name = "Detail Task";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA4889851CA5CBEB00271373 /* AppDelegate.m in Sources */,
+				BA5449311CA8335700DDFBD5 /* DetailTaskViewController.m in Sources */,
 				BA54492A1CA82F0A00DDFBD5 /* ListOfTasksTableViewController.m in Sources */,
 				BA4889821CA5CBEB00271373 /* main.m in Sources */,
+				BA54492D1CA82FA900DDFBD5 /* ListOfTasksTableViewCell.m in Sources */,
 				BA5449241CA82EAE00DDFBD5 /* EditTaskViewController.m in Sources */,
 				BA5449271CA82EED00DDFBD5 /* SplitViewController.m in Sources */,
 			);
