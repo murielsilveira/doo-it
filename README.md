@@ -1,5 +1,5 @@
 # doo it
->simple to do app with a lot of future features 🚀
+>Simple to do app with a lot of future features 🚀
 
 ### 👾 Objective-C
 Swift is awesome, but I believe there are a lot of Objective-C projects around there that a good care. Besides ObjC reminds me C which I love.

@@ -24,18 +24,14 @@ TaskGatewayDouble *gateway;
 }
 
 - (void)testGatewayIsEmpty {
-    NSDate *initialDate = [NSDate date];
-    NSDate *finalDate = [NSDate date];
-    int tasksCount = [gateway numberOfTasksFrom:initialDate to:finalDate];
+    int tasksCount = [gateway numberOfTasks];
     XCTAssertEqual(tasksCount, 0);
 }
 
-- (void)testGatewayReturnsOneAfterAddingTask {
-    NSDate *initialDate = [NSDate date];
-    NSDate *finalDate = [NSDate date];
+- (void)testGatewayHasOneTaskAfterAdding {
     Task *task = [[Task alloc] initWithTitle:@"Test"];
     [gateway addTask:task];
-    int tasksCount = [gateway numberOfTasksFrom:initialDate to:finalDate];
+    int tasksCount = [gateway numberOfTasks];
     
     XCTAssertEqual(tasksCount, 1);
 }

@@ -21,7 +21,7 @@
 
 NSMutableArray *tasks;
 
-- (NSArray *)tasksFrom:(NSDate *)initialDate to:(NSDate *)finalDate {
+- (NSArray *)tasks {
     return tasks;
 }
 
@@ -29,7 +29,7 @@ NSMutableArray *tasks;
     [tasks addObject:task];
 }
 
-- (int)numberOfTasksFrom:(NSDate*)initialDate to:(NSDate*)finalDate {
+- (int)numberOfTasks {
     return [tasks count];
 }
 
