@@ -1,41 +1,24 @@
 # doo it
->Simple to do app
+>simple to do app with a lot of future features 🚀
 
 ### 👾 Objective-C
-Swift is awesome, but I believe there are a lot of Objective-C projects around there.
+Swift is awesome, but I believe there are a lot of Objective-C projects around there that a good care. Besides ObjC reminds me C which I love.
 
 ### 📐 Project Design and Architecture
+- <a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)/">📄 SOLID</a>
 - Clean Code
-- MVVM [YouTube Video 📽](https://www.youtube.com/watch?v=eP_0O5QeYnc)
-- Interactor
-- Gateways
-- Views
-- Entities
-- Presenters
+- [📽 MVVM](https://www.youtube.com/watch?v=eP_0O5QeYnc)
+- [📄 MVVM](https://www.objc.io/issues/13-architecture/mvvm/)
 
 #### Project Structure
 - Model
- - Task
-   - Task Entity
-   - Task Gateway
 - View
- - Storyboard
-- Controllers
-  - List of Tasks
-   - ListOfTasksTableViewController
-   - ListOfTasksViewModel
-   - ListOfTasksPresenter
-  - DetailTaskViewController
-    - DetailTaskViewController
-    - DetailTaskViewModel
-    - DetailTaskPresenter
+- ViewModel
 
 ### ✅ Tests
-- [ ] Unit Tests for ViewModels
-- [ ] Contract Tests for Gateways
+- [ ] TDD for Gateway and ViewModels implementation
 - [ ] UI Tests
 - [ ] Continuous Integration
-- [ ] XCTest
 - [ ] Test Doubles
 
 ### 🗄 Data Model
@@ -49,27 +32,25 @@ Swift is awesome, but I believe there are a lot of Objective-C projects around t
 #### Persistence
 - [ ] Core Data
 - [ ] SQLite
-- [ ] Realm
 
 ### 😍 UI and UX
 
 #### Storyboards
 - [x] Segues
-- [ ] Custom Segue
 - [ ] Auto Layout
 - [ ] Size Classes
 
 #### UIKit components
 - [x] UISplitViewController
 - [ ] UIPresentationController
-- [x] UITableViewController
+- [ ] UITableViewController
 - [ ] UITableViewCell
 - [x] UINavigationController
 - [ ] UIGestureRecognizer
 - [ ] UIVisualEffectView
 - [ ] UIView (customization and reuse)
 
-#### Dynamic Animations
+### 🎈 Notifications
 
 ### 📲 Publish Process
 - [ ] Name
@@ -81,4 +62,10 @@ Swift is awesome, but I believe there are a lot of Objective-C projects around t
 - [ ] TestFlight configuration
 - [ ] Analytics
 
+### 📡 REST API
+
+### 🗝 Facebook Auth
+
 #### 🚠 Migration to Swift
+
+#### ⌚️ Apple Watch
