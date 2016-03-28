@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA4889821CA5CBEB00271373 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4889811CA5CBEB00271373 /* main.m */; };
-		BA4889851CA5CBEB00271373 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4889841CA5CBEB00271373 /* AppDelegate.m */; };
 		BA5449471CA89A8400DDFBD5 /* TaskGatewayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449461CA89A8400DDFBD5 /* TaskGatewayTests.m */; };
-		BA54494D1CA8CC7900DDFBD5 /* ListOfTasksViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA54494C1CA8CC7900DDFBD5 /* ListOfTasksViewModel.m */; };
-		BA5449521CA8CCBD00DDFBD5 /* ListOfTasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA54494F1CA8CCBD00DDFBD5 /* ListOfTasksTableViewCell.m */; };
-		BA5449531CA8CCBD00DDFBD5 /* ListOfTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449511CA8CCBD00DDFBD5 /* ListOfTasksTableViewController.m */; };
 		BA5449561CA8CD0400DDFBD5 /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449551CA8CD0400DDFBD5 /* SplitViewController.m */; };
-		BA5449591CA8CD1900DDFBD5 /* DetailTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449581CA8CD1900DDFBD5 /* DetailTaskViewController.m */; };
-		BA54495C1CA8CD3700DDFBD5 /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA54495B1CA8CD3700DDFBD5 /* EditTaskViewController.m */; };
 		BA5449601CA8CD6D00DDFBD5 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BA54495E1CA8CD6D00DDFBD5 /* Task.m */; };
 		BA5449631CA8CDA200DDFBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5449611CA8CDA200DDFBD5 /* LaunchScreen.storyboard */; };
 		BA5449641CA8CDA200DDFBD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5449621CA8CDA200DDFBD5 /* Main.storyboard */; };
 		BA5449661CA8CDC600DDFBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5449651CA8CDC600DDFBD5 /* Assets.xcassets */; };
 		BA5449681CA8CE0600DDFBD5 /* ListTasksViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5449671CA8CE0600DDFBD5 /* ListTasksViewModelTests.m */; };
 		BA54496B1CA95BE900DDFBD5 /* TaskGatewayDouble.m in Sources */ = {isa = PBXBuildFile; fileRef = BA54496A1CA95BE900DDFBD5 /* TaskGatewayDouble.m */; };
+		BAE43B6E1CA9E755004AE9CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B6B1CA9E755004AE9CD /* AppDelegate.m */; };
+		BAE43B6F1CA9E755004AE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAE43B6C1CA9E755004AE9CD /* Info.plist */; };
+		BAE43B701CA9E755004AE9CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B6D1CA9E755004AE9CD /* main.m */; };
+		BAE43B7E1CA9E7FA004AE9CD /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B7D1CA9E7FA004AE9CD /* EditTaskViewController.m */; };
+		BAE43B821CA9E810004AE9CD /* DetailTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B811CA9E810004AE9CD /* DetailTaskViewController.m */; };
+		BAE43B8A1CA9E88E004AE9CD /* ListOfTasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B891CA9E88E004AE9CD /* ListOfTasksTableViewCell.m */; };
+		BAE43B8D1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B8C1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m */; };
+		BAE43B901CA9E916004AE9CD /* ListOfTasksViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B8F1CA9E916004AE9CD /* ListOfTasksViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,25 +37,11 @@
 
 /* Begin PBXFileReference section */
 		BA48897D1CA5CBEB00271373 /* doo it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "doo it.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA4889811CA5CBEB00271373 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BA4889831CA5CBEB00271373 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BA4889841CA5CBEB00271373 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BA4889911CA5CBEB00271373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA4889961CA5CBEB00271373 /* doo itTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "doo itTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA48899C1CA5CBEB00271373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA5449461CA89A8400DDFBD5 /* TaskGatewayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskGatewayTests.m; sourceTree = "<group>"; };
-		BA54494B1CA8CC7900DDFBD5 /* ListOfTasksViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksViewModel.h; path = "Controller/List of Tasks/ListOfTasksViewModel.h"; sourceTree = "<group>"; };
-		BA54494C1CA8CC7900DDFBD5 /* ListOfTasksViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksViewModel.m; path = "Controller/List of Tasks/ListOfTasksViewModel.m"; sourceTree = "<group>"; };
-		BA54494E1CA8CCBD00DDFBD5 /* ListOfTasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewCell.h; path = "Controller/List of Tasks/ListOfTasksTableViewCell.h"; sourceTree = "<group>"; };
-		BA54494F1CA8CCBD00DDFBD5 /* ListOfTasksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksTableViewCell.m; path = "Controller/List of Tasks/ListOfTasksTableViewCell.m"; sourceTree = "<group>"; };
-		BA5449501CA8CCBD00DDFBD5 /* ListOfTasksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewController.h; path = "Controller/List of Tasks/ListOfTasksTableViewController.h"; sourceTree = "<group>"; };
-		BA5449511CA8CCBD00DDFBD5 /* ListOfTasksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksTableViewController.m; path = "Controller/List of Tasks/ListOfTasksTableViewController.m"; sourceTree = "<group>"; };
 		BA5449541CA8CD0400DDFBD5 /* SplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplitViewController.h; path = View/SplitViewController.h; sourceTree = "<group>"; };
 		BA5449551CA8CD0400DDFBD5 /* SplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplitViewController.m; path = View/SplitViewController.m; sourceTree = "<group>"; };
-		BA5449571CA8CD1900DDFBD5 /* DetailTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTaskViewController.h; path = "Controller/Detail Task/DetailTaskViewController.h"; sourceTree = "<group>"; };
-		BA5449581CA8CD1900DDFBD5 /* DetailTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTaskViewController.m; path = "Controller/Detail Task/DetailTaskViewController.m"; sourceTree = "<group>"; };
-		BA54495A1CA8CD3700DDFBD5 /* EditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTaskViewController.h; path = "Controller/Edit Task/EditTaskViewController.h"; sourceTree = "<group>"; };
-		BA54495B1CA8CD3700DDFBD5 /* EditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTaskViewController.m; path = "Controller/Edit Task/EditTaskViewController.m"; sourceTree = "<group>"; };
 		BA54495D1CA8CD6D00DDFBD5 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Model/Task/Task.h; sourceTree = "<group>"; };
 		BA54495E1CA8CD6D00DDFBD5 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Model/Task/Task.m; sourceTree = "<group>"; };
 		BA54495F1CA8CD6D00DDFBD5 /* TaskGatewayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskGatewayProtocol.h; path = Model/Task/TaskGatewayProtocol.h; sourceTree = "<group>"; };
@@ -64,6 +51,20 @@
 		BA5449671CA8CE0600DDFBD5 /* ListTasksViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTasksViewModelTests.m; sourceTree = "<group>"; };
 		BA5449691CA95BE900DDFBD5 /* TaskGatewayDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskGatewayDouble.h; path = Model/Task/TaskGatewayDouble.h; sourceTree = "<group>"; };
 		BA54496A1CA95BE900DDFBD5 /* TaskGatewayDouble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskGatewayDouble.m; path = Model/Task/TaskGatewayDouble.m; sourceTree = "<group>"; };
+		BAE43B6A1CA9E755004AE9CD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Supporting Files/AppDelegate.h"; sourceTree = "<group>"; };
+		BAE43B6B1CA9E755004AE9CD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Supporting Files/AppDelegate.m"; sourceTree = "<group>"; };
+		BAE43B6C1CA9E755004AE9CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		BAE43B6D1CA9E755004AE9CD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
+		BAE43B7C1CA9E7FA004AE9CD /* EditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTaskViewController.h; path = "View/View Controllers/Edit Task/EditTaskViewController.h"; sourceTree = "<group>"; };
+		BAE43B7D1CA9E7FA004AE9CD /* EditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTaskViewController.m; path = "View/View Controllers/Edit Task/EditTaskViewController.m"; sourceTree = "<group>"; };
+		BAE43B801CA9E810004AE9CD /* DetailTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTaskViewController.h; path = "View/View Controllers/Detail Task/DetailTaskViewController.h"; sourceTree = "<group>"; };
+		BAE43B811CA9E810004AE9CD /* DetailTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTaskViewController.m; path = "View/View Controllers/Detail Task/DetailTaskViewController.m"; sourceTree = "<group>"; };
+		BAE43B881CA9E88E004AE9CD /* ListOfTasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewCell.h; path = "View/View Controllers/List of Tasks/ListOfTasksTableViewCell.h"; sourceTree = "<group>"; };
+		BAE43B891CA9E88E004AE9CD /* ListOfTasksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksTableViewCell.m; path = "View/View Controllers/List of Tasks/ListOfTasksTableViewCell.m"; sourceTree = "<group>"; };
+		BAE43B8B1CA9E8D3004AE9CD /* ListOfTasksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewController.h; path = "View/View Controllers/List of Tasks/ListOfTasksTableViewController.h"; sourceTree = "<group>"; };
+		BAE43B8C1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksTableViewController.m; path = "View/View Controllers/List of Tasks/ListOfTasksTableViewController.m"; sourceTree = "<group>"; };
+		BAE43B8E1CA9E916004AE9CD /* ListOfTasksViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksViewModel.h; path = "ViewModel/List of Tasks/ListOfTasksViewModel.h"; sourceTree = "<group>"; };
+		BAE43B8F1CA9E916004AE9CD /* ListOfTasksViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksViewModel.m; path = "ViewModel/List of Tasks/ListOfTasksViewModel.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +108,7 @@
 			children = (
 				BA5449191CA6BB7C00DDFBD5 /* Model */,
 				BA54491B1CA6BBBC00DDFBD5 /* View */,
-				BA54491C1CA6BBD500DDFBD5 /* Controller */,
+				BAE43B681CA9E702004AE9CD /* ViewModel */,
 				BA4889801CA5CBEB00271373 /* Supporting Files */,
 			);
 			path = "doo it";
@@ -116,10 +117,10 @@
 		BA4889801CA5CBEB00271373 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BA4889831CA5CBEB00271373 /* AppDelegate.h */,
-				BA4889841CA5CBEB00271373 /* AppDelegate.m */,
-				BA4889911CA5CBEB00271373 /* Info.plist */,
-				BA4889811CA5CBEB00271373 /* main.m */,
+				BAE43B6A1CA9E755004AE9CD /* AppDelegate.h */,
+				BAE43B6B1CA9E755004AE9CD /* AppDelegate.m */,
+				BAE43B6C1CA9E755004AE9CD /* Info.plist */,
+				BAE43B6D1CA9E755004AE9CD /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -135,19 +136,6 @@
 			path = "doo itTests";
 			sourceTree = "<group>";
 		};
-		BA5448E11CA5E97600DDFBD5 /* List of Tasks */ = {
-			isa = PBXGroup;
-			children = (
-				BA54494E1CA8CCBD00DDFBD5 /* ListOfTasksTableViewCell.h */,
-				BA54494F1CA8CCBD00DDFBD5 /* ListOfTasksTableViewCell.m */,
-				BA5449501CA8CCBD00DDFBD5 /* ListOfTasksTableViewController.h */,
-				BA5449511CA8CCBD00DDFBD5 /* ListOfTasksTableViewController.m */,
-				BA54494B1CA8CC7900DDFBD5 /* ListOfTasksViewModel.h */,
-				BA54494C1CA8CC7900DDFBD5 /* ListOfTasksViewModel.m */,
-			);
-			name = "List of Tasks";
-			sourceTree = "<group>";
-		};
 		BA5449191CA6BB7C00DDFBD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,41 +147,11 @@
 		BA54491B1CA6BBBC00DDFBD5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BA5449651CA8CDC600DDFBD5 /* Assets.xcassets */,
-				BA5449611CA8CDA200DDFBD5 /* LaunchScreen.storyboard */,
+				BAE43B691CA9E713004AE9CD /* View Controllers */,
+				BAE43B871CA9E853004AE9CD /* Assets */,
 				BA5449621CA8CDA200DDFBD5 /* Main.storyboard */,
-				BA5449541CA8CD0400DDFBD5 /* SplitViewController.h */,
-				BA5449551CA8CD0400DDFBD5 /* SplitViewController.m */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		BA54491C1CA6BBD500DDFBD5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				BA5448E11CA5E97600DDFBD5 /* List of Tasks */,
-				BA54492E1CA8333100DDFBD5 /* Detail Task */,
-				BA5449211CA82E5000DDFBD5 /* Edit Task */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		BA5449211CA82E5000DDFBD5 /* Edit Task */ = {
-			isa = PBXGroup;
-			children = (
-				BA54495A1CA8CD3700DDFBD5 /* EditTaskViewController.h */,
-				BA54495B1CA8CD3700DDFBD5 /* EditTaskViewController.m */,
-			);
-			name = "Edit Task";
-			sourceTree = "<group>";
-		};
-		BA54492E1CA8333100DDFBD5 /* Detail Task */ = {
-			isa = PBXGroup;
-			children = (
-				BA5449571CA8CD1900DDFBD5 /* DetailTaskViewController.h */,
-				BA5449581CA8CD1900DDFBD5 /* DetailTaskViewController.m */,
-			);
-			name = "Detail Task";
 			sourceTree = "<group>";
 		};
 		BA5449421CA872E400DDFBD5 /* Task */ = {
@@ -230,6 +188,97 @@
 				BA5449671CA8CE0600DDFBD5 /* ListTasksViewModelTests.m */,
 			);
 			name = "ViewModel Tests";
+			sourceTree = "<group>";
+		};
+		BAE43B681CA9E702004AE9CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BAE43B831CA9E819004AE9CD /* List of Tasks */,
+				BAE43B851CA9E826004AE9CD /* Detail Task */,
+				BAE43B841CA9E820004AE9CD /* Edit Task */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		BAE43B691CA9E713004AE9CD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BAE43B861CA9E83F004AE9CD /* Split View Controller */,
+				BAE43B771CA9E7D3004AE9CD /* List of Tasks */,
+				BAE43B7F1CA9E7FE004AE9CD /* Detail Task */,
+				BAE43B7B1CA9E7EA004AE9CD /* Edit Task */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BAE43B771CA9E7D3004AE9CD /* List of Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				BAE43B8B1CA9E8D3004AE9CD /* ListOfTasksTableViewController.h */,
+				BAE43B8C1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m */,
+				BAE43B881CA9E88E004AE9CD /* ListOfTasksTableViewCell.h */,
+				BAE43B891CA9E88E004AE9CD /* ListOfTasksTableViewCell.m */,
+			);
+			name = "List of Tasks";
+			sourceTree = "<group>";
+		};
+		BAE43B7B1CA9E7EA004AE9CD /* Edit Task */ = {
+			isa = PBXGroup;
+			children = (
+				BAE43B7C1CA9E7FA004AE9CD /* EditTaskViewController.h */,
+				BAE43B7D1CA9E7FA004AE9CD /* EditTaskViewController.m */,
+			);
+			name = "Edit Task";
+			sourceTree = "<group>";
+		};
+		BAE43B7F1CA9E7FE004AE9CD /* Detail Task */ = {
+			isa = PBXGroup;
+			children = (
+				BAE43B801CA9E810004AE9CD /* DetailTaskViewController.h */,
+				BAE43B811CA9E810004AE9CD /* DetailTaskViewController.m */,
+			);
+			name = "Detail Task";
+			sourceTree = "<group>";
+		};
+		BAE43B831CA9E819004AE9CD /* List of Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				BAE43B8E1CA9E916004AE9CD /* ListOfTasksViewModel.h */,
+				BAE43B8F1CA9E916004AE9CD /* ListOfTasksViewModel.m */,
+			);
+			name = "List of Tasks";
+			sourceTree = "<group>";
+		};
+		BAE43B841CA9E820004AE9CD /* Edit Task */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Edit Task";
+			sourceTree = "<group>";
+		};
+		BAE43B851CA9E826004AE9CD /* Detail Task */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Detail Task";
+			sourceTree = "<group>";
+		};
+		BAE43B861CA9E83F004AE9CD /* Split View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA5449541CA8CD0400DDFBD5 /* SplitViewController.h */,
+				BA5449551CA8CD0400DDFBD5 /* SplitViewController.m */,
+			);
+			name = "Split View Controller";
+			sourceTree = "<group>";
+		};
+		BAE43B871CA9E853004AE9CD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BA5449651CA8CDC600DDFBD5 /* Assets.xcassets */,
+				BA5449611CA8CDA200DDFBD5 /* LaunchScreen.storyboard */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE43B6F1CA9E755004AE9CD /* Info.plist in Resources */,
 				BA5449641CA8CDA200DDFBD5 /* Main.storyboard in Resources */,
 				BA5449661CA8CDC600DDFBD5 /* Assets.xcassets in Resources */,
 				BA5449631CA8CDA200DDFBD5 /* LaunchScreen.storyboard in Resources */,
@@ -332,15 +382,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE43B701CA9E755004AE9CD /* main.m in Sources */,
+				BAE43B6E1CA9E755004AE9CD /* AppDelegate.m in Sources */,
+				BAE43B821CA9E810004AE9CD /* DetailTaskViewController.m in Sources */,
 				BA54496B1CA95BE900DDFBD5 /* TaskGatewayDouble.m in Sources */,
+				BAE43B8D1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m in Sources */,
+				BAE43B7E1CA9E7FA004AE9CD /* EditTaskViewController.m in Sources */,
+				BAE43B901CA9E916004AE9CD /* ListOfTasksViewModel.m in Sources */,
+				BAE43B8A1CA9E88E004AE9CD /* ListOfTasksTableViewCell.m in Sources */,
 				BA5449601CA8CD6D00DDFBD5 /* Task.m in Sources */,
-				BA4889851CA5CBEB00271373 /* AppDelegate.m in Sources */,
-				BA5449531CA8CCBD00DDFBD5 /* ListOfTasksTableViewController.m in Sources */,
-				BA4889821CA5CBEB00271373 /* main.m in Sources */,
-				BA54495C1CA8CD3700DDFBD5 /* EditTaskViewController.m in Sources */,
-				BA5449521CA8CCBD00DDFBD5 /* ListOfTasksTableViewCell.m in Sources */,
-				BA5449591CA8CD1900DDFBD5 /* DetailTaskViewController.m in Sources */,
-				BA54494D1CA8CC7900DDFBD5 /* ListOfTasksViewModel.m in Sources */,
 				BA5449561CA8CD0400DDFBD5 /* SplitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,7 +503,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "doo it/Info.plist";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/doo it/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardo0100.doo-it";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -464,7 +515,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "doo it/Info.plist";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/doo it/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardo0100.doo-it";
 				PRODUCT_NAME = "$(TARGET_NAME)";
