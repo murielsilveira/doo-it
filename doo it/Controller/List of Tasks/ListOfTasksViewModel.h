@@ -1,5 +1,5 @@
 //
-//  TaskGateway.h
+//  ListOfTasksViewModel.h
 //  doo it
 //
 //  Created by Ricardo Gehrke Filho on 27/03/16.
@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol TaskGateway <NSObject>
-
-- (NSArray)tasksFrom(NSDate)initialDate until:(NSDate)finalDate;
+@interface ListOfTasksViewModel : NSObject
 
 @end
