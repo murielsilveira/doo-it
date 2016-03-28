@@ -10,4 +10,12 @@
 
 @implementation Task
 
+- (instancetype)initWithTitle:(NSString *)title {
+    self = [super init];
+    if (self) {
+        self.taskTitle = title;
+    }
+    return self;
+}
+
 @end

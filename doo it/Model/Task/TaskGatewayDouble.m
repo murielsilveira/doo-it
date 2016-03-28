@@ -10,9 +10,27 @@
 
 @implementation TaskGatewayDouble
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        tasks = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+NSMutableArray *tasks;
+
 - (NSArray *)tasksFrom:(NSDate *)initialDate to:(NSDate *)finalDate {
-    NSMutableArray *tasks = [[NSMutableArray alloc] init];
     return tasks;
+}
+
+- (void)addTask:(Task*)task {
+    [tasks addObject:task];
+}
+
+- (int)numberOfTasksFrom:(NSDate*)initialDate to:(NSDate*)finalDate {
+    return [tasks count];
 }
 
 @end

@@ -12,5 +12,7 @@
 @protocol TaskGatewayProtocol <NSObject>
 
 - (NSArray*)tasksFrom:(NSDate*)initialDate to:(NSDate*)finalDate;
+- (int)numberOfTasksFrom:(NSDate*)initialDate to:(NSDate*)finalDate;
+- (void)addTask:(Task*)task;
 
 @end

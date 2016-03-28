@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "TaskGatewayDouble.h"
+#import "Task.h"
 
 @interface TaskGatewayTests : XCTestCase
 
@@ -22,13 +23,21 @@ TaskGatewayDouble *gateway;
     gateway = [[TaskGatewayDouble alloc] init];
 }
 
-- (void)testGatewayReturnsEmptyArray {
+- (void)testGatewayIsEmpty {
     NSDate *initialDate = [NSDate date];
     NSDate *finalDate = [NSDate date];
-    NSArray *tasks = [gateway tasksFrom:initialDate to:finalDate];
-    XCTAssertNotNil(tasks, @"tasks should be not nil");
-    int tasksCount = [tasks count];
-    XCTAssertEqual(tasksCount, 0, @"tasksCount should be 0");
+    int tasksCount = [gateway numberOfTasksFrom:initialDate to:finalDate];
+    XCTAssertEqual(tasksCount, 0);
+}
+
+- (void)testGatewayReturnsOneAfterAddingTask {
+    NSDate *initialDate = [NSDate date];
+    NSDate *finalDate = [NSDate date];
+    Task *task = [[Task alloc] initWithTitle:@"Test"];
+    [gateway addTask:task];
+    int tasksCount = [gateway numberOfTasksFrom:initialDate to:finalDate];
+    
+    XCTAssertEqual(tasksCount, 1);
 }
 
 @end

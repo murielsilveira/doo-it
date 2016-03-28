@@ -10,6 +10,8 @@
 
 @interface Task : NSObject
 
+- (instancetype)initWithTitle:(NSString *)title;
+
 @property NSString *taskTitle;
 @property NSString *taskDescription;
 @property NSDate *taskTime;
