@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Task.h"
 
 @protocol TaskGatewayProtocol <NSObject>
+
+- (NSArray*)tasksFrom:(NSDate*)initialDate to:(NSDate*)finalDate;
 
 @end

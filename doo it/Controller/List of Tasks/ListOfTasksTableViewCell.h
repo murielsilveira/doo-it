@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ListOfTasksTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *taskTitleLabel;
 
 @end
