@@ -18,6 +18,34 @@
 NSString *const CELL_IDENTIFIER = @"Task Cell";
 ListTasksViewModel *viewModel;
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        viewModel = [[ListTasksViewModel alloc] initWithPresenter:self andGateway:[[TaskGatewayDouble alloc] init]];
+    }
+    return self;
+}
+
+#pragma mark - View Controller Lifecycle
+
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    [viewModel presentTasks];
+}
+
+#pragma mark - ListTasksPresenterProtocol
+
+- (void) presentBlankState {
+    
+}
+
+- (void) presentListOfTasks {
+    [self.tableView reloadData];
+}
+
+#pragma mark - UITableViewDelegate and UITableViewDataSource
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 20;
 }
