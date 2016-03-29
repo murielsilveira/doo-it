@@ -8,35 +8,40 @@
 
 #import "ListTasksViewModel.h"
 
+@interface ListTasksViewModel ()
+
+@property id<ListTasksPresenterProtocol> presenter;
+@property id<TaskGatewayProtocol> taskGateway;
+
+@end
+
 @implementation ListTasksViewModel
 
-id<ListTasksPresenterProtocol> presenter;
-id<TaskGatewayProtocol> taskGateway;
 
-- (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)_presenter andGateway:(id<TaskGatewayProtocol>)_taskGateway
+- (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)presenter andGateway:(id<TaskGatewayProtocol>)taskGateway
 {
     self = [super init];
     if (self) {
-        presenter = _presenter;
-        taskGateway = _taskGateway;
+        self.presenter = presenter;
+        self.taskGateway = taskGateway;
     }
     return self;
 }
 
 -(void) presentTasks {
-    if([taskGateway tasks].count == 0) {
-        [presenter presentBlankState];
+    if([self.taskGateway tasks].count == 0) {
+        [self.presenter presentBlankState];
     }else{
-        [presenter presentListOfTasks];
+        [self.presenter presentListOfTasks];
     }
 }
 
 - (int)numberOfTasksToPresent{
-    return [taskGateway tasks].count;
+    return [self.taskGateway tasks].count;
 }
 
 - (Task*)taskForRow:(NSInteger)row inSection:(NSInteger)section; {
-    NSArray *tasksArray = [taskGateway tasks];
+    NSArray *tasksArray = [self.taskGateway tasks];
     return tasksArray[row];
 }
 

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailTaskViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UILabel *taskTitleLabel;
 @property (strong, nonatomic) NSString *titleText;
+
 @end

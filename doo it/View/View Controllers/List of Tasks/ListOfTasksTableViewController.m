@@ -13,18 +13,18 @@
 #import "ListTasksViewModel.h"
 #import "TaskGatewayDouble.h"
 
+@interface ListOfTasksTableViewController ()
+
+@end
+
 @implementation ListOfTasksTableViewController
 
 NSString *const CELL_IDENTIFIER = @"Task Cell";
 ListTasksViewModel *viewModel;
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        viewModel = [[ListTasksViewModel alloc] initWithPresenter:self andGateway:[[TaskGatewayDouble alloc] init]];
-    }
-    return self;
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    viewModel = [[ListTasksViewModel alloc] initWithPresenter:self andGateway:[[TaskGatewayDouble alloc] init]];
 }
 
 #pragma mark - View Controller Lifecycle
@@ -47,21 +47,22 @@ ListTasksViewModel *viewModel;
 #pragma mark - UITableViewDelegate and UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return [viewModel numberOfTasksToPresent];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListOfTasksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
-    NSMutableString *taskTitle = [NSMutableString stringWithFormat:@"Task %d", indexPath.row];
-    cell.taskTitleLabel.text = taskTitle;
+    Task *task = [viewModel taskForRow:indexPath.row inSection:indexPath.section];
+    cell.taskTitleLabel.text = task.taskTitle;
     return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier  isEqual: @"Task Selected"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Task *task = [viewModel taskForRow:indexPath.row inSection:indexPath.section];
         DetailTaskViewController *detailTaskViewController = (DetailTaskViewController *)[[segue destinationViewController] topViewController];
-        detailTaskViewController.titleText = [NSMutableString stringWithFormat:@"Task %d", indexPath.row];
+        detailTaskViewController.titleText = task.taskTitle;
     }
 }
 

@@ -15,7 +15,7 @@ Swift is awesome, but I believe Objective-C projects still need care. Besides, O
 ##### - doo it
 - Model/
    - Gateways
-   - Gateway Doubles _(Will be moved to 'doo it Tests' target)_
+   - Gateway Doubles _(Will be moved to 'doo it Tests' target after persistence implementation)_
 - View/
    - Assets, Storyboards, Custom Views and View Controllers (UIKit stuff)
 - ViewModel/
@@ -53,7 +53,7 @@ Swift is awesome, but I believe Objective-C projects still need care. Besides, O
 
 ---
 
-### 😍 UI and UX
+### 💎 UI and UX
 
 #### Used storyboards concepts
 - [x] Segues
@@ -75,13 +75,14 @@ Swift is awesome, but I believe Objective-C projects still need care. Besides, O
 - [ ] Notification for alarms
 - [ ] Actions for notifications
 
+#### Internationalization
+
 ---
 
 ### 📲 Publishing
 - [ ] Apple Account $
 - [ ] App Icon
 - [ ] Screenshots
-- [ ] Apple Account for publishing
 - [ ] Provisioning
 - [ ] iTunes Connect configuration
 - [ ] TestFlight configuration
@@ -89,15 +90,12 @@ Swift is awesome, but I believe Objective-C projects still need care. Besides, O
 
 ---
 
-#### 🚠 Migration to Swift
-
-_soon_
-
----
-
-#### ⌚️ Apple Watch
-
-_soon_
+### 🔮 For the future
+- Apple Watch
+- Swift compatibility
+- MapKit
+- Widgets
+- REST API integration
 
 ---
 
