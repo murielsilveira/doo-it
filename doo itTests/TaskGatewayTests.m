@@ -11,7 +11,6 @@
 #import "Task.h"
 
 @interface TaskGatewayTests : XCTestCase
-
 @end
 
 @implementation TaskGatewayTests
@@ -28,12 +27,20 @@ TaskGatewayDouble *gateway;
     XCTAssertEqual(tasksCount, 0);
 }
 
-- (void)testGatewayHasOneTaskAfterAdding {
+- (void)testGatewayHasOneTasks {
     Task *task = [[Task alloc] initWithTitle:@"Test"];
     [gateway addTask:task];
     int tasksCount = [gateway numberOfTasks];
-    
     XCTAssertEqual(tasksCount, 1);
+}
+
+- (void)testGatewayHasTwoTasks {
+    Task *task1 = [[Task alloc] initWithTitle:@"Test1"];
+    [gateway addTask:task1];
+    Task *task2 = [[Task alloc] initWithTitle:@"Test2"];
+    [gateway addTask:task2];
+    int tasksCount = [gateway numberOfTasks];
+    XCTAssertEqual(tasksCount, 2);
 }
 
 @end

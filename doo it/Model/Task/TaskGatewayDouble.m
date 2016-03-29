@@ -10,6 +10,8 @@
 
 @implementation TaskGatewayDouble
 
+NSMutableArray *tasks;
+
 - (instancetype)init
 {
     self = [super init];
@@ -18,8 +20,6 @@
     }
     return self;
 }
-
-NSMutableArray *tasks;
 
 - (NSArray *)tasks {
     return tasks;
