@@ -12,7 +12,7 @@
 
 @interface EditTaskViewModel : NSObject
 
-- (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)_presenter andGateway:(id<TaskGatewayProtocol>)_gateway;
-- (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)_presenter gateway:(id<TaskGatewayProtocol>)_gateway andTask:(Task*)task;
+- (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)presenter gateway:(id<TaskGatewayProtocol>)taskGateway andTask:(Task*)task;
+- (void)presentTaskForEditing;
 
 @end

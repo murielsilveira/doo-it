@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Task.h"
 
 @protocol EditTaskPresenterProtocol <NSObject>
+
+- (void)presentTaskForEdition:(Task*)task;
+- (void)presentEmptyTaskForEdition;
 
 @end

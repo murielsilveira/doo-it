@@ -12,30 +12,27 @@
 
 @property id<EditTaskPresenterProtocol> presenter;
 @property id<TaskGatewayProtocol> taskGateway;
+@property Task *task;
 
 @end
 
 @implementation EditTaskViewModel
-
-- (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)presenter andGateway:(id<TaskGatewayProtocol>)taskGateway
-{
+- (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)presenter gateway:(id<TaskGatewayProtocol>)taskGateway andTask:(Task *)task {
     self = [super init];
     if (self) {
         self.presenter = presenter;
         self.taskGateway = taskGateway;
+        self.task = task;
     }
     return self;
 }
 
-- (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)_presenter gateway:(id<TaskGatewayProtocol>)_gateway andTask:(Task *)task {
-    self = [super init];
-    if (self) {
-        //        presenter = _presenter;
-        //        taskGateway = _taskGateway;
+- (void)presentTaskForEditing {
+    if(_task==nil) {
+        [_presenter presentEmptyTaskForEdition];
+    }else{
+        [_presenter presentTaskForEdition:_task];
     }
-    return self;
 }
-
-
 
 @end
