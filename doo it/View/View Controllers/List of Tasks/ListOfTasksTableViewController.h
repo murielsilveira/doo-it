@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ListTasksPresenterProtocol.h"
 
-@interface ListOfTasksTableViewController : UITableViewController
+@interface ListOfTasksTableViewController : UITableViewController <ListTasksPresenterProtocol>
 
 @end

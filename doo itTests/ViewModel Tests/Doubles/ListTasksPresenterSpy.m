@@ -6,9 +6,9 @@
 //  Copyright © 2016 Ricardo Gehrke Filho. All rights reserved.
 //
 
-#import "ListTasksPresenterDouble.h"
+#import "ListTasksPresenterSpy.h"
 
-@implementation ListTasksPresenterDouble
+@implementation ListTasksPresenterSpy
 
 - (instancetype)init
 {
@@ -20,7 +20,7 @@
     return self;
 }
 
-- (void)presentListOfTasks:(NSArray *)tasks {
+- (void)presentListOfTasks {
     _presentListOfTasksCalled = YES;
 }
 

@@ -11,25 +11,33 @@
 @implementation ListTasksViewModel
 
 id<ListTasksPresenterProtocol> presenter;
-id<TaskGatewayProtocol> gateway;
+id<TaskGatewayProtocol> taskGateway;
 
-
-- (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)_presenter andGateway:(id<TaskGatewayProtocol>)_gateway
+- (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)_presenter andGateway:(id<TaskGatewayProtocol>)_taskGateway
 {
     self = [super init];
     if (self) {
         presenter = _presenter;
-        gateway = _gateway;
+        taskGateway = _taskGateway;
     }
     return self;
 }
 
--(void) presentListOfTasks {
-    if([gateway numberOfTasks] == 0) {
+-(void) presentTasks {
+    if([taskGateway tasks].count == 0) {
         [presenter presentBlankState];
     }else{
-        [presenter presentListOfTasks:[gateway tasks]];
+        [presenter presentListOfTasks];
     }
+}
+
+- (int)numberOfTasksToPresent{
+    return [taskGateway tasks].count;
+}
+
+- (Task*)taskForRow:(NSInteger)row inSection:(NSInteger)section; {
+    NSArray *tasksArray = [taskGateway tasks];
+    return tasksArray[row];
 }
 
 @end

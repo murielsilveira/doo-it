@@ -12,24 +12,25 @@ Swift is awesome, but I believe Objective-C projects still need care. Besides, O
 
 #### Files Structure
 
-##### doo it
-- Model
+##### - doo it
+- Model/
    - Gateways
    - Gateway Doubles _(Will be moved to 'doo it Tests' target)_
-- View
+- View/
    - Assets, Storyboards, Custom Views and View Controllers (UIKit stuff)
-- ViewModel
+- ViewModel/
    - ViewModels
    - Presenters Protocols
-- Supporting Files
+- Supporting Files/
 
-##### doo it Tests
-- Doubles
-- ViewModel Tests
-- Gateway Tests
-- Supporting Files
+##### - doo it Tests
+- Doubles/
+- ViewModel Tests/
+- Gateway Tests/
+- Supporting Files/
 
 ---
+
 ### ✅ Tests
 - [x] TDD for Gateway and ViewModels implementation
 - [ ] UI Tests

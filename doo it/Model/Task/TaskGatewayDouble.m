@@ -29,8 +29,4 @@ NSMutableArray *tasks;
     [tasks addObject:task];
 }
 
-- (int)numberOfTasks {
-    return [tasks count];
-}
-
 @end

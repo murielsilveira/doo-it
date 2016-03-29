@@ -23,15 +23,15 @@ TaskGatewayDouble *gateway;
 }
 
 - (void)testGatewayIsEmpty {
-    int tasksCount = [gateway numberOfTasks];
-    XCTAssertEqual(tasksCount, 0);
+    NSArray *tasks = [gateway tasks];
+    XCTAssertEqual(tasks.count, 0);
 }
 
 - (void)testGatewayHasOneTasks {
     Task *task = [[Task alloc] initWithTitle:@"Test"];
     [gateway addTask:task];
-    int tasksCount = [gateway numberOfTasks];
-    XCTAssertEqual(tasksCount, 1);
+    NSArray *tasks = [gateway tasks];
+    XCTAssertEqual(tasks.count, 1);
 }
 
 - (void)testGatewayHasTwoTasks {
@@ -39,8 +39,8 @@ TaskGatewayDouble *gateway;
     [gateway addTask:task1];
     Task *task2 = [[Task alloc] initWithTitle:@"Test2"];
     [gateway addTask:task2];
-    int tasksCount = [gateway numberOfTasks];
-    XCTAssertEqual(tasksCount, 2);
+    NSArray *tasks = [gateway tasks];
+    XCTAssertEqual(tasks.count, 2);
 }
 
 @end

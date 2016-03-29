@@ -10,14 +10,13 @@
 #import "DetailTaskViewController.h"
 #import "EditTaskViewController.h"
 #import "ListOfTasksTableViewCell.h"
-
-@interface ListOfTasksTableViewController ()
-
-@end
+#import "ListTasksViewModel.h"
+#import "TaskGatewayDouble.h"
 
 @implementation ListOfTasksTableViewController
 
 NSString *const CELL_IDENTIFIER = @"Task Cell";
+ListTasksViewModel *viewModel;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 20;

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ListTasksPresenterProtocol.h"
 
-@interface ListTasksPresenterDouble : NSObject <ListTasksPresenterProtocol>
+@interface ListTasksPresenterSpy : NSObject <ListTasksPresenterProtocol>
 
 @property (nonatomic, readonly) BOOL presentListOfTasksCalled;
 @property (nonatomic, readonly) BOOL presentBlankStateCalled;

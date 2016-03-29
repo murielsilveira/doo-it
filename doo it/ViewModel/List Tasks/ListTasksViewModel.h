@@ -13,6 +13,8 @@
 @interface ListTasksViewModel : NSObject
 
 - (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)_presenter andGateway:(id<TaskGatewayProtocol>)_gateway;
-- (void)presentListOfTasks;
+- (void)presentTasks;
+- (int)numberOfTasksToPresent;
+- (Task*)taskForRow:(NSInteger)row inSection:(NSInteger)section;
 
 @end
