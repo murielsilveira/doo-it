@@ -1,26 +1,42 @@
 # doo it
 >Simple to do app with a lot of future features 🚀
 
-### 👾 Objective-C
-Swift is awesome, but I believe there are a lot of Objective-C projects around there that a good care. Besides ObjC reminds me C which I love.
+### 📖 Description
+This project's mission is to create and publish an iOS app for managing tasks. Similar to Reminders app, but better.
 
-### 📐 Project Design and Architecture
-- <a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">📄 SOLID</a>
-- [📽 MVVM](https://www.youtube.com/watch?v=eP_0O5QeYnc)
-- [📄 MVVM](https://www.objc.io/issues/13-architecture/mvvm/)
+#### Design and Architecture
+This project is based on MVVM design pattern where the Model and ViewModel layers are created using TDD (Test Driven Development). The View layer is tested with UI tests.
 
-![MVVM](https://www.objc.io/images/issue-13/mvvm-b27768df.png)
+#### Objective-C
+Swift is awesome, but I believe Objective-C projects still need care. Besides, Objective-C reminds me C, my first programming language, which I love 💙.
 
-#### Project Structure
+#### Files Structure
+
+##### doo it
 - Model
+   - Gateways
+   - Gateway Doubles _(Will be moved to 'doo it Tests' target)_
 - View
+   - Assets, Storyboards, Custom Views and View Controllers (UIKit stuff)
 - ViewModel
+   - ViewModels
+   - Presenters Protocols
+- Supporting Files
 
+##### doo it Tests
+- Doubles
+- ViewModel Tests
+- Gateway Tests
+- Supporting Files
+
+---
 ### ✅ Tests
-- [ ] TDD for Gateway and ViewModels implementation
+- [x] TDD for Gateway and ViewModels implementation
 - [ ] UI Tests
 - [ ] Continuous Integration
 - [ ] Test Doubles
+
+---
 
 ### 🗄 Data Model
 
@@ -34,14 +50,17 @@ Swift is awesome, but I believe there are a lot of Objective-C projects around t
 - [ ] Core Data
 - [ ] SQLite
 
+---
+
 ### 😍 UI and UX
 
-#### Storyboards
+#### Used storyboards concepts
 - [x] Segues
+- [ ] Launchscreen
 - [ ] Auto Layout
 - [ ] Size Classes
 
-#### UIKit components
+#### Used UIKit components
 - [x] UISplitViewController
 - [ ] UIPresentationController
 - [ ] UITableViewController
@@ -51,10 +70,14 @@ Swift is awesome, but I believe there are a lot of Objective-C projects around t
 - [ ] UIVisualEffectView
 - [ ] UIView (customization and reuse)
 
-### 🎈 Notifications
+#### Notifications
+- [ ] Notification for alarms
+- [ ] Actions for notifications
 
-### 📲 Publish Process
-- [ ] Name
+---
+
+### 📲 Publishing
+- [ ] Apple Account $
 - [ ] App Icon
 - [ ] Screenshots
 - [ ] Apple Account for publishing
@@ -63,10 +86,21 @@ Swift is awesome, but I believe there are a lot of Objective-C projects around t
 - [ ] TestFlight configuration
 - [ ] Analytics
 
-### 📡 REST API
-
-### 🗝 Facebook Auth
+---
 
 #### 🚠 Migration to Swift
 
+_soon_
+
+---
+
 #### ⌚️ Apple Watch
+
+_soon_
+
+---
+
+### 📚 References
+- <a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">📄 SOLID</a>
+- [📽 MVVM](https://www.youtube.com/watch?v=eP_0O5QeYnc)
+- [📄 MVVM](https://www.objc.io/issues/13-architecture/mvvm/)

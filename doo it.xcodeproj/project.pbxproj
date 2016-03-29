@@ -135,7 +135,7 @@
 				BAC6F4DB1CAA19AE005401B6 /* Doubles */,
 				BA54494A1CA8CBC200DDFBD5 /* ViewModel Tests */,
 				BA5449491CA8CBA400DDFBD5 /* Gateway Tests */,
-				BA48899C1CA5CBEB00271373 /* Info.plist */,
+				BAC6F4DF1CAA204D005401B6 /* SupportingFiles */,
 			);
 			name = "doo it Tests";
 			path = "doo itTests";
@@ -202,6 +202,14 @@
 				BAC6F4DD1CAA19DA005401B6 /* ListTasksPresenterDouble.m */,
 			);
 			name = Doubles;
+			sourceTree = "<group>";
+		};
+		BAC6F4DF1CAA204D005401B6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BA48899C1CA5CBEB00271373 /* Info.plist */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		BAE43B681CA9E702004AE9CD /* ViewModel */ = {
