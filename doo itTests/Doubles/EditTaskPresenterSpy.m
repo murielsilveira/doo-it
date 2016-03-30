@@ -16,6 +16,8 @@
     if (self) {
         _presentTaskForEditionCalled = NO;
         _presentEmptyTaskForEditionCalled = NO;
+        _presentSuccesMessageForSavingTaskCalled = NO;
+        _presentErrorMessageForSavingTaskCalled = NO;
     }
     return self;
 }
@@ -26,6 +28,14 @@
 
 - (void)presentTaskForEdition:(NSString*)taskTitle {
     _presentTaskForEditionCalled = YES;
+}
+
+-(void)presentSuccesMessageForSavingTask {
+    _presentSuccesMessageForSavingTaskCalled = YES;
+}
+
+-(void)presentErrorMessageForSavingTask:(NSString*)message {
+    _presentErrorMessageForSavingTaskCalled = YES;
 }
 
 @end

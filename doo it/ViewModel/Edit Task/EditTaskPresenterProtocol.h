@@ -14,4 +14,7 @@
 - (void)presentTaskForEdition:(NSString*)taskTitle;
 - (void)presentEmptyTaskForEdition;
 
+-(void)presentSuccesMessageForSavingTask;
+-(void)presentErrorMessageForSavingTask:(NSString*)message;
+
 @end

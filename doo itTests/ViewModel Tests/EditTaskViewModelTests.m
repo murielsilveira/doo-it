@@ -40,7 +40,23 @@
 }
 
 - (void) testViewModelSavedNewTaskAndPresentedSuccessMessage {
-    
+    Task *task = [[Task alloc]initWithTitle:@"Task"];
+    _viewModel = [[EditTaskViewModel alloc] initWithPresenter:_presenterSpy gateway:_taskGateway andTask:nil];
+    [_viewModel saveTask:task];
+    XCTAssertTrue(_presenterSpy.presentSuccesMessageForSavingTaskCalled);
+    XCTAssertEqual([[_taskGateway tasks] count], 1);
 }
+
+//- (void) testViewModelSavedExistingTaskAndPresentedSuccessMessage {
+//    
+//}
+//
+//- (void) testViewModelDidNotSaveNewTaskAndPresentedErrorMessage {
+//    Task *task = [[Task alloc]initWithTitle:@""];
+//    _viewModel = [[EditTaskViewModel alloc] initWithPresenter:_presenterSpy gateway:_taskGateway andTask:nil];
+//    [_viewModel saveTask:task];
+//    XCTAssertTrue(_presenterSpy.presentErrorMessageForSavingTaskCalled);
+//    XCTAssertEqual([[_taskGateway tasks] count], 0);
+//}
 
 @end

@@ -33,8 +33,8 @@ NSString *const CELL_IDENTIFIER = @"Task Cell";
 
 #pragma mark - View Controller Lifecycle
 
-- (void) viewDidLoad {
-    [super viewDidLoad];
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [_viewModel presentTasks];
 }
 

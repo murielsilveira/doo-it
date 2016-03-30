@@ -14,5 +14,6 @@
 
 - (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)presenter gateway:(id<TaskGatewayProtocol>)taskGateway andTask:(Task*)task;
 - (void)presentTaskForEditing;
+- (void)saveTask:(Task*)task;
 
 @end

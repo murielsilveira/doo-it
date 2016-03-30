@@ -35,4 +35,19 @@
     }
 }
 
+- (void)saveTask:(Task*)task {
+    if([self validateTaskForSaving:task]) {
+        [_taskGateway addTask:task];
+        [_presenter presentSuccesMessageForSavingTask];
+    }else{
+        [_presenter presentErrorMessageForSavingTask:@"Error saving task!"];
+    }
+}
+
+- (bool)validateTaskForSaving:(Task*)task {
+    if([task.taskTitle isEqual:@""])
+        return false;
+    return true;
+}
+
 @end

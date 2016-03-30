@@ -137,12 +137,12 @@
                     <navigationItem key="navigationItem" title="Edit" id="Kij-Zc-7Fe">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LhO-hy-Ry9">
                             <connections>
-                                <segue destination="iR9-Yb-dQh" kind="unwind" unwindAction="unwindToListOfTasksTableViewController:" id="Mxm-ja-gNS"/>
+                                <action selector="cancelEditTask:" destination="cYt-7h-Wsa" id="u75-BR-1Ic"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="e05-kI-iFD">
                             <connections>
-                                <segue destination="iR9-Yb-dQh" kind="unwind" unwindAction="unwindToListOfTasksTableViewController:" id="gSX-PY-1JN"/>
+                                <action selector="saveEditTask:" destination="cYt-7h-Wsa" id="eDS-8y-oRO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -152,7 +152,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R8H-F7-StU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="iR9-Yb-dQh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1332" y="156"/>
         </scene>

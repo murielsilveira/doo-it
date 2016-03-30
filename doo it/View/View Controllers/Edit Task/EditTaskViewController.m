@@ -19,12 +19,12 @@
 
 @implementation EditTaskViewController
 
--(void)awakeFromNib {
+- (void)awakeFromNib {
     [super awakeFromNib];
     _viewModel = [[EditTaskViewModel alloc]initWithPresenter:self gateway:[TaskGatewayFactory create] andTask:_task];
 }
 
--(void)viewDidLoad{
+- (void)viewDidLoad{
     [super viewDidLoad];
     [_viewModel presentTaskForEditing];
 }
@@ -33,8 +33,29 @@
     _taskTitleTextField.text = @"";
 }
 
--(void)presentTaskForEdition:(NSString*)taskTitle {
+- (void)presentTaskForEdition:(NSString*)taskTitle {
     _taskTitleTextField.text = taskTitle;
+}
+
+- (void)presentSuccesMessageForSavingTask {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)presentErrorMessageForSavingTask:(NSString *)message {
+    
+}
+
+- (void)saveTask {
+    Task *task = [[Task alloc]initWithTitle:_taskTitleTextField.text];
+    [_viewModel saveTask:task];
+}
+
+- (IBAction)cancelEditTask:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)saveEditTask:(id)sender {
+    [self saveTask];
 }
 
 @end

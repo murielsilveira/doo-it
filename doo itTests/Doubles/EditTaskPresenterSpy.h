@@ -13,5 +13,7 @@
 
 @property (nonatomic, readonly) BOOL presentEmptyTaskForEditionCalled;
 @property (nonatomic, readonly) BOOL presentTaskForEditionCalled;
+@property (nonatomic, readonly) BOOL presentSuccesMessageForSavingTaskCalled;
+@property (nonatomic, readonly) BOOL presentErrorMessageForSavingTaskCalled;
 
 @end
