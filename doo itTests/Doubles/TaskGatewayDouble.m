@@ -8,25 +8,29 @@
 
 #import "TaskGatewayDouble.h"
 
-@implementation TaskGatewayDouble
+@interface TaskGatewayDouble ()
 
-NSMutableArray *tasks;
+@property (nonatomic) NSMutableArray *tasks;
+
+@end
+
+@implementation TaskGatewayDouble
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        tasks = [[NSMutableArray alloc] init];
+        _tasks = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 - (NSArray *)tasks {
-    return tasks;
+    return _tasks;
 }
 
 - (void)addTask:(Task*)task {
-    [tasks addObject:task];
+    [_tasks addObject:task];
 }
 
 @end

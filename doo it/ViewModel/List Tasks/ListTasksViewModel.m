@@ -29,6 +29,7 @@
 }
 
 -(void) presentTasks {
+    
     if([self.taskGateway tasks].count == 0) {
         [self.presenter presentBlankState];
     }else{

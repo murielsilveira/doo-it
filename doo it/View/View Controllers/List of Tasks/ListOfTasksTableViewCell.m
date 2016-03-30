@@ -7,7 +7,6 @@
 //
 
 #import "ListOfTasksTableViewCell.h"
-#import "TaskGatewayDouble.h"
 
 @implementation ListOfTasksTableViewCell
 

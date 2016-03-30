@@ -24,7 +24,7 @@
     _presentEmptyTaskForEditionCalled = YES;
 }
 
-- (void)presentTaskForEdition:(id)task {
+- (void)presentTaskForEdition:(NSString*)taskTitle {
     _presentTaskForEditionCalled = YES;
 }
 

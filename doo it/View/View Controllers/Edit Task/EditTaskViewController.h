@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EditTaskPresenterProtocol.h"
 
-@interface EditTaskViewController : UIViewController
+@interface EditTaskViewController : UIViewController <EditTaskPresenterProtocol>
+
+@property Task *task;
 
 @end

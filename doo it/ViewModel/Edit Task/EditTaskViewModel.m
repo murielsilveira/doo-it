@@ -31,7 +31,7 @@
     if(_task==nil) {
         [_presenter presentEmptyTaskForEdition];
     }else{
-        [_presenter presentTaskForEdition:_task];
+        [_presenter presentTaskForEdition:_task.taskTitle];
     }
 }
 

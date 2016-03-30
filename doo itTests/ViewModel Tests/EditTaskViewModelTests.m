@@ -39,4 +39,8 @@
     XCTAssertTrue(_presenterSpy.presentTaskForEditionCalled);
 }
 
+- (void) testViewModelSavedNewTaskAndPresentedSuccessMessage {
+    
+}
+
 @end

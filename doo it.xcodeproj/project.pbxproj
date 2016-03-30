@@ -13,13 +13,14 @@
 		BA5449631CA8CDA200DDFBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5449611CA8CDA200DDFBD5 /* LaunchScreen.storyboard */; };
 		BA5449641CA8CDA200DDFBD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5449621CA8CDA200DDFBD5 /* Main.storyboard */; };
 		BA5449661CA8CDC600DDFBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5449651CA8CDC600DDFBD5 /* Assets.xcassets */; };
-		BA54496B1CA95BE900DDFBD5 /* TaskGatewayDouble.m in Sources */ = {isa = PBXBuildFile; fileRef = BA54496A1CA95BE900DDFBD5 /* TaskGatewayDouble.m */; };
 		BAB8A7AA1CAABA8E00337180 /* EditTaskViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7A91CAABA8E00337180 /* EditTaskViewModel.m */; };
 		BAB8A7AD1CAACC8B00337180 /* EditTaskViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7AC1CAACC8B00337180 /* EditTaskViewModelTests.m */; };
-		BAB8A7B01CAACCDC00337180 /* ListTasksPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7AF1CAACCDC00337180 /* ListTasksPresenterSpy.m */; };
 		BAB8A7B51CAACD5900337180 /* ListTasksViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7B31CAACCF200337180 /* ListTasksViewModelTests.m */; };
 		BAB8A7B61CAACD6300337180 /* TaskGatewayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7B11CAACCE700337180 /* TaskGatewayTests.m */; };
-		BAB8A7B91CAACE6300337180 /* EditTaskPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7B81CAACE6300337180 /* EditTaskPresenterSpy.m */; };
+		BAB8A7BB1CAC011200337180 /* ListTasksPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7AF1CAACCDC00337180 /* ListTasksPresenterSpy.m */; };
+		BAB8A7BC1CAC011500337180 /* EditTaskPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7B81CAACE6300337180 /* EditTaskPresenterSpy.m */; };
+		BAB8A7C21CAC035900337180 /* TaskGatewayFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7C11CAC035900337180 /* TaskGatewayFactory.m */; };
+		BAB8A7C41CAC0A2700337180 /* TaskGatewayDouble.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7BE1CAC031800337180 /* TaskGatewayDouble.m */; };
 		BAE43B6E1CA9E755004AE9CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B6B1CA9E755004AE9CD /* AppDelegate.m */; };
 		BAE43B6F1CA9E755004AE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAE43B6C1CA9E755004AE9CD /* Info.plist */; };
 		BAE43B701CA9E755004AE9CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B6D1CA9E755004AE9CD /* main.m */; };
@@ -51,8 +52,6 @@
 		BA5449611CA8CDA200DDFBD5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = View/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA5449621CA8CDA200DDFBD5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = View/Main.storyboard; sourceTree = "<group>"; };
 		BA5449651CA8CDC600DDFBD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = View/Assets.xcassets; sourceTree = "<group>"; };
-		BA5449691CA95BE900DDFBD5 /* TaskGatewayDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskGatewayDouble.h; path = Model/Task/TaskGatewayDouble.h; sourceTree = "<group>"; };
-		BA54496A1CA95BE900DDFBD5 /* TaskGatewayDouble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskGatewayDouble.m; path = Model/Task/TaskGatewayDouble.m; sourceTree = "<group>"; };
 		BAB8A7A81CAABA8E00337180 /* EditTaskViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTaskViewModel.h; path = "ViewModel/Edit Task/EditTaskViewModel.h"; sourceTree = "<group>"; };
 		BAB8A7A91CAABA8E00337180 /* EditTaskViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTaskViewModel.m; path = "ViewModel/Edit Task/EditTaskViewModel.m"; sourceTree = "<group>"; };
 		BAB8A7AB1CAABAB000337180 /* EditTaskPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTaskPresenterProtocol.h; path = "ViewModel/Edit Task/EditTaskPresenterProtocol.h"; sourceTree = "<group>"; };
@@ -63,6 +62,10 @@
 		BAB8A7B31CAACCF200337180 /* ListTasksViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListTasksViewModelTests.m; path = "ViewModel Tests/ListTasksViewModelTests.m"; sourceTree = "<group>"; };
 		BAB8A7B71CAACE6300337180 /* EditTaskPresenterSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTaskPresenterSpy.h; path = Doubles/EditTaskPresenterSpy.h; sourceTree = "<group>"; };
 		BAB8A7B81CAACE6300337180 /* EditTaskPresenterSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTaskPresenterSpy.m; path = Doubles/EditTaskPresenterSpy.m; sourceTree = "<group>"; };
+		BAB8A7BD1CAC031800337180 /* TaskGatewayDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskGatewayDouble.h; path = Doubles/TaskGatewayDouble.h; sourceTree = "<group>"; };
+		BAB8A7BE1CAC031800337180 /* TaskGatewayDouble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskGatewayDouble.m; path = Doubles/TaskGatewayDouble.m; sourceTree = "<group>"; };
+		BAB8A7C01CAC035900337180 /* TaskGatewayFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskGatewayFactory.h; path = Model/Task/TaskGatewayFactory.h; sourceTree = "<group>"; };
+		BAB8A7C11CAC035900337180 /* TaskGatewayFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskGatewayFactory.m; path = Model/Task/TaskGatewayFactory.m; sourceTree = "<group>"; };
 		BAC6F4D41CAA050F005401B6 /* ListTasksViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListTasksViewModel.h; path = "ViewModel/List Tasks/ListTasksViewModel.h"; sourceTree = "<group>"; };
 		BAC6F4D51CAA050F005401B6 /* ListTasksViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ListTasksViewModel.m; path = "ViewModel/List Tasks/ListTasksViewModel.m"; sourceTree = "<group>"; };
 		BAC6F4D71CAA052E005401B6 /* ListTasksPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListTasksPresenterProtocol.h; path = "ViewModel/List Tasks/ListTasksPresenterProtocol.h"; sourceTree = "<group>"; };
@@ -173,7 +176,6 @@
 			children = (
 				BA54495D1CA8CD6D00DDFBD5 /* Task.h */,
 				BA54495E1CA8CD6D00DDFBD5 /* Task.m */,
-				BA54495F1CA8CD6D00DDFBD5 /* TaskGatewayProtocol.h */,
 				BA5449451CA8731900DDFBD5 /* Task Gateway */,
 			);
 			name = Task;
@@ -182,8 +184,9 @@
 		BA5449451CA8731900DDFBD5 /* Task Gateway */ = {
 			isa = PBXGroup;
 			children = (
-				BA5449691CA95BE900DDFBD5 /* TaskGatewayDouble.h */,
-				BA54496A1CA95BE900DDFBD5 /* TaskGatewayDouble.m */,
+				BA54495F1CA8CD6D00DDFBD5 /* TaskGatewayProtocol.h */,
+				BAB8A7C01CAC035900337180 /* TaskGatewayFactory.h */,
+				BAB8A7C11CAC035900337180 /* TaskGatewayFactory.m */,
 			);
 			name = "Task Gateway";
 			sourceTree = "<group>";
@@ -208,6 +211,8 @@
 		BAC6F4DB1CAA19AE005401B6 /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
+				BAB8A7BD1CAC031800337180 /* TaskGatewayDouble.h */,
+				BAB8A7BE1CAC031800337180 /* TaskGatewayDouble.m */,
 				BAB8A7AE1CAACCDC00337180 /* ListTasksPresenterSpy.h */,
 				BAB8A7AF1CAACCDC00337180 /* ListTasksPresenterSpy.m */,
 				BAB8A7B71CAACE6300337180 /* EditTaskPresenterSpy.h */,
@@ -413,12 +418,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE43B701CA9E755004AE9CD /* main.m in Sources */,
-				BAB8A7B91CAACE6300337180 /* EditTaskPresenterSpy.m in Sources */,
 				BAE43B6E1CA9E755004AE9CD /* AppDelegate.m in Sources */,
+				BAB8A7C41CAC0A2700337180 /* TaskGatewayDouble.m in Sources */,
 				BAE43B821CA9E810004AE9CD /* DetailTaskViewController.m in Sources */,
-				BA54496B1CA95BE900DDFBD5 /* TaskGatewayDouble.m in Sources */,
-				BAB8A7B01CAACCDC00337180 /* ListTasksPresenterSpy.m in Sources */,
 				BAE43B8D1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m in Sources */,
+				BAB8A7C21CAC035900337180 /* TaskGatewayFactory.m in Sources */,
 				BAE43B7E1CA9E7FA004AE9CD /* EditTaskViewController.m in Sources */,
 				BA5047BB1CAA9EE900B9FC5E /* ListTasksViewModel.m in Sources */,
 				BAB8A7AA1CAABA8E00337180 /* EditTaskViewModel.m in Sources */,
@@ -432,8 +436,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB8A7BC1CAC011500337180 /* EditTaskPresenterSpy.m in Sources */,
 				BAB8A7AD1CAACC8B00337180 /* EditTaskViewModelTests.m in Sources */,
 				BAB8A7B51CAACD5900337180 /* ListTasksViewModelTests.m in Sources */,
+				BAB8A7BB1CAC011200337180 /* ListTasksPresenterSpy.m in Sources */,
 				BAB8A7B61CAACD6300337180 /* TaskGatewayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

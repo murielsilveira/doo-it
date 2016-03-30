@@ -11,7 +11,7 @@
 
 @protocol EditTaskPresenterProtocol <NSObject>
 
-- (void)presentTaskForEdition:(Task*)task;
+- (void)presentTaskForEdition:(NSString*)taskTitle;
 - (void)presentEmptyTaskForEdition;
 
 @end
