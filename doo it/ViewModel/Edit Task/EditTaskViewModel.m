@@ -17,6 +17,7 @@
 @end
 
 @implementation EditTaskViewModel
+
 - (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)presenter gateway:(id<TaskGatewayProtocol>)taskGateway andTask:(Task *)task {
     self = [super init];
     if (self) {

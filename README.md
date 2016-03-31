@@ -57,7 +57,7 @@ Swift is awesome, but I believe Objective-C projects still need care. Besides, O
 
 #### Used storyboards concepts
 - [x] Segues
-- [ ] Launchscreen
+- [ ] LaunchScreen
 - [ ] Auto Layout
 - [ ] Size Classes
 
@@ -76,6 +76,7 @@ Swift is awesome, but I believe Objective-C projects still need care. Besides, O
 - [ ] Actions for notifications
 
 #### Internationalization
+#### NSAttributedStrings
 
 ---
 
