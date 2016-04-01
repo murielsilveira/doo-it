@@ -11,9 +11,7 @@
 
 @interface ListTasksPresenterSpy : NSObject <ListTasksPresenterProtocol>
 
-@property (nonatomic, readonly) BOOL presentListOfTasksCalled;
-@property (nonatomic, readonly) BOOL presentBlankStateCalled;
-
-@property NSArray *listOfTasks;
+@property BOOL presentListOfTasksCalled;
+@property BOOL presentBlankStateCalled;
 
 @end

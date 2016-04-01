@@ -12,6 +12,6 @@
 @protocol DetailTaskPresenterProtocol <NSObject>
 
 - (void)presentBlankState;
-- (void)presentDetailsForTask:(Task*)task;
+- (void)presentDetailsForTask;
 
 @end

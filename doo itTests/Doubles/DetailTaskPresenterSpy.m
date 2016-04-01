@@ -14,18 +14,18 @@
 {
     self = [super init];
     if (self) {
-        _presentTaskCalled = NO;
-        _presentBlankStateCalled = NO;
+        self.presentTaskCalled = NO;
+        self.presentBlankStateCalled = NO;
     }
     return self;
 }
 
 - (void)presentBlankState {
-    _presentBlankStateCalled = YES;
+    self.presentBlankStateCalled = YES;
 }
 
-- (void)presentDetailsForTask:(Task*)task {
-    _presentTaskCalled = YES;
+- (void)presentDetailsForTask {
+    self.presentTaskCalled = YES;
 }
 
 @end

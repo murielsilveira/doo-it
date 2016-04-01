@@ -12,11 +12,11 @@
 
 + (void)injectRandomObjects:(TaskGatewayDouble *)_sharedInstance {
     Task *task = [[Task alloc]initWithTitle:@"Open a hotel in Amsterdam"];
-    [_sharedInstance addTask:task];
+    [_sharedInstance saveTask:task];
     task = [[Task alloc]initWithTitle:@"Create an app for selling interplanetary trips tickets"];
-    [_sharedInstance addTask:task];
+    [_sharedInstance saveTask:task];
     task = [[Task alloc]initWithTitle:@"Enjoy ceviche in Peru"];
-    [_sharedInstance addTask:task];
+    [_sharedInstance saveTask:task];
 }
 
 + (id<TaskGatewayProtocol>)create {

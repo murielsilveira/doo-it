@@ -17,7 +17,6 @@
 @interface ListOfTasksTableViewController ()
 
 @property ListTasksViewModel *viewModel;
-@property NSArray *listOfTasks;
 
 @end
 
@@ -25,18 +24,17 @@
 
 NSString *const CELL_IDENTIFIER = @"Task Cell";
 
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     id<TaskGatewayProtocol> gateway = [TaskGatewayFactory create];
-    _viewModel = [[ListTasksViewModel alloc] initWithPresenter:self andGateway:gateway];
+    self.viewModel = [[ListTasksViewModel alloc] initWithPresenter:self andGateway:gateway];
 }
 
 #pragma mark - View Controller Lifecycle
 
-- (void) viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [_viewModel presentListOfTasks];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.viewModel presentListOfTasks];
 }
 
 #pragma mark - ListTasksPresenterProtocol
@@ -45,34 +43,33 @@ NSString *const CELL_IDENTIFIER = @"Task Cell";
     
 }
 
-- (void) presentListOfTasks:(NSArray*)listOfTasks {
-    self.listOfTasks = listOfTasks;
+- (void) presentListOfTasks {
     [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDelegate and UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.listOfTasks.count;
+    return [self.viewModel numberOfTasksToPresent];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListOfTasksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
-    Task *task = self.listOfTasks[indexPath.row];
+    Task *task = [self.viewModel taskForRowAtIndex:indexPath.row];
     cell.taskTitleLabel.text = task.taskTitle;
     return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqual: @"detailTask"]) {
+    if([segue.identifier isEqualToString:@"detailTask"]){
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        DetailTaskViewController *detailTaskViewController = (DetailTaskViewController *)[[segue destinationViewController] topViewController];
-        [detailTaskViewController createViewModelForTask:_listOfTasks[indexPath.row]];
+        Task *task = [self.viewModel taskForRowAtIndex:indexPath.row];
+        DetailTaskViewController *detailTaskViewController = (DetailTaskViewController*)[[segue destinationViewController] topViewController];
+        [detailTaskViewController prepareViewModelWithTask:task];
+    }else if([segue.identifier isEqualToString:@"newTask"]){
+        EditTaskViewController *editTaskViewController = (EditTaskViewController*)[[segue destinationViewController] topViewController];
+        [editTaskViewController prepareViewModelWithNoTask];
     }
-}
-
-- (IBAction)unwindToListOfTasksTableViewController:(UIStoryboardSegue *)segue {
-    [_viewModel presentListOfTasks];
 }
 
 @end

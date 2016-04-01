@@ -11,36 +11,54 @@
 #import "Task.h"
 
 @interface TaskGatewayTests : XCTestCase
+@property TaskGatewayDouble *gateway;
 @end
 
 @implementation TaskGatewayTests
 
-TaskGatewayDouble *gateway;
-
 - (void)setUp {
     [super setUp];
-    gateway = [[TaskGatewayDouble alloc] init];
+    self.gateway = [[TaskGatewayDouble alloc] init];
 }
 
 - (void)testGatewayIsEmpty {
-    NSArray *tasks = [gateway tasks];
+    NSArray *tasks = [self.gateway tasks];
     XCTAssertEqual(tasks.count, 0);
 }
 
 - (void)testGatewayHasOneTasks {
     Task *task = [[Task alloc] initWithTitle:@"Test"];
-    [gateway addTask:task];
-    NSArray *tasks = [gateway tasks];
+    [self.gateway saveTask:task];
+    NSArray *tasks = [self.gateway tasks];
     XCTAssertEqual(tasks.count, 1);
 }
 
 - (void)testGatewayHasTwoTasks {
     Task *task1 = [[Task alloc] initWithTitle:@"Test1"];
-    [gateway addTask:task1];
+    [self.gateway saveTask:task1];
     Task *task2 = [[Task alloc] initWithTitle:@"Test2"];
-    [gateway addTask:task2];
-    NSArray *tasks = [gateway tasks];
+    [self.gateway saveTask:task2];
+    NSArray *tasks = [self.gateway tasks];
     XCTAssertEqual(tasks.count, 2);
+}
+
+- (void)testGatewayDoNotDuplicateObjects {
+    Task *task = [[Task alloc] initWithTitle:@"Test"];
+    [self.gateway saveTask:task];
+    [self.gateway saveTask:task];
+    NSArray *tasks = [self.gateway tasks];
+    XCTAssertEqual(tasks.count, 1);
+}
+
+- (void)testGatewayUpdatesExistingTaskInformation {
+    Task *task = [[Task alloc] initWithTitle:@"Test"];
+    [self.gateway saveTask:task];
+    task.taskTitle = @"TestModified";
+    [self.gateway saveTask:task];
+    NSArray *tasks = [self.gateway tasks];
+    XCTAssertEqual(tasks.count, 1);
+    Task *savedTask = tasks[0];
+    XCTAssertEqual(task.taskTitle, savedTask.taskTitle);
 }
 
 @end

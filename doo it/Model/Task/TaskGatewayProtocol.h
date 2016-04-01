@@ -12,6 +12,6 @@
 @protocol TaskGatewayProtocol <NSObject>
 
 - (NSArray*)tasks;
-- (void)addTask:(Task*)task;
+- (void)saveTask:(Task*)task;
 
 @end

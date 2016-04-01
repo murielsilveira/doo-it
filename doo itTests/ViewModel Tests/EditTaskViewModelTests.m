@@ -12,6 +12,7 @@
 
 @interface EditTaskViewModelTests : XCTestCase
 
+@property Task *taskForEditing;
 @property EditTaskViewModel *viewModel;
 @property TaskGatewayDouble *taskGateway;
 @property EditTaskPresenterSpy *presenterSpy;
@@ -22,33 +23,45 @@
 
 - (void)setUp {
     [super setUp];
-    _taskGateway = [[TaskGatewayDouble alloc] init];
-    _presenterSpy = [[EditTaskPresenterSpy alloc]init];
+    self.taskGateway = [[TaskGatewayDouble alloc] init];
+    self.presenterSpy = [[EditTaskPresenterSpy alloc]init];
+    self.taskForEditing = nil;
 }
 
-- (void)testViewModelPresentedEmptyTaskForEdition {
-    _viewModel = [[EditTaskViewModel alloc] initWithPresenter:_presenterSpy gateway:_taskGateway andTask:nil];
-    [_viewModel presentTaskForEditing];
-    XCTAssertTrue(_presenterSpy.presentEmptyTaskForEditionCalled);
+- (void)initViewModelHelper {
+    self.viewModel = [[EditTaskViewModel alloc] initWithPresenter:self.presenterSpy gateway:self.taskGateway andTask:self.taskForEditing];
 }
 
-- (void)testViewModelPresentedExistingTaskForEdition {
-    Task *task = [[Task alloc]initWithTitle:@"Task"];
-    _viewModel = [[EditTaskViewModel alloc] initWithPresenter:_presenterSpy gateway:_taskGateway andTask:task];
-    [_viewModel presentTaskForEditing];
-    XCTAssertTrue(_presenterSpy.presentTaskForEditionCalled);
-}
-
-- (void) testViewModelSavedNewTaskAndPresentedSuccessMessage {
-    Task *task = [[Task alloc]initWithTitle:@"Task"];
-    _viewModel = [[EditTaskViewModel alloc] initWithPresenter:_presenterSpy gateway:_taskGateway andTask:nil];
-    [_viewModel saveTask:task];
-    XCTAssertTrue(_presenterSpy.presentSuccesMessageForSavingTaskCalled);
-    XCTAssertEqual([[_taskGateway tasks] count], 1);
-}
-
+//- (void)testViewModelPresentedEmptyTaskForEdition {
+//    self.taskForEditing = nil;
+//    [self initViewModelHelper];
+//    [self.viewModel prepareTaskFormForEditing];
+//    XCTAssertTrue(self.presenterSpy.presentEmptyTaskForEditionCalled);
+//}
+//
+//- (void)testViewModelPresentedExistingTaskForEdition {
+//    self.taskForEditing = [[Task alloc]initWithTitle:@"Task"];
+//    [self initViewModelHelper];
+//    [self.viewModel prepareTaskFormForEditing];
+//    XCTAssertTrue(self.presenterSpy.presentTaskForEditionCalled);
+//}
+//
+//- (void) testViewModelSavedNewTaskAndPresentedSuccessMessage {
+//    [self initViewModelHelper];
+//    Task *newTask = [[Task alloc]initWithTitle:@"Task"];
+//    [self.viewModel saveTask];
+//    XCTAssertTrue(self.presenterSpy.presentSuccesMessageForSavingTaskCalled);
+//    XCTAssertEqual([[self.taskGateway tasks] count], 1);
+//}
+//
 //- (void) testViewModelSavedExistingTaskAndPresentedSuccessMessage {
-//    
+//    Task *task = [[Task alloc]initWithTitle:@"Task"];
+//    [self.taskGateway saveTask:task];
+//    self.taskForEditing = task;
+//    [self initViewModelHelper];
+//    [self.viewModel saveTask];
+//    XCTAssertTrue(self.presenterSpy.presentSuccesMessageForSavingTaskCalled);
+//    XCTAssertEqual([[self.taskGateway tasks] count], 1);
 //}
 //
 //- (void) testViewModelDidNotSaveNewTaskAndPresentedErrorMessage {

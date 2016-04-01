@@ -37,7 +37,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="taskTitleLabel" destination="iPU-1N-lPy" id="RX6-Uo-0FE"/>
-                                    <segue destination="HGe-Sl-vHa" kind="showDetail" identifier="detailTask" id="bYu-PM-qjm"/>
+                                    <segue destination="HGe-Sl-vHa" kind="showDetail" identifier="detailTask" id="Fv0-1Y-76Q"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -49,7 +49,7 @@
                     <navigationItem key="navigationItem" title="List" id="cGz-HS-Zw4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cft-BB-wKE">
                             <connections>
-                                <segue destination="L1f-Tq-gaQ" kind="presentation" identifier="" id="wRE-bH-tUH"/>
+                                <segue destination="L1f-Tq-gaQ" kind="presentation" identifier="newTask" id="5T9-ZJ-YfL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -88,7 +88,7 @@
                     <navigationItem key="navigationItem" title="Detail" id="0ll-KC-tm5">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="vRI-N8-4yr">
                             <connections>
-                                <segue destination="L1f-Tq-gaQ" kind="presentation" id="nZ5-Xe-LLn"/>
+                                <segue destination="L1f-Tq-gaQ" kind="presentation" identifier="editTask" id="hAq-Hw-Fig"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -113,22 +113,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fze-1c-ggZ">
-                                <rect key="frame" x="16" y="110" width="288" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="481075897.878941">
-                                    <!--2016-03-31 00:11:37 +0000-->
-                                </date>
-                            </datePicker>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vtv-nQ-ofk">
-                                <rect key="frame" x="16" y="334" width="288" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="WSK-IY-RRi"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2K-fw-F3M">
                                 <rect key="frame" x="16" y="72" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -139,12 +123,6 @@
                         <constraints>
                             <constraint firstItem="A2K-fw-F3M" firstAttribute="leading" secondItem="uqi-yw-k38" secondAttribute="leadingMargin" id="0Lm-tJ-bne"/>
                             <constraint firstAttribute="trailingMargin" secondItem="A2K-fw-F3M" secondAttribute="trailing" id="5G2-3Z-qxh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vtv-nQ-ofk" secondAttribute="trailing" id="BGb-rL-u4z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fze-1c-ggZ" secondAttribute="trailing" id="FPc-aR-rP0"/>
-                            <constraint firstItem="Fze-1c-ggZ" firstAttribute="top" secondItem="A2K-fw-F3M" secondAttribute="bottom" constant="8" id="LH4-4h-hg3"/>
-                            <constraint firstItem="Fze-1c-ggZ" firstAttribute="leading" secondItem="uqi-yw-k38" secondAttribute="leadingMargin" id="d1b-et-nzh"/>
-                            <constraint firstItem="vtv-nQ-ofk" firstAttribute="leading" secondItem="uqi-yw-k38" secondAttribute="leadingMargin" id="eIF-bH-d8s"/>
-                            <constraint firstItem="vtv-nQ-ofk" firstAttribute="top" secondItem="Fze-1c-ggZ" secondAttribute="bottom" constant="8" id="oSW-XR-qwA"/>
                             <constraint firstItem="A2K-fw-F3M" firstAttribute="top" secondItem="3jB-uS-HWQ" secondAttribute="bottom" constant="8" id="t0S-3N-pAh"/>
                         </constraints>
                     </view>
@@ -239,7 +217,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bYu-PM-qjm"/>
-        <segue reference="wRE-bH-tUH"/>
+        <segue reference="Fv0-1Y-76Q"/>
+        <segue reference="5T9-ZJ-YfL"/>
     </inferredMetricsTieBreakers>
 </document>

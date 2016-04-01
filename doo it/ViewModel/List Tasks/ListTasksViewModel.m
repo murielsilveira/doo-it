@@ -12,6 +12,7 @@
 
 @property id<ListTasksPresenterProtocol> presenter;
 @property id<TaskGatewayProtocol> taskGateway;
+@property NSArray *listOfTasks;
 
 @end
 
@@ -27,17 +28,20 @@
 }
 
 -(void) presentListOfTasks {
-    
-    if([self.taskGateway tasks].count == 0) {
+    self.listOfTasks = [self.taskGateway tasks];
+    if(self.listOfTasks.count == 0) {
         [self.presenter presentBlankState];
     }else{
-        [self.presenter presentListOfTasks:[self.taskGateway tasks]];
+        [self.presenter presentListOfTasks];
     }
 }
 
-- (Task*)taskForRow:(NSInteger)row inSection:(NSInteger)section; {
-    NSArray *tasksArray = [self.taskGateway tasks];
-    return tasksArray[row];
+- (NSInteger)numberOfTasksToPresent {
+    return self.listOfTasks.count;
+}
+
+- (Task*)taskForRowAtIndex:(NSInteger)index {
+    return self.listOfTasks[index];
 }
 
 @end

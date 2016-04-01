@@ -14,19 +14,18 @@
 {
     self = [super init];
     if (self) {
-        _presentBlankStateCalled = NO;
-        _presentListOfTasksCalled = NO;
+        self.presentBlankStateCalled = NO;
+        self.presentListOfTasksCalled = NO;
     }
     return self;
 }
 
-- (void)presentListOfTasks:(NSArray*)listOfTasks {
-    self.listOfTasks = listOfTasks;
-    _presentListOfTasksCalled = YES;
+- (void)presentListOfTasks {
+    self.presentListOfTasksCalled = YES;
 }
 
 - (void)presentBlankState {
-    _presentBlankStateCalled = YES;
+    self.presentBlankStateCalled = YES;
 }
 
 @end

@@ -14,28 +14,29 @@
 {
     self = [super init];
     if (self) {
-        _presentTaskForEditionCalled = NO;
-        _presentEmptyTaskForEditionCalled = NO;
-        _presentSuccesMessageForSavingTaskCalled = NO;
-        _presentErrorMessageForSavingTaskCalled = NO;
+        self.presentTaskForEditionCalled = NO;
+        self.presentEmptyTaskForEditionCalled = NO;
+        self.presentSuccesMessageForSavingTaskCalled = NO;
+        self.presentErrorMessageForSavingTaskCalled = NO;
     }
     return self;
 }
 
 - (void)presentEmptyTaskForEdition {
-    _presentEmptyTaskForEditionCalled = YES;
+    self.presentEmptyTaskForEditionCalled = YES;
 }
 
-- (void)presentTaskForEdition:(NSString*)taskTitle {
-    _presentTaskForEditionCalled = YES;
+- (void)presentEditionForTask {
+    self.presentTaskForEditionCalled = YES;
 }
 
--(void)presentSuccesMessageForSavingTask {
-    _presentSuccesMessageForSavingTaskCalled = YES;
+- (void)presentSuccesMessageForSavingTask {
+    self.presentSuccesMessageForSavingTaskCalled = YES;
 }
 
--(void)presentErrorMessageForSavingTask:(NSString*)message {
-    _presentErrorMessageForSavingTaskCalled = YES;
+- (void)presentErrorMessageForSavingTask:(NSString*)message {
+    self.presentErrorMessageForSavingTaskCalled = YES;
 }
+
 
 @end

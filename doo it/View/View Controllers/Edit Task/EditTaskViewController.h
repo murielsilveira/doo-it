@@ -11,6 +11,7 @@
 
 @interface EditTaskViewController : UIViewController <EditTaskPresenterProtocol>
 
-@property Task *task;
+- (void)prepareViewModelWithNoTask;
+- (void)prepareViewModelWithTask:(Task*)task;
 
 @end

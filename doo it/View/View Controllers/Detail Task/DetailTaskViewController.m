@@ -7,38 +7,38 @@
 //
 
 #import "DetailTaskViewController.h"
-#import "DetailTaskViewModel.h"
+#import "EditTaskViewController.h"
 
 @interface DetailTaskViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *taskTitleLabel;
 
-@property DetailTaskViewModel *viewModel;
-
 @end
 
 @implementation DetailTaskViewController
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self createViewModelForTask:nil];
-}
-
-- (void)createViewModelForTask:(Task*)task {
-    _viewModel = [[DetailTaskViewModel alloc] initWithPresenter:self andTask:task];
+- (void)prepareViewModelWithTask:(Task *)task {
+    self.viewModel = [[DetailTaskViewModel alloc] initWithPresenter:self andTask:task];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [_viewModel showDetailTask];
+    [self.viewModel showDetailTask];
 }
 
 - (void)presentBlankState {
-    _taskTitleLabel.text = @"";
+    self.taskTitleLabel.text = @"";
 }
 
-- (void)presentDetailsForTask:(Task *)task {
-    _taskTitleLabel.text = task.taskTitle;
+- (void)presentDetailsForTask {
+    self.taskTitleLabel.text = self.viewModel.task.taskTitle;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"editTask"]){
+        EditTaskViewController *editTaskViewController = (EditTaskViewController*)[[segue destinationViewController] topViewController];
+        [editTaskViewController prepareViewModelWithTask:self.viewModel.task];
+    }
 }
 
 @end

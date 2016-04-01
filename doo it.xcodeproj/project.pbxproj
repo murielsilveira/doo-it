@@ -212,8 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				BAB8A7B31CAACCF200337180 /* ListTasksViewModelTests.m */,
-				BAB8A7AC1CAACC8B00337180 /* EditTaskViewModelTests.m */,
 				BAB8A7C91CAC6C5200337180 /* DetailTaskViewModelTests.m */,
+				BAB8A7AC1CAACC8B00337180 /* EditTaskViewModelTests.m */,
 			);
 			name = "ViewModel Tests";
 			sourceTree = "<group>";
@@ -235,10 +235,10 @@
 				BAB8A7BE1CAC031800337180 /* TaskGatewayDouble.m */,
 				BAB8A7AE1CAACCDC00337180 /* ListTasksPresenterSpy.h */,
 				BAB8A7AF1CAACCDC00337180 /* ListTasksPresenterSpy.m */,
-				BAB8A7B71CAACE6300337180 /* EditTaskPresenterSpy.h */,
-				BAB8A7B81CAACE6300337180 /* EditTaskPresenterSpy.m */,
 				BAB8A7CC1CAD6ACB00337180 /* DetailTaskPresenterSpy.h */,
 				BAB8A7CD1CAD6ACB00337180 /* DetailTaskPresenterSpy.m */,
+				BAB8A7B71CAACE6300337180 /* EditTaskPresenterSpy.h */,
+				BAB8A7B81CAACE6300337180 /* EditTaskPresenterSpy.m */,
 			);
 			name = Doubles;
 			sourceTree = "<group>";
@@ -255,8 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				BAE43B831CA9E819004AE9CD /* List Tasks */,
-				BAE43B841CA9E820004AE9CD /* Edit Task */,
 				BAB8A7C51CAC6B2C00337180 /* DetailTask */,
+				BAE43B841CA9E820004AE9CD /* Edit Task */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";

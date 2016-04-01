@@ -10,7 +10,6 @@
 
 @interface DetailTaskViewModel ()
 
-@property Task *task;
 @property id<DetailTaskPresenterProtocol> presenter;
 
 @end
@@ -28,9 +27,9 @@
 
 - (void)showDetailTask {
     if(self.task==nil) {
-        [_presenter presentBlankState];
+        [self.presenter presentBlankState];
     }else{
-        [_presenter presentDetailsForTask:self.task];
+        [self.presenter presentDetailsForTask];
     }
 }
 

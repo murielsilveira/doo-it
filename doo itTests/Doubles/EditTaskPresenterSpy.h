@@ -11,9 +11,9 @@
 
 @interface EditTaskPresenterSpy : NSObject <EditTaskPresenterProtocol>
 
-@property (nonatomic, readonly) BOOL presentEmptyTaskForEditionCalled;
-@property (nonatomic, readonly) BOOL presentTaskForEditionCalled;
-@property (nonatomic, readonly) BOOL presentSuccesMessageForSavingTaskCalled;
-@property (nonatomic, readonly) BOOL presentErrorMessageForSavingTaskCalled;
+@property BOOL presentEmptyTaskForEditionCalled;
+@property BOOL presentTaskForEditionCalled;
+@property BOOL presentSuccesMessageForSavingTaskCalled;
+@property BOOL presentErrorMessageForSavingTaskCalled;
 
 @end

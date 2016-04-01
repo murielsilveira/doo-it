@@ -12,6 +12,7 @@
 
 @interface DetailTaskViewModel : NSObject
 
+@property Task *task;
 - (instancetype)initWithPresenter:(id<DetailTaskPresenterProtocol>)presenter andTask:(Task*)task;
 - (void)showDetailTask;
 

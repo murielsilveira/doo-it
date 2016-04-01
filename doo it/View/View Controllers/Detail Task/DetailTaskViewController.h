@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailTaskPresenterProtocol.h"
+#import "DetailTaskViewModel.h"
 
 @interface DetailTaskViewController : UIViewController <DetailTaskPresenterProtocol>
 
-- (void)createViewModelForTask:(Task*)task;
+@property DetailTaskViewModel *viewModel;
+
+- (void)prepareViewModelWithTask:(Task*)task;
 
 @end

@@ -10,7 +10,7 @@
 
 @interface TaskGatewayDouble ()
 
-@property (nonatomic) NSMutableArray *tasks;
+@property (strong, nonatomic) NSMutableArray *listOftasks;
 
 @end
 
@@ -20,17 +20,21 @@
 {
     self = [super init];
     if (self) {
-        _tasks = [[NSMutableArray alloc] init];
+        self.listOftasks = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
-- (NSArray *)tasks {
-    return _tasks;
+- (NSMutableArray *)tasks {
+    return self.listOftasks;
 }
 
-- (void)addTask:(Task*)task {
-    [_tasks addObject:task];
+- (void)saveTask:(Task*)task {
+    if([self.listOftasks containsObject:task]){
+        //Same reference
+    }else{
+        [self.listOftasks addObject:task];
+    }
 }
 
 @end

@@ -19,22 +19,25 @@
 
 @implementation EditTaskViewController
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    _viewModel = [[EditTaskViewModel alloc]initWithPresenter:self gateway:[TaskGatewayFactory create] andTask:_task];
+- (void)prepareViewModelWithNoTask {
+    self.viewModel = [[EditTaskViewModel alloc]initWithPresenter:self gateway:[TaskGatewayFactory create] andTask:nil];
 }
 
-- (void)viewDidLoad{
-    [super viewDidLoad];
-    [_viewModel presentTaskForEditing];
+- (void)prepareViewModelWithTask:(Task*)task {
+    self.viewModel = [[EditTaskViewModel alloc]initWithPresenter:self gateway:[TaskGatewayFactory create] andTask:task];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.viewModel prepareTaskFormForEditing];
 }
 
 - (void)presentEmptyTaskForEdition {
-    _taskTitleTextField.text = @"";
+    self.taskTitleTextField.text = @"";
 }
 
-- (void)presentTaskForEdition:(NSString*)taskTitle {
-    _taskTitleTextField.text = taskTitle;
+- (void)presentEditionForTask {
+    self.taskTitleTextField.text = self.viewModel.task.taskTitle;
 }
 
 - (void)presentSuccesMessageForSavingTask {
@@ -46,8 +49,9 @@
 }
 
 - (void)saveTask {
-    Task *task = [[Task alloc]initWithTitle:_taskTitleTextField.text];
-    [_viewModel saveTask:task];
+    Task *task = self.viewModel.task;
+    task.taskTitle = self.taskTitleTextField.text;
+    [self.viewModel saveTask];
 }
 
 - (IBAction)cancelEditTask:(id)sender {

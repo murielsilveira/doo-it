@@ -12,7 +12,6 @@
 
 @property id<EditTaskPresenterProtocol> presenter;
 @property id<TaskGatewayProtocol> taskGateway;
-@property Task *task;
 
 @end
 
@@ -28,25 +27,26 @@
     return self;
 }
 
-- (void)presentTaskForEditing {
-    if(_task==nil) {
-        [_presenter presentEmptyTaskForEdition];
+- (void)prepareTaskFormForEditing {
+    if(self.task==nil) {
+        self.task = [[Task alloc]initWithTitle:@""];
+        [self.presenter presentEmptyTaskForEdition];
     }else{
-        [_presenter presentTaskForEdition:_task.taskTitle];
+        [self.presenter presentEditionForTask];
     }
 }
 
-- (void)saveTask:(Task*)task {
-    if([self validateTaskForSaving:task]) {
-        [_taskGateway addTask:task];
-        [_presenter presentSuccesMessageForSavingTask];
+- (void)saveTask {
+    if([self validateTaskForSaving]) {
+        [self.taskGateway saveTask:self.task];
+        [self.presenter presentSuccesMessageForSavingTask];
     }else{
-        [_presenter presentErrorMessageForSavingTask:@"Error saving task!"];
+        [self.presenter presentErrorMessageForSavingTask:@"Error saving task!"];
     }
 }
 
-- (bool)validateTaskForSaving:(Task*)task {
-    if([task.taskTitle isEqual:@""])
+- (bool)validateTaskForSaving {
+    if([self.task.taskTitle isEqual:@""])
         return false;
     return true;
 }

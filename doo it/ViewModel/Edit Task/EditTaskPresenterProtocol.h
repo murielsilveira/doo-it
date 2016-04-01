@@ -11,10 +11,10 @@
 
 @protocol EditTaskPresenterProtocol <NSObject>
 
-- (void)presentTaskForEdition:(NSString*)taskTitle;
+- (void)presentEditionForTask;
 - (void)presentEmptyTaskForEdition;
 
--(void)presentSuccesMessageForSavingTask;
--(void)presentErrorMessageForSavingTask:(NSString*)message;
+- (void)presentSuccesMessageForSavingTask;
+- (void)presentErrorMessageForSavingTask:(NSString*)message;
 
 @end

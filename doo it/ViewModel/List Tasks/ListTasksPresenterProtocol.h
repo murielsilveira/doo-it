@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DetailTaskViewModel.h"
 
 @protocol ListTasksPresenterProtocol <NSObject>
 
-- (void)presentListOfTasks:(NSArray*)listOfTasks;
+- (void)presentListOfTasks;
 - (void)presentBlankState;
 
 @end

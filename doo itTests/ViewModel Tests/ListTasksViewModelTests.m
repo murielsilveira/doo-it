@@ -24,55 +24,55 @@
 
 - (void)setUp {
     [super setUp];
-    _presenterSpy = [[ListTasksPresenterSpy alloc] init];
-    _taskGateway = [[TaskGatewayDouble alloc] init];
-    _viewModel = [[ListTasksViewModel alloc] initWithPresenter:_presenterSpy andGateway:_taskGateway];
+    self.presenterSpy = [[ListTasksPresenterSpy alloc] init];
+    self.taskGateway = [[TaskGatewayDouble alloc] init];
+    self.viewModel = [[ListTasksViewModel alloc] initWithPresenter:self.presenterSpy andGateway:self.taskGateway];
 }
 
 - (void)addOneTaskToGatewayHelper {
     Task *task1 = [[Task alloc] initWithTitle:@"Task"];
-    [_taskGateway addTask:task1];
+    [_taskGateway saveTask:task1];
 }
 
 - (void)addTwoTasksToGatewayHelper {
     Task *task1 = [[Task alloc] initWithTitle:@"Task1"];
-    [_taskGateway addTask:task1];
+    [_taskGateway saveTask:task1];
     Task *task2 = [[Task alloc] initWithTitle:@"Task2"];
-    [_taskGateway addTask:task2];
+    [_taskGateway saveTask:task2];
 }
 
 - (void)testViewModelPresentedBlankState {
-    [_viewModel presentListOfTasks];
+    [self.viewModel presentListOfTasks];
     XCTAssertTrue(_presenterSpy.presentBlankStateCalled);
 }
 
 - (void)testViewModelPresentedOneTask {
     [self addOneTaskToGatewayHelper];
-    [_viewModel presentListOfTasks];
-    XCTAssertTrue(_presenterSpy.presentListOfTasksCalled);
-    XCTAssertEqual(_presenterSpy.listOfTasks.count, 1);
+    [self.viewModel presentListOfTasks];
+    XCTAssertTrue(self.presenterSpy.presentListOfTasksCalled);
+    XCTAssertEqual([self.viewModel numberOfTasksToPresent], 1);
 }
 
 - (void)testViewModelPresentedTwoTasks {
     [self addTwoTasksToGatewayHelper];
-    [_viewModel presentListOfTasks];
-    XCTAssertTrue(_presenterSpy.presentListOfTasksCalled);
-    XCTAssertEqual(_presenterSpy.listOfTasks.count, 2);
+    [self.viewModel presentListOfTasks];
+    XCTAssertTrue(self.presenterSpy.presentListOfTasksCalled);
+    XCTAssertEqual([self.viewModel numberOfTasksToPresent], 2);
 }
 
 - (void)testViewModelReturnsFirstTaskForPositionZero {
     [self addTwoTasksToGatewayHelper];
-    [_viewModel presentListOfTasks];
-    Task *task = _presenterSpy.listOfTasks[0];
-    XCTAssertTrue(_presenterSpy.presentListOfTasksCalled);
+    [self.viewModel presentListOfTasks];
+    Task *task = [self.viewModel taskForRowAtIndex:0];
+    XCTAssertTrue(self.presenterSpy.presentListOfTasksCalled);
     XCTAssertEqual(task.taskTitle, @"Task1");
 }
 
 - (void)testViewModelReturnsSecondTaskForPositionOne {
     [self addTwoTasksToGatewayHelper];
-    [_viewModel presentListOfTasks];
-    Task *task = _presenterSpy.listOfTasks[1];
-    XCTAssertTrue(_presenterSpy.presentListOfTasksCalled);
+    [self.viewModel presentListOfTasks];
+    Task *task = [self.viewModel taskForRowAtIndex:1];
+    XCTAssertTrue(self.presenterSpy.presentListOfTasksCalled);
     XCTAssertEqual(task.taskTitle, @"Task2");
 }
 
