@@ -7,6 +7,8 @@ This project's mission is to create and publish an iOS app for managing tasks. S
 #### Design and Architecture
 This project is based on MVVM design pattern where the Model and ViewModel layers are created using TDD (Test Driven Development). The View layer is tested with UI tests.
 
+##### ReactiveCocoa
+
 #### Objective-C
 Swift is awesome, but I believe Objective-C projects still need care. Besides, Objective-C reminds me C, my first programming language, which I love 💙.
 
@@ -35,7 +37,7 @@ Swift is awesome, but I believe Objective-C projects still need care. Besides, O
 - [x] TDD for Gateway and ViewModels implementation
 - [ ] UI Tests
 - [ ] Continuous Integration
-- [ ] Test Doubles
+- [X] No test doubles libraries
 
 ---
 
@@ -48,9 +50,7 @@ Swift is awesome, but I believe Objective-C projects still need care. Besides, O
 - [ ] Account
 
 #### Persistence
-- [ ] Core Data
-- [ ] SQLite
-
+- Core Data
 ---
 
 ### 💎 UI and UX

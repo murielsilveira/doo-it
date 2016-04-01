@@ -37,7 +37,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="taskTitleLabel" destination="iPU-1N-lPy" id="RX6-Uo-0FE"/>
-                                    <segue destination="HGe-Sl-vHa" kind="showDetail" identifier="Task Selected" id="bYu-PM-qjm"/>
+                                    <segue destination="HGe-Sl-vHa" kind="showDetail" identifier="detailTask" id="bYu-PM-qjm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -240,6 +240,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="bYu-PM-qjm"/>
-        <segue reference="nZ5-Xe-LLn"/>
+        <segue reference="wRE-bH-tUH"/>
     </inferredMetricsTieBreakers>
 </document>

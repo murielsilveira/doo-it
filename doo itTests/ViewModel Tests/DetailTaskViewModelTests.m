@@ -26,14 +26,14 @@
 
 - (void)testViewModelPresentedBlankState {
     _viewModel = [[DetailTaskViewModel alloc] initWithPresenter:_presenterSpy andTask:nil];
-    [_viewModel detailTask];
+    [_viewModel showDetailTask];
     XCTAssertTrue(_presenterSpy.presentBlankStateCalled);
 }
 
 - (void)testViewModelPresentedTaskDetails {
     Task *task = [[Task alloc] initWithTitle:@"Task"];
     _viewModel = [[DetailTaskViewModel alloc] initWithPresenter:_presenterSpy andTask:task];
-    [_viewModel detailTask];
+    [_viewModel showDetailTask];
     XCTAssertTrue(_presenterSpy.presentTaskCalled);
 }
 

@@ -17,9 +17,7 @@
 
 @implementation ListTasksViewModel
 
-
-- (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)presenter andGateway:(id<TaskGatewayProtocol>)taskGateway
-{
+- (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)presenter andGateway:(id<TaskGatewayProtocol>)taskGateway {
     self = [super init];
     if (self) {
         self.presenter = presenter;
@@ -28,17 +26,13 @@
     return self;
 }
 
--(void) presentTasks {
+-(void) presentListOfTasks {
     
     if([self.taskGateway tasks].count == 0) {
         [self.presenter presentBlankState];
     }else{
-        [self.presenter presentListOfTasks];
+        [self.presenter presentListOfTasks:[self.taskGateway tasks]];
     }
-}
-
-- (int)numberOfTasksToPresent{
-    return [self.taskGateway tasks].count;
 }
 
 - (Task*)taskForRow:(NSInteger)row inSection:(NSInteger)section; {

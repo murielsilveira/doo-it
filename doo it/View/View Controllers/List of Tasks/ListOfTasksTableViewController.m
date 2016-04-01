@@ -17,6 +17,7 @@
 @interface ListOfTasksTableViewController ()
 
 @property ListTasksViewModel *viewModel;
+@property NSArray *listOfTasks;
 
 @end
 
@@ -35,7 +36,7 @@ NSString *const CELL_IDENTIFIER = @"Task Cell";
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [_viewModel presentTasks];
+    [_viewModel presentListOfTasks];
 }
 
 #pragma mark - ListTasksPresenterProtocol
@@ -44,34 +45,34 @@ NSString *const CELL_IDENTIFIER = @"Task Cell";
     
 }
 
-- (void) presentListOfTasks {
+- (void) presentListOfTasks:(NSArray*)listOfTasks {
+    self.listOfTasks = listOfTasks;
     [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDelegate and UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_viewModel numberOfTasksToPresent];
+    return self.listOfTasks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListOfTasksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
-    Task *task = [_viewModel taskForRow:indexPath.row inSection:indexPath.section];
+    Task *task = self.listOfTasks[indexPath.row];
     cell.taskTitleLabel.text = task.taskTitle;
     return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier  isEqual: @"Task Selected"]) {
+    if([segue.identifier isEqual: @"detailTask"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Task *task = [_viewModel taskForRow:indexPath.row inSection:indexPath.section];
         DetailTaskViewController *detailTaskViewController = (DetailTaskViewController *)[[segue destinationViewController] topViewController];
-        detailTaskViewController.titleText = task.taskTitle;
+        [detailTaskViewController createViewModelForTask:_listOfTasks[indexPath.row]];
     }
 }
 
 - (IBAction)unwindToListOfTasksTableViewController:(UIStoryboardSegue *)segue {
-    [_viewModel presentTasks];
+    [_viewModel presentListOfTasks];
 }
 
 @end

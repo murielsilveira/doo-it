@@ -10,7 +10,7 @@
 
 @protocol ListTasksPresenterProtocol <NSObject>
 
-- (void)presentListOfTasks;
+- (void)presentListOfTasks:(NSArray*)listOfTasks;
 - (void)presentBlankState;
 
 @end

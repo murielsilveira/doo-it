@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailTaskPresenterProtocol.h"
 
-@interface DetailTaskViewController : UIViewController
+@interface DetailTaskViewController : UIViewController <DetailTaskPresenterProtocol>
 
-@property (weak, nonatomic) IBOutlet UILabel *taskTitleLabel;
-@property (strong, nonatomic) NSString *titleText;
+- (void)createViewModelForTask:(Task*)task;
 
 @end

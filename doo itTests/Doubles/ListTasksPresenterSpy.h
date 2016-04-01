@@ -14,4 +14,6 @@
 @property (nonatomic, readonly) BOOL presentListOfTasksCalled;
 @property (nonatomic, readonly) BOOL presentBlankStateCalled;
 
+@property NSArray *listOfTasks;
+
 @end

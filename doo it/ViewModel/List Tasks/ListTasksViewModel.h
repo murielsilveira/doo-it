@@ -9,12 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "ListTasksPresenterProtocol.h"
 #import "TaskGatewayProtocol.h"
+#import "DetailTaskViewModel.h"
 
 @interface ListTasksViewModel : NSObject
 
 - (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)presenter andGateway:(id<TaskGatewayProtocol>)taskGateway;
-- (void)presentTasks;
-- (int)numberOfTasksToPresent;
-- (Task*)taskForRow:(NSInteger)row inSection:(NSInteger)section;
+- (void)presentListOfTasks;
 
 @end

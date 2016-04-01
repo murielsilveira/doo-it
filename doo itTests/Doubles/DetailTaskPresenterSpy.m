@@ -24,7 +24,7 @@
     _presentBlankStateCalled = YES;
 }
 
-- (void)presentTask:(Task*)task {
+- (void)presentDetailsForTask:(Task*)task {
     _presentTaskCalled = YES;
 }
 

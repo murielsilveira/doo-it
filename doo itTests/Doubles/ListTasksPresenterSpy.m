@@ -20,7 +20,8 @@
     return self;
 }
 
-- (void)presentListOfTasks {
+- (void)presentListOfTasks:(NSArray*)listOfTasks {
+    self.listOfTasks = listOfTasks;
     _presentListOfTasksCalled = YES;
 }
 

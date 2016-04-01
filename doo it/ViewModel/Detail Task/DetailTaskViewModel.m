@@ -26,11 +26,11 @@
     return self;
 }
 
-- (void)detailTask {
+- (void)showDetailTask {
     if(self.task==nil) {
         [_presenter presentBlankState];
     }else{
-        [_presenter presentTask:self.task];
+        [_presenter presentDetailsForTask:self.task];
     }
 }
 
