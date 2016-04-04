@@ -10,4 +10,16 @@
 
 @implementation ListOfTasksTableViewCell
 
+-(void)awakeFromNib {
+    [super awakeFromNib];
+    [self setLayoutMargins:UIEdgeInsetsZero];
+}
+
+-(void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    if(selected)
+        self.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    else
+        self.backgroundColor = [UIColor whiteColor];
+}
+
 @end

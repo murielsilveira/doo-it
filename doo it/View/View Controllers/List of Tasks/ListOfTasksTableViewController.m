@@ -7,9 +7,10 @@
 //
 
 #import "ListOfTasksTableViewController.h"
-#import "DetailTaskViewController.h"
+#import "DetailTaskTableViewController.h"
 #import "EditTaskViewController.h"
 #import "ListOfTasksTableViewCell.h"
+#import "Colors.h"
 
 #import "TaskGatewayFactory.h"
 #import "ListTasksViewModel.h"
@@ -17,12 +18,14 @@
 @interface ListOfTasksTableViewController ()
 
 @property ListTasksViewModel *viewModel;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
 @implementation ListOfTasksTableViewController
 
 NSString *const CELL_IDENTIFIER = @"Task Cell";
+NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -31,6 +34,13 @@ NSString *const CELL_IDENTIFIER = @"Task Cell";
 }
 
 #pragma mark - View Controller Lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.searchBar.layer.borderWidth = 1;
+    self.searchBar.layer.borderColor = [[Colors grayBlueColor] CGColor];
+//    self.view.backgroundColor = [Colors grayBlueColor];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -64,12 +74,19 @@ NSString *const CELL_IDENTIFIER = @"Task Cell";
     if([segue.identifier isEqualToString:@"detailTask"]){
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Task *task = [self.viewModel taskForRowAtIndex:indexPath.row];
-        DetailTaskViewController *detailTaskViewController = (DetailTaskViewController*)[[segue destinationViewController] topViewController];
+        DetailTaskTableViewController *detailTaskViewController = (DetailTaskTableViewController*)[[segue destinationViewController] topViewController];
         [detailTaskViewController prepareViewModelWithTask:task];
     }else if([segue.identifier isEqualToString:@"newTask"]){
         EditTaskViewController *editTaskViewController = (EditTaskViewController*)[[segue destinationViewController] topViewController];
         [editTaskViewController prepareViewModelWithNoTask];
     }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SECTION_IDENTIFIER];
+    cell.layer.borderWidth = 1;
+    cell.layer.borderColor = [[UIColor groupTableViewBackgroundColor] CGColor];
+    return cell;
 }
 
 @end

@@ -23,13 +23,13 @@
 //    [super setUp];
 //    self.presenterSpy = [[DetailTaskPresenterSpy alloc] init];
 //}
-//
+
 //- (void)testViewModelPresentedBlankState {
 //    self.viewModel = [[DetailTaskViewModel alloc] initWithPresenter:self.presenterSpy andTask:nil];
 //    [self.viewModel showDetailTask];
 //    XCTAssertTrue(self.presenterSpy.presentBlankStateCalled);
 //}
-//
+
 //- (void)testViewModelPresentedTaskDetails {
 //    Task *task = [[Task alloc] initWithTitle:@"Task"];
 //    self.viewModel = [[DetailTaskViewModel alloc] initWithPresenter:self.presenterSpy andTask:task];

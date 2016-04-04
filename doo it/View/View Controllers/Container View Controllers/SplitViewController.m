@@ -7,6 +7,7 @@
 //
 
 #import "SplitViewController.h"
+#import "Colors.h"
 
 @interface SplitViewController ()
 
@@ -16,6 +17,12 @@
 
 -(void)viewDidLoad {
     self.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
+    self.delegate = self;
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+}
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
+    return YES;
 }
 
 @end

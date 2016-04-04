@@ -16,5 +16,6 @@
 @property NSString *taskDescription;
 @property NSDate *taskTime;
 @property BOOL deleted;
+@property BOOL done;
 
 @end

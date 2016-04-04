@@ -6,16 +6,16 @@
 //  Copyright © 2016 Ricardo Gehrke Filho. All rights reserved.
 //
 
-#import "DetailTaskViewController.h"
+#import "DetailTaskTableViewController.h"
 #import "EditTaskViewController.h"
 
-@interface DetailTaskViewController ()
+@interface DetailTaskTableViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *taskTitleLabel;
 
 @end
 
-@implementation DetailTaskViewController
+@implementation DetailTaskTableViewController
 
 - (void)prepareViewModelWithTask:(Task *)task {
     self.viewModel = [[DetailTaskViewModel alloc] initWithPresenter:self andTask:task];
@@ -31,6 +31,7 @@
 }
 
 - (void)presentDetailsForTask {
+//    self.title = self.viewModel.task.taskTitle;
     self.taskTitleLabel.text = self.viewModel.task.taskTitle;
 }
 

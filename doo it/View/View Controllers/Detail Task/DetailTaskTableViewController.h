@@ -10,7 +10,7 @@
 #import "DetailTaskPresenterProtocol.h"
 #import "DetailTaskViewModel.h"
 
-@interface DetailTaskViewController : UIViewController <DetailTaskPresenterProtocol>
+@interface DetailTaskTableViewController : UITableViewController <DetailTaskPresenterProtocol>
 
 @property DetailTaskViewModel *viewModel;
 
