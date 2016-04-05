@@ -7,11 +7,13 @@
 //
 
 #import "DetailTaskTableViewController.h"
-#import "ColorView.h"
 #import "Colors.h"
 #import "UIColor+Tools.h"
 
 @interface DetailTaskTableViewController ()
+
+@property DetailTaskViewModel *detailTaskViewModel;
+@property EditTaskViewModel *editTaskViewModel;
 
 @property (weak, nonatomic) IBOutlet UITextView *taskTitleTextView;
 @property (weak, nonatomic) IBOutlet UILabel *taskDescriptionLabel;
@@ -22,7 +24,7 @@
 @implementation DetailTaskTableViewController
 
 - (void)prepareViewModelWithTask:(Task *)task {
-    self.viewModel = [[DetailTaskViewModel alloc] initWithPresenter:self andTask:task];
+    self.detailTaskViewModel = [[DetailTaskViewModel alloc] initWithPresenter:self andTask:task];
 }
 
 - (void)viewDidLoad {
@@ -32,7 +34,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.viewModel showDetailTask];
+    [self.detailTaskViewModel showDetailTask];
 }
 
 - (void)presentBlankState {
@@ -40,10 +42,10 @@
 }
 
 - (void)presentDetailsForTask {
-    self.taskTitleTextView.textColor = [UIColor colorWithHexString:self.viewModel.task.color];
-    self.taskDescriptionLabel.textColor = [UIColor colorWithHexString:self.viewModel.task.color];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHexString:self.viewModel.task.color];
-    self.taskTitleTextView.text = self.viewModel.task.taskTitle;
+    self.taskTitleTextView.textColor = [UIColor colorWithHexString:self.detailTaskViewModel.task.color];
+    self.taskDescriptionLabel.textColor = [UIColor colorWithHexString:self.detailTaskViewModel.task.color];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHexString:self.detailTaskViewModel.task.color];
+    self.taskTitleTextView.text = self.detailTaskViewModel.task.taskTitle;
 }
 
 - (IBAction)editTapped:(id)sender {

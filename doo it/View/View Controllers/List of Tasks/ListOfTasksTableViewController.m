@@ -77,11 +77,4 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
     }
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SECTION_IDENTIFIER];
-    cell.layer.borderWidth = 1;
-    cell.layer.borderColor = [[UIColor groupTableViewBackgroundColor] CGColor];
-    return cell;
-}
-
 @end

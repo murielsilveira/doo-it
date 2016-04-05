@@ -71,27 +71,6 @@
                                     <segue destination="HGe-Sl-vHa" kind="showDetail" identifier="detailTask" id="lS5-lT-l05"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Task Cell Section" rowHeight="30" id="vMA-dR-xHf">
-                                <rect key="frame" x="0.0" y="128" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vMA-dR-xHf" id="naE-su-kdW">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hm-pL-3JP">
-                                            <rect key="frame" x="139" y="6" width="42" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstItem="7hm-pL-3JP" firstAttribute="centerX" secondItem="naE-su-kdW" secondAttribute="centerX" id="Fx6-Jm-BcL"/>
-                                        <constraint firstItem="7hm-pL-3JP" firstAttribute="centerY" secondItem="naE-su-kdW" secondAttribute="centerY" id="e9K-x8-Zw4"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="j6U-YY-rzg" id="WPk-NK-7c6"/>
