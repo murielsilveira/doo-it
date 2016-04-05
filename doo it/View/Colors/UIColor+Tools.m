@@ -42,8 +42,8 @@
 					alpha:((colorValueA)&0xFF)/255.0];
 }
 
-+ (NSString *)hexStringFromColor:(UIColor *)color {
-    const CGFloat *components = CGColorGetComponents(color.CGColor);
+- (NSString *)hexStringFromColor {
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
     
     CGFloat r = components[0];
     CGFloat g = components[1];
@@ -53,6 +53,16 @@
             lroundf(r * 255),
             lroundf(g * 255),
             lroundf(b * 255)];
+}
+
+- (UIColor *)brighterColorWithAmount:(CGFloat)amount {
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
+    
+    CGFloat r = components[0] + amount;
+    CGFloat g = components[1] + amount;
+    CGFloat b = components[2] + amount;
+    
+    return [UIColor colorWithRed:r  green:g blue:b alpha:1];
 }
 
 @end

@@ -29,7 +29,7 @@
     return self.listOftasks;
 }
 
-- (void)saveTask:(Task*)task {
+- (void)saveTask:(Markdown*)task {
     if([self.listOftasks containsObject:task]){
         //Same reference
     }else{

@@ -11,13 +11,13 @@
 @interface EditTaskViewModel ()
 
 @property id<EditTaskPresenterProtocol> presenter;
-@property id<TaskGatewayProtocol> taskGateway;
+@property id<MarkdownGatewayProtocol> taskGateway;
 
 @end
 
 @implementation EditTaskViewModel
 
-- (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)presenter gateway:(id<TaskGatewayProtocol>)taskGateway andTask:(Task *)task {
+- (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)presenter gateway:(id<MarkdownGatewayProtocol>)taskGateway andTask:(Markdown *)task {
     self = [super init];
     if (self) {
         self.presenter = presenter;
@@ -29,7 +29,7 @@
 
 - (void)prepareTaskFormForEditing {
     if(self.task==nil) {
-        self.task = [[Task alloc]initWithTitle:@""];
+        self.task = [[Markdown alloc]init];
         [self.presenter presentEmptyTaskForEdition];
     }else{
         [self.presenter presentEditionForTask];
@@ -46,7 +46,7 @@
 }
 
 - (bool)validateTaskForSaving {
-    if([self.task.taskTitle isEqual:@""])
+    if([self.task.markdownString isEqual:@""])
         return false;
     return true;
 }

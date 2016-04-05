@@ -10,29 +10,31 @@
 		BA43D2951CB0344B00905AC4 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA43D2941CB0344B00905AC4 /* BaseNavigationController.m */; };
 		BA43D2981CB0348800905AC4 /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA43D2971CB0348800905AC4 /* SplitViewController.m */; };
 		BA5047BB1CAA9EE900B9FC5E /* ListTasksViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC6F4D51CAA050F005401B6 /* ListTasksViewModel.m */; };
-		BA5449601CA8CD6D00DDFBD5 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BA54495E1CA8CD6D00DDFBD5 /* Task.m */; };
 		BA5449631CA8CDA200DDFBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5449611CA8CDA200DDFBD5 /* LaunchScreen.storyboard */; };
 		BA5449641CA8CDA200DDFBD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5449621CA8CDA200DDFBD5 /* Main.storyboard */; };
 		BA5449661CA8CDC600DDFBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5449651CA8CDC600DDFBD5 /* Assets.xcassets */; };
 		BA66B30D1CB2AE7D007DFDDE /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66B30A1CB2AE7D007DFDDE /* Colors.m */; };
 		BA66B30E1CB2AE7D007DFDDE /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66B30C1CB2AE7D007DFDDE /* UIColor+Tools.m */; };
 		BA66B3121CB2B79A007DFDDE /* ColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66B3111CB2B79A007DFDDE /* ColorView.m */; };
+		BA75A5E71CB53707001DC8CF /* Markdown.m in Sources */ = {isa = PBXBuildFile; fileRef = BA75A5E31CB53707001DC8CF /* Markdown.m */; };
+		BA75A5EF1CB5378A001DC8CF /* MarkdownGatewayFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA75A5ED1CB5378A001DC8CF /* MarkdownGatewayFactory.m */; };
+		BA79730F1CB40F1F0054807A /* MarkdownTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7973091CB40F1F0054807A /* MarkdownTokenizer.m */; };
+		BA7973101CB40F1F0054807A /* MarkdownTokens.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79730B1CB40F1F0054807A /* MarkdownTokens.m */; };
+		BA7973111CB40F1F0054807A /* NSAttributedStringMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79730E1CB40F1F0054807A /* NSAttributedStringMarkdownParser.m */; };
+		BA7973151CB411310054807A /* fmemopen.c in Sources */ = {isa = PBXBuildFile; fileRef = BA7973121CB411310054807A /* fmemopen.c */; };
 		BAB8A7AA1CAABA8E00337180 /* EditTaskViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7A91CAABA8E00337180 /* EditTaskViewModel.m */; };
 		BAB8A7AD1CAACC8B00337180 /* EditTaskViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7AC1CAACC8B00337180 /* EditTaskViewModelTests.m */; };
 		BAB8A7B51CAACD5900337180 /* ListTasksViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7B31CAACCF200337180 /* ListTasksViewModelTests.m */; };
 		BAB8A7B61CAACD6300337180 /* TaskGatewayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7B11CAACCE700337180 /* TaskGatewayTests.m */; };
 		BAB8A7BB1CAC011200337180 /* ListTasksPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7AF1CAACCDC00337180 /* ListTasksPresenterSpy.m */; };
 		BAB8A7BC1CAC011500337180 /* EditTaskPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7B81CAACE6300337180 /* EditTaskPresenterSpy.m */; };
-		BAB8A7C21CAC035900337180 /* TaskGatewayFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7C11CAC035900337180 /* TaskGatewayFactory.m */; };
 		BAB8A7C41CAC0A2700337180 /* TaskGatewayDouble.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7BE1CAC031800337180 /* TaskGatewayDouble.m */; };
 		BAB8A7C81CAC6B5B00337180 /* DetailTaskViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7C71CAC6B5B00337180 /* DetailTaskViewModel.m */; };
 		BAB8A7CA1CAC6C5200337180 /* DetailTaskViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7C91CAC6C5200337180 /* DetailTaskViewModelTests.m */; };
 		BAB8A7CE1CAD6ACB00337180 /* DetailTaskPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7CD1CAD6ACB00337180 /* DetailTaskPresenterSpy.m */; };
 		BAE43B6E1CA9E755004AE9CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B6B1CA9E755004AE9CD /* AppDelegate.m */; };
-		BAE43B6F1CA9E755004AE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAE43B6C1CA9E755004AE9CD /* Info.plist */; };
 		BAE43B701CA9E755004AE9CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B6D1CA9E755004AE9CD /* main.m */; };
-		BAE43B7E1CA9E7FA004AE9CD /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B7D1CA9E7FA004AE9CD /* EditTaskViewController.m */; };
-		BAE43B821CA9E810004AE9CD /* DetailTaskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B811CA9E810004AE9CD /* DetailTaskTableViewController.m */; };
+		BAE43B821CA9E810004AE9CD /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B811CA9E810004AE9CD /* TaskViewController.m */; };
 		BAE43B8A1CA9E88E004AE9CD /* ListOfTasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B891CA9E88E004AE9CD /* ListOfTasksTableViewCell.m */; };
 		BAE43B8D1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B8C1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -55,9 +57,6 @@
 		BA48897D1CA5CBEB00271373 /* doo it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "doo it.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4889961CA5CBEB00271373 /* doo itTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "doo itTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA48899C1CA5CBEB00271373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA54495D1CA8CD6D00DDFBD5 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Model/Task/Task.h; sourceTree = "<group>"; };
-		BA54495E1CA8CD6D00DDFBD5 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Model/Task/Task.m; sourceTree = "<group>"; };
-		BA54495F1CA8CD6D00DDFBD5 /* TaskGatewayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskGatewayProtocol.h; path = Model/Task/TaskGatewayProtocol.h; sourceTree = "<group>"; };
 		BA5449611CA8CDA200DDFBD5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = View/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA5449621CA8CDA200DDFBD5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = View/Main.storyboard; sourceTree = "<group>"; };
 		BA5449651CA8CDC600DDFBD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = View/Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +66,19 @@
 		BA66B30C1CB2AE7D007DFDDE /* UIColor+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Tools.m"; path = "View/Colors/UIColor+Tools.m"; sourceTree = "<group>"; };
 		BA66B3101CB2B79A007DFDDE /* ColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorView.h; path = "View/Custom Views/ColorView.h"; sourceTree = "<group>"; };
 		BA66B3111CB2B79A007DFDDE /* ColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorView.m; path = "View/Custom Views/ColorView.m"; sourceTree = "<group>"; };
+		BA75A5E21CB53707001DC8CF /* Markdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Markdown.h; path = Model/Markdown/Markdown.h; sourceTree = "<group>"; };
+		BA75A5E31CB53707001DC8CF /* Markdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Markdown.m; path = Model/Markdown/Markdown.m; sourceTree = "<group>"; };
+		BA75A5EC1CB5378A001DC8CF /* MarkdownGatewayFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarkdownGatewayFactory.h; path = Model/Markdown/Gateway/MarkdownGatewayFactory.h; sourceTree = "<group>"; };
+		BA75A5ED1CB5378A001DC8CF /* MarkdownGatewayFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarkdownGatewayFactory.m; path = Model/Markdown/Gateway/MarkdownGatewayFactory.m; sourceTree = "<group>"; };
+		BA75A5EE1CB5378A001DC8CF /* MarkdownGatewayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarkdownGatewayProtocol.h; path = Model/Markdown/Gateway/MarkdownGatewayProtocol.h; sourceTree = "<group>"; };
+		BA7973091CB40F1F0054807A /* MarkdownTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarkdownTokenizer.m; path = "Modules/Markdown Parser/MarkdownTokenizer.m"; sourceTree = "<group>"; };
+		BA79730A1CB40F1F0054807A /* MarkdownTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarkdownTokens.h; path = "Modules/Markdown Parser/MarkdownTokens.h"; sourceTree = "<group>"; };
+		BA79730B1CB40F1F0054807A /* MarkdownTokens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarkdownTokens.m; path = "Modules/Markdown Parser/MarkdownTokens.m"; sourceTree = "<group>"; };
+		BA79730C1CB40F1F0054807A /* NimbusMarkdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NimbusMarkdown.h; path = "Modules/Markdown Parser/NimbusMarkdown.h"; sourceTree = "<group>"; };
+		BA79730D1CB40F1F0054807A /* NSAttributedStringMarkdownParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAttributedStringMarkdownParser.h; path = "Modules/Markdown Parser/NSAttributedStringMarkdownParser.h"; sourceTree = "<group>"; };
+		BA79730E1CB40F1F0054807A /* NSAttributedStringMarkdownParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSAttributedStringMarkdownParser.m; path = "Modules/Markdown Parser/NSAttributedStringMarkdownParser.m"; sourceTree = "<group>"; };
+		BA7973121CB411310054807A /* fmemopen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fmemopen.c; path = "Modules/Markdown Parser/fmemopen.c"; sourceTree = "<group>"; };
+		BA7973131CB411310054807A /* fmemopen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmemopen.h; path = "Modules/Markdown Parser/fmemopen.h"; sourceTree = "<group>"; };
 		BAB8A7A81CAABA8E00337180 /* EditTaskViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTaskViewModel.h; path = "ViewModel/Edit Task/EditTaskViewModel.h"; sourceTree = "<group>"; };
 		BAB8A7A91CAABA8E00337180 /* EditTaskViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTaskViewModel.m; path = "ViewModel/Edit Task/EditTaskViewModel.m"; sourceTree = "<group>"; };
 		BAB8A7AB1CAABAB000337180 /* EditTaskPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTaskPresenterProtocol.h; path = "ViewModel/Edit Task/EditTaskPresenterProtocol.h"; sourceTree = "<group>"; };
@@ -79,8 +91,6 @@
 		BAB8A7B81CAACE6300337180 /* EditTaskPresenterSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTaskPresenterSpy.m; path = Doubles/EditTaskPresenterSpy.m; sourceTree = "<group>"; };
 		BAB8A7BD1CAC031800337180 /* TaskGatewayDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskGatewayDouble.h; path = Doubles/TaskGatewayDouble.h; sourceTree = "<group>"; };
 		BAB8A7BE1CAC031800337180 /* TaskGatewayDouble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskGatewayDouble.m; path = Doubles/TaskGatewayDouble.m; sourceTree = "<group>"; };
-		BAB8A7C01CAC035900337180 /* TaskGatewayFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskGatewayFactory.h; path = Model/Task/TaskGatewayFactory.h; sourceTree = "<group>"; };
-		BAB8A7C11CAC035900337180 /* TaskGatewayFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskGatewayFactory.m; path = Model/Task/TaskGatewayFactory.m; sourceTree = "<group>"; };
 		BAB8A7C61CAC6B5B00337180 /* DetailTaskViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTaskViewModel.h; path = "ViewModel/Detail Task/DetailTaskViewModel.h"; sourceTree = "<group>"; };
 		BAB8A7C71CAC6B5B00337180 /* DetailTaskViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTaskViewModel.m; path = "ViewModel/Detail Task/DetailTaskViewModel.m"; sourceTree = "<group>"; };
 		BAB8A7C91CAC6C5200337180 /* DetailTaskViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTaskViewModelTests.m; path = "ViewModel Tests/DetailTaskViewModelTests.m"; sourceTree = "<group>"; };
@@ -94,10 +104,8 @@
 		BAE43B6B1CA9E755004AE9CD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Supporting Files/AppDelegate.m"; sourceTree = "<group>"; };
 		BAE43B6C1CA9E755004AE9CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		BAE43B6D1CA9E755004AE9CD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
-		BAE43B7C1CA9E7FA004AE9CD /* EditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTaskViewController.h; path = "View/View Controllers/Edit Task/EditTaskViewController.h"; sourceTree = "<group>"; };
-		BAE43B7D1CA9E7FA004AE9CD /* EditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTaskViewController.m; path = "View/View Controllers/Edit Task/EditTaskViewController.m"; sourceTree = "<group>"; };
-		BAE43B801CA9E810004AE9CD /* DetailTaskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTaskTableViewController.h; path = "View/View Controllers/Detail Task/DetailTaskTableViewController.h"; sourceTree = "<group>"; };
-		BAE43B811CA9E810004AE9CD /* DetailTaskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTaskTableViewController.m; path = "View/View Controllers/Detail Task/DetailTaskTableViewController.m"; sourceTree = "<group>"; };
+		BAE43B801CA9E810004AE9CD /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskViewController.h; path = "View/View Controllers/Detail Task/TaskViewController.h"; sourceTree = "<group>"; };
+		BAE43B811CA9E810004AE9CD /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskViewController.m; path = "View/View Controllers/Detail Task/TaskViewController.m"; sourceTree = "<group>"; };
 		BAE43B881CA9E88E004AE9CD /* ListOfTasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewCell.h; path = "View/View Controllers/List of Tasks/ListOfTasksTableViewCell.h"; sourceTree = "<group>"; };
 		BAE43B891CA9E88E004AE9CD /* ListOfTasksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfTasksTableViewCell.m; path = "View/View Controllers/List of Tasks/ListOfTasksTableViewCell.m"; sourceTree = "<group>"; };
 		BAE43B8B1CA9E8D3004AE9CD /* ListOfTasksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewController.h; path = "View/View Controllers/List of Tasks/ListOfTasksTableViewController.h"; sourceTree = "<group>"; };
@@ -143,6 +151,7 @@
 		BA48897F1CA5CBEB00271373 /* doo it */ = {
 			isa = PBXGroup;
 			children = (
+				BA7973071CB40F040054807A /* Modules */,
 				BA5449191CA6BB7C00DDFBD5 /* Model */,
 				BA54491B1CA6BBBC00DDFBD5 /* View */,
 				BAE43B681CA9E702004AE9CD /* ViewModel */,
@@ -177,7 +186,7 @@
 		BA5449191CA6BB7C00DDFBD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BA5449421CA872E400DDFBD5 /* Task */,
+				BA5449421CA872E400DDFBD5 /* Markdown */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -194,24 +203,14 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		BA5449421CA872E400DDFBD5 /* Task */ = {
+		BA5449421CA872E400DDFBD5 /* Markdown */ = {
 			isa = PBXGroup;
 			children = (
-				BA54495D1CA8CD6D00DDFBD5 /* Task.h */,
-				BA54495E1CA8CD6D00DDFBD5 /* Task.m */,
-				BA5449451CA8731900DDFBD5 /* Task Gateway */,
+				BA75A5E91CB53771001DC8CF /* Gateway */,
+				BA75A5E21CB53707001DC8CF /* Markdown.h */,
+				BA75A5E31CB53707001DC8CF /* Markdown.m */,
 			);
-			name = Task;
-			sourceTree = "<group>";
-		};
-		BA5449451CA8731900DDFBD5 /* Task Gateway */ = {
-			isa = PBXGroup;
-			children = (
-				BA54495F1CA8CD6D00DDFBD5 /* TaskGatewayProtocol.h */,
-				BAB8A7C01CAC035900337180 /* TaskGatewayFactory.h */,
-				BAB8A7C11CAC035900337180 /* TaskGatewayFactory.m */,
-			);
-			name = "Task Gateway";
+			name = Markdown;
 			sourceTree = "<group>";
 		};
 		BA5449491CA8CBA400DDFBD5 /* Gateway Tests */ = {
@@ -250,6 +249,39 @@
 				BA66B3111CB2B79A007DFDDE /* ColorView.m */,
 			);
 			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		BA75A5E91CB53771001DC8CF /* Gateway */ = {
+			isa = PBXGroup;
+			children = (
+				BA75A5EC1CB5378A001DC8CF /* MarkdownGatewayFactory.h */,
+				BA75A5ED1CB5378A001DC8CF /* MarkdownGatewayFactory.m */,
+				BA75A5EE1CB5378A001DC8CF /* MarkdownGatewayProtocol.h */,
+			);
+			name = Gateway;
+			sourceTree = "<group>";
+		};
+		BA7973071CB40F040054807A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BA7973081CB40F0B0054807A /* Markdown Parser */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		BA7973081CB40F0B0054807A /* Markdown Parser */ = {
+			isa = PBXGroup;
+			children = (
+				BA7973121CB411310054807A /* fmemopen.c */,
+				BA7973131CB411310054807A /* fmemopen.h */,
+				BA7973091CB40F1F0054807A /* MarkdownTokenizer.m */,
+				BA79730A1CB40F1F0054807A /* MarkdownTokens.h */,
+				BA79730B1CB40F1F0054807A /* MarkdownTokens.m */,
+				BA79730C1CB40F1F0054807A /* NimbusMarkdown.h */,
+				BA79730D1CB40F1F0054807A /* NSAttributedStringMarkdownParser.h */,
+				BA79730E1CB40F1F0054807A /* NSAttributedStringMarkdownParser.m */,
+			);
+			name = "Markdown Parser";
 			sourceTree = "<group>";
 		};
 		BAB8A7C51CAC6B2C00337180 /* DetailTask */ = {
@@ -299,14 +331,13 @@
 			isa = PBXGroup;
 			children = (
 				BAE43B861CA9E83F004AE9CD /* Container View Controllers */,
-				BAE43B771CA9E7D3004AE9CD /* List of Tasks */,
-				BAE43B7F1CA9E7FE004AE9CD /* Detail Task */,
-				BAE43B7B1CA9E7EA004AE9CD /* Edit Task */,
+				BAE43B771CA9E7D3004AE9CD /* List Of Markdowns Screen */,
+				BAE43B7F1CA9E7FE004AE9CD /* Markdown Screen */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		BAE43B771CA9E7D3004AE9CD /* List of Tasks */ = {
+		BAE43B771CA9E7D3004AE9CD /* List Of Markdowns Screen */ = {
 			isa = PBXGroup;
 			children = (
 				BAE43B8B1CA9E8D3004AE9CD /* ListOfTasksTableViewController.h */,
@@ -314,25 +345,16 @@
 				BAE43B881CA9E88E004AE9CD /* ListOfTasksTableViewCell.h */,
 				BAE43B891CA9E88E004AE9CD /* ListOfTasksTableViewCell.m */,
 			);
-			name = "List of Tasks";
+			name = "List Of Markdowns Screen";
 			sourceTree = "<group>";
 		};
-		BAE43B7B1CA9E7EA004AE9CD /* Edit Task */ = {
+		BAE43B7F1CA9E7FE004AE9CD /* Markdown Screen */ = {
 			isa = PBXGroup;
 			children = (
-				BAE43B7C1CA9E7FA004AE9CD /* EditTaskViewController.h */,
-				BAE43B7D1CA9E7FA004AE9CD /* EditTaskViewController.m */,
+				BAE43B801CA9E810004AE9CD /* TaskViewController.h */,
+				BAE43B811CA9E810004AE9CD /* TaskViewController.m */,
 			);
-			name = "Edit Task";
-			sourceTree = "<group>";
-		};
-		BAE43B7F1CA9E7FE004AE9CD /* Detail Task */ = {
-			isa = PBXGroup;
-			children = (
-				BAE43B801CA9E810004AE9CD /* DetailTaskTableViewController.h */,
-				BAE43B811CA9E810004AE9CD /* DetailTaskTableViewController.m */,
-			);
-			name = "Detail Task";
+			name = "Markdown Screen";
 			sourceTree = "<group>";
 		};
 		BAE43B831CA9E819004AE9CD /* List Tasks */ = {
@@ -455,7 +477,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE43B6F1CA9E755004AE9CD /* Info.plist in Resources */,
 				BA5449641CA8CDA200DDFBD5 /* Main.storyboard in Resources */,
 				BA5449661CA8CDC600DDFBD5 /* Assets.xcassets in Resources */,
 				BA5449631CA8CDA200DDFBD5 /* LaunchScreen.storyboard in Resources */,
@@ -476,22 +497,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA75A5E71CB53707001DC8CF /* Markdown.m in Sources */,
+				BA79730F1CB40F1F0054807A /* MarkdownTokenizer.m in Sources */,
 				BAE43B701CA9E755004AE9CD /* main.m in Sources */,
+				BA7973101CB40F1F0054807A /* MarkdownTokens.m in Sources */,
 				BAB8A7CE1CAD6ACB00337180 /* DetailTaskPresenterSpy.m in Sources */,
 				BA66B30E1CB2AE7D007DFDDE /* UIColor+Tools.m in Sources */,
 				BAE43B6E1CA9E755004AE9CD /* AppDelegate.m in Sources */,
 				BAB8A7C41CAC0A2700337180 /* TaskGatewayDouble.m in Sources */,
-				BAE43B821CA9E810004AE9CD /* DetailTaskTableViewController.m in Sources */,
+				BAE43B821CA9E810004AE9CD /* TaskViewController.m in Sources */,
+				BA7973151CB411310054807A /* fmemopen.c in Sources */,
 				BA66B30D1CB2AE7D007DFDDE /* Colors.m in Sources */,
 				BAE43B8D1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m in Sources */,
-				BAB8A7C21CAC035900337180 /* TaskGatewayFactory.m in Sources */,
 				BA43D2981CB0348800905AC4 /* SplitViewController.m in Sources */,
-				BAE43B7E1CA9E7FA004AE9CD /* EditTaskViewController.m in Sources */,
+				BA75A5EF1CB5378A001DC8CF /* MarkdownGatewayFactory.m in Sources */,
 				BA5047BB1CAA9EE900B9FC5E /* ListTasksViewModel.m in Sources */,
 				BAB8A7AA1CAABA8E00337180 /* EditTaskViewModel.m in Sources */,
 				BAE43B8A1CA9E88E004AE9CD /* ListOfTasksTableViewCell.m in Sources */,
 				BA66B3121CB2B79A007DFDDE /* ColorView.m in Sources */,
-				BA5449601CA8CD6D00DDFBD5 /* Task.m in Sources */,
+				BA7973111CB40F1F0054807A /* NSAttributedStringMarkdownParser.m in Sources */,
 				BAB8A7C81CAC6B5B00337180 /* DetailTaskViewModel.m in Sources */,
 				BA43D2951CB0344B00905AC4 /* BaseNavigationController.m in Sources */,
 			);
@@ -612,6 +636,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/doo it/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardo0100.doo-it";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -626,6 +651,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/doo it/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardo0100.doo-it";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -638,6 +664,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "doo itTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardo0100.doo-itTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -650,6 +677,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "doo itTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardo0100.doo-itTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

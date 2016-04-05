@@ -11,6 +11,7 @@
 @interface UIColor (Tools)
 
 + (UIColor *)colorWithHexString:(NSString *)hexString;
-+ (NSString *)hexStringFromColor:(UIColor *)color;
+- (NSString *)hexStringFromColor;
+- (UIColor *)brighterColorWithAmount:(CGFloat)amount;
 
 @end

@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Task.h"
+#import "Markdown.h"
 
-@protocol TaskGatewayProtocol <NSObject>
+@protocol MarkdownGatewayProtocol <NSObject>
 
 - (NSArray*)tasks;
-- (void)saveTask:(Task*)task;
+- (void)saveTask:(Markdown*)task;
 
 @end

@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TaskGatewayProtocol.h"
+#import "MarkdownGatewayProtocol.h"
 #import "TaskGatewayDouble.h"
 
-@interface TaskGatewayFactory : NSObject
+@interface MarkdownGatewayFactory : NSObject
 
-+ (id<TaskGatewayProtocol>)create;
++ (id<MarkdownGatewayProtocol>)create;
 
 @end

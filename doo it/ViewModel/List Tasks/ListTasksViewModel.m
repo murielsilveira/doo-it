@@ -11,14 +11,14 @@
 @interface ListTasksViewModel ()
 
 @property id<ListTasksPresenterProtocol> presenter;
-@property id<TaskGatewayProtocol> taskGateway;
+@property id<MarkdownGatewayProtocol> taskGateway;
 @property NSArray *listOfTasks;
 
 @end
 
 @implementation ListTasksViewModel
 
-- (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)presenter andGateway:(id<TaskGatewayProtocol>)taskGateway {
+- (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)presenter andGateway:(id<MarkdownGatewayProtocol>)taskGateway {
     self = [super init];
     if (self) {
         self.presenter = presenter;
@@ -40,7 +40,7 @@
     return self.listOfTasks.count;
 }
 
-- (Task*)taskForRowAtIndex:(NSInteger)index {
+- (Markdown*)taskForRowAtIndex:(NSInteger)index {
     return self.listOfTasks[index];
 }
 

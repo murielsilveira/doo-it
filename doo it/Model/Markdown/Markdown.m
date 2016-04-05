@@ -6,14 +6,14 @@
 //  Copyright © 2016 Ricardo Gehrke Filho. All rights reserved.
 //
 
-#import "Task.h"
+#import "Markdown.h"
 
-@implementation Task
+@implementation Markdown
 
-- (instancetype)initWithTitle:(NSString *)title {
+- (instancetype)initWithTitle {
     self = [super init];
     if (self) {
-        self.taskTitle = title;
+        self.markdownString = @"#New Markdown\n\n#Header 1\n##Header2";
     }
     return self;
 }

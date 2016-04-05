@@ -7,6 +7,13 @@
 //
 
 #import "ListOfTasksTableViewCell.h"
+#import "Colors.h"
+
+@interface ListOfTasksTableViewCell ()
+
+@property UIColor *taskColor;
+
+@end
 
 @implementation ListOfTasksTableViewCell
 
@@ -15,9 +22,15 @@
     [self setLayoutMargins:UIEdgeInsetsZero];
 }
 
--(void)setSelected:(BOOL)selected animated:(BOOL)animated {
+- (void)setColor:(UIColor*)color {
+    self.taskColor = color;
+    self.taskTitleLabel.textColor = color;
+    self.colorView.backgroundColor = color;
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     if(selected)
-        self.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        self.backgroundColor = [self.taskColor colorWithAlphaComponent:0.05];
     else
         self.backgroundColor = [UIColor whiteColor];
 }

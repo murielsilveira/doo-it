@@ -16,7 +16,7 @@
 
 @implementation DetailTaskViewModel
 
-- (instancetype)initWithPresenter:(id<DetailTaskPresenterProtocol>)presenter andTask:(Task*)task {
+- (instancetype)initWithPresenter:(id<DetailTaskPresenterProtocol>)presenter andTask:(Markdown*)task {
     self = [super init];
     if (self) {
         self.task = task;

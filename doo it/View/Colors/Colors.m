@@ -24,9 +24,15 @@
 }
 
 + (UIColor*)amber {
-    return [UIColor colorWithHexString:@"FFC107"];
+    return [UIColor colorWithHexString:@"FFA000"];
 }
+
 + (UIColor*)nickel {
     return [UIColor colorWithHexString:@"808080"];
 }
+
++ (UIColor*)iceGray {
+    return [UIColor colorWithHexString:@"FEFEFE"];
+}
+
 @end

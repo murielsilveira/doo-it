@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailTaskPresenterProtocol.h"
+#import "EditTaskPresenterProtocol.h"
 #import "DetailTaskViewModel.h"
+#import "EditTaskViewModel.h"
 
-@interface DetailTaskTableViewController : UITableViewController <DetailTaskPresenterProtocol>
+@interface TaskViewController : UIViewController <DetailTaskPresenterProtocol, EditTaskPresenterProtocol>
 
-@property DetailTaskViewModel *viewModel;
-
-- (void)prepareViewModelWithTask:(Task*)task;
+- (void)prepareViewModelWithTask:(Markdown*)task;
 
 @end

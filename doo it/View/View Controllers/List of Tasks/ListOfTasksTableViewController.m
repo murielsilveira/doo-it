@@ -7,19 +7,17 @@
 //
 
 #import "ListOfTasksTableViewController.h"
-#import "DetailTaskTableViewController.h"
-#import "EditTaskViewController.h"
+#import "TaskViewController.h"
 #import "ListOfTasksTableViewCell.h"
 #import "Colors.h"
 #import "UIColor+Tools.h"
 
-#import "TaskGatewayFactory.h"
+#import "MarkdownGatewayFactory.h"
 #import "ListTasksViewModel.h"
 
 @interface ListOfTasksTableViewController ()
 
 @property ListTasksViewModel *viewModel;
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -30,7 +28,7 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    id<TaskGatewayProtocol> gateway = [TaskGatewayFactory create];
+    id<MarkdownGatewayProtocol> gateway = [MarkdownGatewayFactory create];
     self.viewModel = [[ListTasksViewModel alloc] initWithPresenter:self andGateway:gateway];
 }
 
@@ -63,26 +61,28 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListOfTasksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
-    Task *task = [self.viewModel taskForRowAtIndex:indexPath.row];
-    cell.taskTitleLabel.text = task.taskTitle;
-    cell.colorView.backgroundColor = [UIColor colorWithHexString:task.color];
+    Markdown *task = [self.viewModel taskForRowAtIndex:indexPath.row];
+    cell.taskTitleLabel.text = task.markdownString;
+    [cell setColor: [UIColor colorWithHexString:task.markdownColor ]];
     return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"detailTask"]){
+    if([segue.identifier isEqualToString:@"showMarkdown"]){
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Task *task = [self.viewModel taskForRowAtIndex:indexPath.row];
-        DetailTaskTableViewController *detailTaskViewController = (DetailTaskTableViewController*)[[segue destinationViewController] topViewController];
+        Markdown *task = [self.viewModel taskForRowAtIndex:indexPath.row];
+        TaskViewController *detailTaskViewController = (TaskViewController*)[segue destinationViewController];
         [detailTaskViewController prepareViewModelWithTask:task];
     }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SECTION_IDENTIFIER];
-    cell.layer.borderWidth = 1;
-    cell.layer.borderColor = [[Colors nickel] CGColor];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"sectionCell"];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 2;
 }
 
 @end
