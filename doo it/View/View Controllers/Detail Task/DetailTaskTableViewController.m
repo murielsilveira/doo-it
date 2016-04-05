@@ -7,8 +7,10 @@
 //
 
 #import "DetailTaskTableViewController.h"
+#import "TaskGatewayFactory.h"
 #import "Colors.h"
 #import "UIColor+Tools.h"
+#import "CocoaMarkdown.h"
 
 @interface DetailTaskTableViewController ()
 
@@ -25,6 +27,7 @@
 
 - (void)prepareViewModelWithTask:(Task *)task {
     self.detailTaskViewModel = [[DetailTaskViewModel alloc] initWithPresenter:self andTask:task];
+    self.editTaskViewModel = [[EditTaskViewModel alloc] initWithPresenter:self gateway:[TaskGatewayFactory create] andTask:task];
 }
 
 - (void)viewDidLoad {
@@ -48,15 +51,34 @@
     self.taskTitleTextView.text = self.detailTaskViewModel.task.taskTitle;
 }
 
+- (void)presentEditionForTask {
+    self.editing = YES;
+    self.navigationItem.rightBarButtonItem.title = @"Done";
+    self.taskTitleTextView.userInteractionEnabled = YES;
+}
+
+- (void)presentEmptyTaskForEdition {
+    
+}
+
+- (void)presentSuccesMessageForSavingTask {
+    self.editing = NO;
+    self.navigationItem.rightBarButtonItem.title = @"Edit";
+    self.taskTitleTextView.userInteractionEnabled = NO;
+}
+
+- (void)presentErrorMessageForSavingTask:(NSString *)message {
+    
+}
+
 - (IBAction)editTapped:(id)sender {
     if(self.editing){
-        self.editing = NO;
-        self.navigationItem.rightBarButtonItem.title = @"Edit";
-        self.taskTitleTextView.userInteractionEnabled = NO;
+        Task *task = [self.detailTaskViewModel task];
+        task.taskTitle = self.taskTitleTextView.text;
+        [self.editTaskViewModel setTask:task];
+        [self.editTaskViewModel saveTask];
     }else{
-        self.editing = YES;
-        self.navigationItem.rightBarButtonItem.title = @"Done";
-        self.taskTitleTextView.userInteractionEnabled = YES;
+        [self.editTaskViewModel prepareTaskFormForEditing];
     }
 }
 
