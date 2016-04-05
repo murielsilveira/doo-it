@@ -7,7 +7,7 @@
 //
 
 #import "ListOfTasksTableViewController.h"
-#import "DetailTaskTableViewController.h"
+#import "TaskViewController.h"
 #import "ListOfTasksTableViewCell.h"
 #import "Colors.h"
 #import "UIColor+Tools.h"
@@ -72,7 +72,7 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
     if([segue.identifier isEqualToString:@"detailTask"]){
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Task *task = [self.viewModel taskForRowAtIndex:indexPath.row];
-        DetailTaskTableViewController *detailTaskViewController = (DetailTaskTableViewController*)[[segue destinationViewController] topViewController];
+        TaskViewController *detailTaskViewController = (TaskViewController*)[[segue destinationViewController] topViewController];
         [detailTaskViewController prepareViewModelWithTask:task];
     }
 }

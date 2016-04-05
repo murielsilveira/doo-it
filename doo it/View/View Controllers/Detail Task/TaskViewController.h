@@ -12,7 +12,7 @@
 #import "DetailTaskViewModel.h"
 #import "EditTaskViewModel.h"
 
-@interface DetailTaskTableViewController : UITableViewController <DetailTaskPresenterProtocol, EditTaskPresenterProtocol>
+@interface TaskViewController : UIViewController <DetailTaskPresenterProtocol, EditTaskPresenterProtocol>
 
 - (void)prepareViewModelWithTask:(Task*)task;
 

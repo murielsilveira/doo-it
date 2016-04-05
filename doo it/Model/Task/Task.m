@@ -14,6 +14,7 @@
     self = [super init];
     if (self) {
         self.taskTitle = title;
+        self.taskDescription = @"#Hey";
     }
     return self;
 }
