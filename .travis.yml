@@ -1,0 +1,7 @@
+language: objective-c
+xcode_project: doo it.xcodeproj
+xcode_scheme: doo itTests
+osx_image: xcode7.3
+xcode_sdk: iphonesimulator
+before_install:
+  - brew uninstall xctool && brew install --HEAD xctool
