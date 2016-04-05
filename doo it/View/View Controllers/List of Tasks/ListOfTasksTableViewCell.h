@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *taskTitleLabel;
 @property (weak, nonatomic) IBOutlet UIView *colorView;
+- (void)setColor:(UIColor*)color;
 
 @end

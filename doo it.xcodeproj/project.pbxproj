@@ -31,7 +31,6 @@
 		BAE43B6E1CA9E755004AE9CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B6B1CA9E755004AE9CD /* AppDelegate.m */; };
 		BAE43B6F1CA9E755004AE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAE43B6C1CA9E755004AE9CD /* Info.plist */; };
 		BAE43B701CA9E755004AE9CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B6D1CA9E755004AE9CD /* main.m */; };
-		BAE43B7E1CA9E7FA004AE9CD /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B7D1CA9E7FA004AE9CD /* EditTaskViewController.m */; };
 		BAE43B821CA9E810004AE9CD /* DetailTaskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B811CA9E810004AE9CD /* DetailTaskTableViewController.m */; };
 		BAE43B8A1CA9E88E004AE9CD /* ListOfTasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B891CA9E88E004AE9CD /* ListOfTasksTableViewCell.m */; };
 		BAE43B8D1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B8C1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m */; };
@@ -94,8 +93,6 @@
 		BAE43B6B1CA9E755004AE9CD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Supporting Files/AppDelegate.m"; sourceTree = "<group>"; };
 		BAE43B6C1CA9E755004AE9CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		BAE43B6D1CA9E755004AE9CD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
-		BAE43B7C1CA9E7FA004AE9CD /* EditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTaskViewController.h; path = "View/View Controllers/Edit Task/EditTaskViewController.h"; sourceTree = "<group>"; };
-		BAE43B7D1CA9E7FA004AE9CD /* EditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTaskViewController.m; path = "View/View Controllers/Edit Task/EditTaskViewController.m"; sourceTree = "<group>"; };
 		BAE43B801CA9E810004AE9CD /* DetailTaskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTaskTableViewController.h; path = "View/View Controllers/Detail Task/DetailTaskTableViewController.h"; sourceTree = "<group>"; };
 		BAE43B811CA9E810004AE9CD /* DetailTaskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTaskTableViewController.m; path = "View/View Controllers/Detail Task/DetailTaskTableViewController.m"; sourceTree = "<group>"; };
 		BAE43B881CA9E88E004AE9CD /* ListOfTasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfTasksTableViewCell.h; path = "View/View Controllers/List of Tasks/ListOfTasksTableViewCell.h"; sourceTree = "<group>"; };
@@ -301,7 +298,6 @@
 				BAE43B861CA9E83F004AE9CD /* Container View Controllers */,
 				BAE43B771CA9E7D3004AE9CD /* List of Tasks */,
 				BAE43B7F1CA9E7FE004AE9CD /* Detail Task */,
-				BAE43B7B1CA9E7EA004AE9CD /* Edit Task */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -315,15 +311,6 @@
 				BAE43B891CA9E88E004AE9CD /* ListOfTasksTableViewCell.m */,
 			);
 			name = "List of Tasks";
-			sourceTree = "<group>";
-		};
-		BAE43B7B1CA9E7EA004AE9CD /* Edit Task */ = {
-			isa = PBXGroup;
-			children = (
-				BAE43B7C1CA9E7FA004AE9CD /* EditTaskViewController.h */,
-				BAE43B7D1CA9E7FA004AE9CD /* EditTaskViewController.m */,
-			);
-			name = "Edit Task";
 			sourceTree = "<group>";
 		};
 		BAE43B7F1CA9E7FE004AE9CD /* Detail Task */ = {
@@ -486,7 +473,6 @@
 				BAE43B8D1CA9E8D3004AE9CD /* ListOfTasksTableViewController.m in Sources */,
 				BAB8A7C21CAC035900337180 /* TaskGatewayFactory.m in Sources */,
 				BA43D2981CB0348800905AC4 /* SplitViewController.m in Sources */,
-				BAE43B7E1CA9E7FA004AE9CD /* EditTaskViewController.m in Sources */,
 				BA5047BB1CAA9EE900B9FC5E /* ListTasksViewModel.m in Sources */,
 				BAB8A7AA1CAABA8E00337180 /* EditTaskViewModel.m in Sources */,
 				BAE43B8A1CA9E88E004AE9CD /* ListOfTasksTableViewCell.m in Sources */,

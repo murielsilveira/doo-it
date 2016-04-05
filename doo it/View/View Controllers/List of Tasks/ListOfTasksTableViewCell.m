@@ -8,6 +8,12 @@
 
 #import "ListOfTasksTableViewCell.h"
 
+@interface ListOfTasksTableViewCell ()
+
+@property UIColor *colorx;
+
+@end
+
 @implementation ListOfTasksTableViewCell
 
 -(void)awakeFromNib {
@@ -15,9 +21,15 @@
     [self setLayoutMargins:UIEdgeInsetsZero];
 }
 
--(void)setSelected:(BOOL)selected animated:(BOOL)animated {
+- (void)setColor:(UIColor*)color {
+    self.colorx = color;
+    self.taskTitleLabel.textColor = color;
+    self.colorView.backgroundColor = color;
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     if(selected)
-        self.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        self.backgroundColor = [self.colorx colorWithAlphaComponent:0.05];
     else
         self.backgroundColor = [UIColor whiteColor];
 }

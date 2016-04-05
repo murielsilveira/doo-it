@@ -39,7 +39,7 @@
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0p-H1-E1s">
                                             <rect key="frame" x="8" y="99" width="317" height="1"/>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="6Iq-Yy-Gvi"/>
                                             </constraints>
@@ -47,7 +47,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtV-ak-W9O">
                                             <rect key="frame" x="16" y="74" width="37" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -81,11 +81,11 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hm-pL-3JP">
                                             <rect key="frame" x="139" y="6" width="42" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="7hm-pL-3JP" firstAttribute="centerX" secondItem="naE-su-kdW" secondAttribute="centerX" id="Fx6-Jm-BcL"/>
                                         <constraint firstItem="7hm-pL-3JP" firstAttribute="centerY" secondItem="naE-su-kdW" secondAttribute="centerY" id="e9K-x8-Zw4"/>
@@ -137,26 +137,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study how to implement Artificial Intelligence to conquer the world!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpF-jk-fLv">
-                                                    <rect key="frame" x="5" y="8" width="320" height="143"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
-                                                    <color key="textColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Study how to implement Artificial Intelligence to conquer the world!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m2F-gb-P0T">
-                                                    <rect key="frame" x="0.0" y="0.0" width="312" height="151"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Study how to implement Artificial Intelligence to conquer the world!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m2F-gb-P0T">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
+                                                    <color key="textColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="32"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="m2F-gb-P0T" firstAttribute="leading" secondItem="hzX-UO-55f" secondAttribute="leading" id="9EZ-8w-Kd5"/>
-                                                <constraint firstAttribute="bottom" secondItem="gpF-jk-fLv" secondAttribute="bottom" id="BQD-Nv-8L3"/>
                                                 <constraint firstItem="m2F-gb-P0T" firstAttribute="top" secondItem="hzX-UO-55f" secondAttribute="top" id="MEb-2B-iuC"/>
-                                                <constraint firstAttribute="trailing" secondItem="m2F-gb-P0T" secondAttribute="trailing" constant="8" id="S6d-Eg-PYy"/>
-                                                <constraint firstItem="gpF-jk-fLv" firstAttribute="trailing" secondItem="hzX-UO-55f" secondAttribute="trailing" constant="5" id="SnO-g0-sXd"/>
-                                                <constraint firstItem="gpF-jk-fLv" firstAttribute="leading" secondItem="hzX-UO-55f" secondAttribute="leading" constant="5" id="fDa-tz-O3D"/>
-                                                <constraint firstItem="gpF-jk-fLv" firstAttribute="top" secondItem="hzX-UO-55f" secondAttribute="top" constant="8" id="r5y-Df-5Fp"/>
+                                                <constraint firstAttribute="trailing" secondItem="m2F-gb-P0T" secondAttribute="trailing" id="S6d-Eg-PYy"/>
                                                 <constraint firstAttribute="bottom" secondItem="m2F-gb-P0T" secondAttribute="bottom" id="uGX-Xc-gZj"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -245,11 +236,14 @@ Cg
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="fMx-vM-vuq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="PZO-Sk-3fF"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="PZO-Sk-3fF">
+                            <connections>
+                                <action selector="editTapped:" destination="hEl-0k-Sxl" id="doh-eg-Ei4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="taskDescriptionLabel" destination="kLX-PL-yuy" id="9qN-Gc-JD6"/>
-                        <outlet property="taskTitleLabel" destination="gpF-jk-fLv" id="LJn-Sd-Hnm"/>
                         <outlet property="taskTitleTextView" destination="m2F-gb-P0T" id="9Dx-SO-5ua"/>
                     </connections>
                 </tableViewController>
@@ -295,7 +289,6 @@ Cg
         <!--Base Navigation Controller-->
         <scene sceneID="qfR-2c-kTo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n3h-Gl-WmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HGe-Sl-vHa" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -311,6 +304,7 @@ Cg
                         <segue destination="hEl-0k-Sxl" kind="relationship" relationship="rootViewController" id="5KT-mo-zB5"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3h-Gl-WmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54" y="537"/>
         </scene>

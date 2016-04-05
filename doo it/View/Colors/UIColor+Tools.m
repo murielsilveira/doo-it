@@ -42,8 +42,8 @@
 					alpha:((colorValueA)&0xFF)/255.0];
 }
 
-+ (NSString *)hexStringFromColor:(UIColor *)color {
-    const CGFloat *components = CGColorGetComponents(color.CGColor);
+- (NSString *)hexStringFromColor {
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
     
     CGFloat r = components[0];
     CGFloat g = components[1];

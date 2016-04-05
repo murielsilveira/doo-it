@@ -14,16 +14,16 @@
 
 + (void)injectRandomObjects:(TaskGatewayDouble *)_sharedInstance {
     Task *task = [[Task alloc]initWithTitle:@"Open a hotel in Amsterdam"];
-    task.color = [UIColor hexStringFromColor:[Colors deepOrange]];
+    task.color = [[Colors deepOrange] hexStringFromColor];
     [_sharedInstance saveTask:task];
     task = [[Task alloc]initWithTitle:@"Create an app for selling interplanetary trips tickets"];
-    task.color = [UIColor hexStringFromColor:[Colors amber]];
+    task.color = [[Colors amber] hexStringFromColor];
     [_sharedInstance saveTask:task];
     task = [[Task alloc]initWithTitle:@"Enjoy ceviche in Peru"];
-    task.color = [UIColor hexStringFromColor:[Colors lightBlue]];
+    task.color = [[Colors ironSky] hexStringFromColor];
     [_sharedInstance saveTask:task];
     task = [[Task alloc]initWithTitle:@"Write a book about Supermassive Black Holes"];
-    task.color = [UIColor hexStringFromColor:[Colors ironSky]];
+    task.color = [[Colors lightBlue] hexStringFromColor];
     [_sharedInstance saveTask:task];
 }
 

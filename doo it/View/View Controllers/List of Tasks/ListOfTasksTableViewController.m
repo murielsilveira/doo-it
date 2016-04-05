@@ -8,7 +8,6 @@
 
 #import "ListOfTasksTableViewController.h"
 #import "DetailTaskTableViewController.h"
-#import "EditTaskViewController.h"
 #import "ListOfTasksTableViewCell.h"
 #import "Colors.h"
 #import "UIColor+Tools.h"
@@ -65,7 +64,7 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
     ListOfTasksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
     Task *task = [self.viewModel taskForRowAtIndex:indexPath.row];
     cell.taskTitleLabel.text = task.taskTitle;
-    cell.colorView.backgroundColor = [UIColor colorWithHexString:task.color];
+    [cell setColor: [UIColor colorWithHexString:task.color ]];
     return cell;
 }
 
@@ -81,7 +80,7 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SECTION_IDENTIFIER];
     cell.layer.borderWidth = 1;
-    cell.layer.borderColor = [[Colors nickel] CGColor];
+    cell.layer.borderColor = [[UIColor groupTableViewBackgroundColor] CGColor];
     return cell;
 }
 
