@@ -14,6 +14,7 @@
 
 @property NSString *taskTitle;
 @property NSString *taskDescription;
+@property NSString *color;
 @property NSDate *taskTime;
 @property BOOL deleted;
 @property BOOL done;

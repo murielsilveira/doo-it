@@ -11,6 +11,7 @@
 #import "EditTaskViewController.h"
 #import "ListOfTasksTableViewCell.h"
 #import "Colors.h"
+#import "UIColor+Tools.h"
 
 #import "TaskGatewayFactory.h"
 #import "ListTasksViewModel.h"
@@ -37,9 +38,6 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.searchBar.layer.borderWidth = 1;
-    self.searchBar.layer.borderColor = [[Colors grayBlueColor] CGColor];
-//    self.view.backgroundColor = [Colors grayBlueColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -67,6 +65,7 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
     ListOfTasksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
     Task *task = [self.viewModel taskForRowAtIndex:indexPath.row];
     cell.taskTitleLabel.text = task.taskTitle;
+    cell.colorView.backgroundColor = [UIColor colorWithHexString:task.color];
     return cell;
 }
 
@@ -76,16 +75,13 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
         Task *task = [self.viewModel taskForRowAtIndex:indexPath.row];
         DetailTaskTableViewController *detailTaskViewController = (DetailTaskTableViewController*)[[segue destinationViewController] topViewController];
         [detailTaskViewController prepareViewModelWithTask:task];
-    }else if([segue.identifier isEqualToString:@"newTask"]){
-        EditTaskViewController *editTaskViewController = (EditTaskViewController*)[[segue destinationViewController] topViewController];
-        [editTaskViewController prepareViewModelWithNoTask];
     }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SECTION_IDENTIFIER];
     cell.layer.borderWidth = 1;
-    cell.layer.borderColor = [[UIColor groupTableViewBackgroundColor] CGColor];
+    cell.layer.borderColor = [[Colors nickel] CGColor];
     return cell;
 }
 

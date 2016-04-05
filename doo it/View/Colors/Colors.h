@@ -10,6 +10,10 @@
 
 @interface Colors : NSObject
 
-+ (UIColor*)grayBlueColor;
++ (UIColor*)deepOrange;
++ (UIColor*)lightBlue;
++ (UIColor*)ironSky;
++ (UIColor*)amber;
++ (UIColor*)nickel;
 
 @end

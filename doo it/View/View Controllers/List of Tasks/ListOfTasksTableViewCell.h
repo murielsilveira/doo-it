@@ -11,5 +11,6 @@
 @interface ListOfTasksTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *taskTitleLabel;
+@property (weak, nonatomic) IBOutlet UIView *colorView;
 
 @end

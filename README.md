@@ -60,6 +60,7 @@ Swift is awesome, but I believe Objective-C projects still need care. Besides, O
 - [ ] LaunchScreen
 - [ ] Auto Layout
 - [ ] Size Classes
+- [ ] XCAssets
 
 #### Used UIKit components
 - [x] UISplitViewController
@@ -67,6 +68,7 @@ Swift is awesome, but I believe Objective-C projects still need care. Besides, O
 - [ ] UITableViewController
 - [ ] UITableViewCell
 - [x] UINavigationController
+- [ ] UIStackView
 - [ ] UIGestureRecognizer
 - [ ] UIVisualEffectView
 - [ ] UIView (customization and reuse)

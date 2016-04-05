@@ -7,15 +7,23 @@
 //
 
 #import "TaskGatewayFactory.h"
+#import "Colors.h"
+#import "UIColor+Tools.h"
 
 @implementation TaskGatewayFactory
 
 + (void)injectRandomObjects:(TaskGatewayDouble *)_sharedInstance {
     Task *task = [[Task alloc]initWithTitle:@"Open a hotel in Amsterdam"];
+    task.color = [UIColor hexStringFromColor:[Colors deepOrange]];
     [_sharedInstance saveTask:task];
     task = [[Task alloc]initWithTitle:@"Create an app for selling interplanetary trips tickets"];
+    task.color = [UIColor hexStringFromColor:[Colors amber]];
     [_sharedInstance saveTask:task];
     task = [[Task alloc]initWithTitle:@"Enjoy ceviche in Peru"];
+    task.color = [UIColor hexStringFromColor:[Colors lightBlue]];
+    [_sharedInstance saveTask:task];
+    task = [[Task alloc]initWithTitle:@"Write a book about Supermassive Black Holes"];
+    task.color = [UIColor hexStringFromColor:[Colors ironSky]];
     [_sharedInstance saveTask:task];
 }
 
