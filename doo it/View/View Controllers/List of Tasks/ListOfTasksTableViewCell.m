@@ -10,7 +10,7 @@
 
 @interface ListOfTasksTableViewCell ()
 
-@property UIColor *colorx;
+@property UIColor *taskColor;
 
 @end
 
@@ -22,14 +22,14 @@
 }
 
 - (void)setColor:(UIColor*)color {
-    self.colorx = color;
+    self.taskColor = color;
     self.taskTitleLabel.textColor = color;
     self.colorView.backgroundColor = color;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     if(selected)
-        self.backgroundColor = [self.colorx colorWithAlphaComponent:0.05];
+        self.backgroundColor = [self.taskColor colorWithAlphaComponent:0.05];
     else
         self.backgroundColor = [UIColor whiteColor];
 }

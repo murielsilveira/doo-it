@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "DetailTaskPresenterProtocol.h"
-#import "Task.h"
+#import "Markdown.h"
 
 @interface DetailTaskViewModel : NSObject
 
-@property Task *task;
-- (instancetype)initWithPresenter:(id<DetailTaskPresenterProtocol>)presenter andTask:(Task*)task;
+@property Markdown *task;
+- (instancetype)initWithPresenter:(id<DetailTaskPresenterProtocol>)presenter andTask:(Markdown*)task;
 - (void)showDetailTask;
 
 @end

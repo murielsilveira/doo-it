@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "TaskGatewayDouble.h"
-#import "Task.h"
+#import "Markdown.h"
 
 @interface TaskGatewayTests : XCTestCase
 @property TaskGatewayDouble *gateway;
@@ -27,23 +27,23 @@
 }
 
 - (void)testGatewayHasOneTasks {
-    Task *task = [[Task alloc] initWithTitle:@"Test"];
+    Markdown *task = [[Markdown alloc] init];
     [self.gateway saveTask:task];
     NSArray *tasks = [self.gateway tasks];
     XCTAssertEqual(tasks.count, 1);
 }
 
 - (void)testGatewayHasTwoTasks {
-    Task *task1 = [[Task alloc] initWithTitle:@"Test1"];
+    Markdown *task1 = [[Markdown alloc] init];
     [self.gateway saveTask:task1];
-    Task *task2 = [[Task alloc] initWithTitle:@"Test2"];
+    Markdown *task2 = [[Markdown alloc] init];
     [self.gateway saveTask:task2];
     NSArray *tasks = [self.gateway tasks];
     XCTAssertEqual(tasks.count, 2);
 }
 
 - (void)testGatewayDoNotDuplicateObjects {
-    Task *task = [[Task alloc] initWithTitle:@"Test"];
+    Markdown *task = [[Markdown alloc] init];
     [self.gateway saveTask:task];
     [self.gateway saveTask:task];
     NSArray *tasks = [self.gateway tasks];
@@ -51,14 +51,11 @@
 }
 
 - (void)testGatewayUpdatesExistingTaskInformation {
-    Task *task = [[Task alloc] initWithTitle:@"Test"];
+    Markdown *task = [[Markdown alloc] init];
     [self.gateway saveTask:task];
-    task.taskTitle = @"TestModified";
     [self.gateway saveTask:task];
     NSArray *tasks = [self.gateway tasks];
     XCTAssertEqual(tasks.count, 1);
-    Task *savedTask = tasks[0];
-    XCTAssertEqual(task.taskTitle, savedTask.taskTitle);
 }
 
 @end

@@ -95,7 +95,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="487" y="-209"/>
+            <point key="canvasLocation" x="453" y="-209"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="nlU-SL-UDv">
@@ -238,7 +238,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8a-yB-G6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="528" y="537"/>
+            <point key="canvasLocation" x="453" y="537"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

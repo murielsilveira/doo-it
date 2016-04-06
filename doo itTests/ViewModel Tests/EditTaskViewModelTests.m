@@ -12,7 +12,7 @@
 
 @interface EditTaskViewModelTests : XCTestCase
 
-@property Task *taskForEditing;
+@property Markdown *taskForEditing;
 @property EditTaskViewModel *viewModel;
 @property TaskGatewayDouble *taskGateway;
 @property EditTaskPresenterSpy *presenterSpy;

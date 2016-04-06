@@ -12,9 +12,9 @@
 
 @interface EditTaskViewModel : NSObject
 
-@property Task *task;
+@property Markdown *task;
 
-- (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)presenter gateway:(id<TaskGatewayProtocol>)taskGateway andTask:(Task*)task;
+- (instancetype)initWithPresenter:(id<EditTaskPresenterProtocol>)presenter gateway:(id<MarkdownGatewayProtocol>)taskGateway andTask:(Markdown*)task;
 - (void)prepareTaskFormForEditing;
 - (void)saveTask;
 

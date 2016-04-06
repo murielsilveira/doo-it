@@ -12,7 +12,7 @@
 #import "Colors.h"
 #import "UIColor+Tools.h"
 
-#import "TaskGatewayFactory.h"
+#import "MarkdownGatewayFactory.h"
 #import "ListTasksViewModel.h"
 
 @interface ListOfTasksTableViewController ()
@@ -29,7 +29,7 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    id<TaskGatewayProtocol> gateway = [TaskGatewayFactory create];
+    id<MarkdownGatewayProtocol> gateway = [MarkdownGatewayFactory create];
     self.viewModel = [[ListTasksViewModel alloc] initWithPresenter:self andGateway:gateway];
 }
 
@@ -62,16 +62,16 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListOfTasksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
-    Task *task = [self.viewModel taskForRowAtIndex:indexPath.row];
-    cell.taskTitleLabel.text = task.taskTitle;
-    [cell setColor: [UIColor colorWithHexString:task.color ]];
+    Markdown *task = [self.viewModel taskForRowAtIndex:indexPath.row];
+    cell.taskTitleLabel.text = task.markdownString;
+    [cell setColor: [UIColor colorWithHexString:task.markdownColor ]];
     return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"detailTask"]){
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Task *task = [self.viewModel taskForRowAtIndex:indexPath.row];
+        Markdown *task = [self.viewModel taskForRowAtIndex:indexPath.row];
         TaskViewController *detailTaskViewController = (TaskViewController*)[[segue destinationViewController] topViewController];
         [detailTaskViewController prepareViewModelWithTask:task];
     }

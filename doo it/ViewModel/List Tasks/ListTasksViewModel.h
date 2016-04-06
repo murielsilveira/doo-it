@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "ListTasksPresenterProtocol.h"
-#import "TaskGatewayProtocol.h"
+#import "MarkdownGatewayProtocol.h"
 #import "DetailTaskPresenterProtocol.h"
 
 @interface ListTasksViewModel : NSObject
 
-- (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)presenter andGateway:(id<TaskGatewayProtocol>)taskGateway;
+- (instancetype)initWithPresenter:(id<ListTasksPresenterProtocol>)presenter andGateway:(id<MarkdownGatewayProtocol>)taskGateway;
 
 - (void)presentListOfTasks;
 - (NSInteger)numberOfTasksToPresent;
-- (Task*)taskForRowAtIndex:(NSInteger)index;
+- (Markdown*)taskForRowAtIndex:(NSInteger)index;
 
 @end

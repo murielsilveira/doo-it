@@ -30,14 +30,14 @@
 }
 
 - (void)addOneTaskToGatewayHelper {
-    Task *task1 = [[Task alloc] initWithTitle:@"Task"];
+    Markdown *task1 = [[Markdown alloc] init];
     [_taskGateway saveTask:task1];
 }
 
 - (void)addTwoTasksToGatewayHelper {
-    Task *task1 = [[Task alloc] initWithTitle:@"Task1"];
+    Markdown *task1 = [[Markdown alloc] init];
     [_taskGateway saveTask:task1];
-    Task *task2 = [[Task alloc] initWithTitle:@"Task2"];
+    Markdown *task2 = [[Markdown alloc] init];
     [_taskGateway saveTask:task2];
 }
 
@@ -63,17 +63,15 @@
 - (void)testViewModelReturnsFirstTaskForPositionZero {
     [self addTwoTasksToGatewayHelper];
     [self.viewModel presentListOfTasks];
-    Task *task = [self.viewModel taskForRowAtIndex:0];
+    Markdown *task = [self.viewModel taskForRowAtIndex:0];
     XCTAssertTrue(self.presenterSpy.presentListOfTasksCalled);
-    XCTAssertEqual(task.taskTitle, @"Task1");
 }
 
 - (void)testViewModelReturnsSecondTaskForPositionOne {
     [self addTwoTasksToGatewayHelper];
     [self.viewModel presentListOfTasks];
-    Task *task = [self.viewModel taskForRowAtIndex:1];
+    Markdown *task = [self.viewModel taskForRowAtIndex:1];
     XCTAssertTrue(self.presenterSpy.presentListOfTasksCalled);
-    XCTAssertEqual(task.taskTitle, @"Task2");
 }
 
 @end

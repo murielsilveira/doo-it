@@ -14,6 +14,6 @@
 
 @interface TaskViewController : UIViewController <DetailTaskPresenterProtocol, EditTaskPresenterProtocol>
 
-- (void)prepareViewModelWithTask:(Task*)task;
+- (void)prepareViewModelWithTask:(Markdown*)task;
 
 @end

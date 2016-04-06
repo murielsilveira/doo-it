@@ -7,7 +7,7 @@
 //
 
 #import "TaskViewController.h"
-#import "TaskGatewayFactory.h"
+#import "MarkdownGatewayFactory.h"
 #import "Colors.h"
 #import "UIColor+Tools.h"
 #import "NSAttributedStringMarkdownParser.h"
@@ -24,9 +24,9 @@
 
 @implementation TaskViewController
 
-- (void)prepareViewModelWithTask:(Task *)task {
+- (void)prepareViewModelWithTask:(Markdown *)task {
     self.detailTaskViewModel = [[DetailTaskViewModel alloc] initWithPresenter:self andTask:task];
-    self.editTaskViewModel = [[EditTaskViewModel alloc] initWithPresenter:self gateway:[TaskGatewayFactory create] andTask:task];
+    self.editTaskViewModel = [[EditTaskViewModel alloc] initWithPresenter:self gateway:[MarkdownGatewayFactory create] andTask:task];
 }
 
 - (void)viewDidLoad {
@@ -50,14 +50,14 @@
 - (void)presentDetailsForTask {
     self.navigationItem.rightBarButtonItem.title = @"Edit";
     
-    self.taskDescriptionTextView.textColor = [UIColor colorWithHexString:self.detailTaskViewModel.task.color];
+    self.taskDescriptionTextView.textColor = [UIColor colorWithHexString:self.detailTaskViewModel.task.markdownColor];
     
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHexString:self.detailTaskViewModel.task.color];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHexString:self.detailTaskViewModel.task.markdownColor];
     
-    NSString *description = self.detailTaskViewModel.task.taskDescription;
+    NSString *description = self.detailTaskViewModel.task.markdownString;
     NSAttributedStringMarkdownParser* parser = [[NSAttributedStringMarkdownParser alloc] init];
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithAttributedString:[parser attributedStringFromMarkdownString:description]];
-    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:self.detailTaskViewModel.task.color] range:NSMakeRange(0, attributedString.length)];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:self.detailTaskViewModel.task.markdownColor] range:NSMakeRange(0, attributedString.length)];
     self.taskDescriptionTextView.attributedText = attributedString;
 }
 
@@ -65,7 +65,7 @@
     self.editing = YES;
     self.navigationItem.rightBarButtonItem.title = @"Done";
     self.taskDescriptionTextView.userInteractionEnabled = YES;
-    self.taskDescriptionTextView.text = self.detailTaskViewModel.task.taskDescription;
+    self.taskDescriptionTextView.text = self.detailTaskViewModel.task.markdownString;
     self.taskDescriptionTextView.font = [UIFont systemFontOfSize:20];
 }
 
@@ -78,10 +78,10 @@
     self.navigationItem.rightBarButtonItem.title = @"Edit";
     self.taskDescriptionTextView.userInteractionEnabled = NO;
     
-    NSString *description = self.detailTaskViewModel.task.taskDescription;
+    NSString *description = self.detailTaskViewModel.task.markdownString;
     NSAttributedStringMarkdownParser* parser = [[NSAttributedStringMarkdownParser alloc] init];
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithAttributedString:[parser attributedStringFromMarkdownString:description]];
-    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:self.detailTaskViewModel.task.color] range:NSMakeRange(0, attributedString.length)];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:self.detailTaskViewModel.task.markdownColor] range:NSMakeRange(0, attributedString.length)];
     self.taskDescriptionTextView.attributedText = attributedString;
 }
 
@@ -91,10 +91,8 @@
 
 - (IBAction)editTapped:(id)sender {
     if(self.editing){
-        Task *task = [self.detailTaskViewModel task];
-        NSString *title = [[task.taskDescription componentsSeparatedByString:@"\n"][0] stringByReplacingOccurrencesOfString:@"#" withString:@""];
-        task.taskTitle = title;
-        task.taskDescription = self.taskDescriptionTextView.text;
+        Markdown *task = [self.detailTaskViewModel task];
+        task.markdownString = self.taskDescriptionTextView.text;
         [self.editTaskViewModel setTask:task];
         [self.editTaskViewModel saveTask];
     }else{
