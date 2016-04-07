@@ -31,4 +31,8 @@
     return [UIColor colorWithHexString:@"808080"];
 }
 
++ (UIColor*)iceGray {
+    return [UIColor colorWithHexString:@"FEFEFE"];
+}
+
 @end

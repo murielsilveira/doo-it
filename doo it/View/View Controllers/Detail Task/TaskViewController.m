@@ -8,6 +8,7 @@
 
 #import "TaskViewController.h"
 #import "MarkdownGatewayFactory.h"
+#import "MarkdownGatewayProtocol.h"
 #import "Colors.h"
 #import "UIColor+Tools.h"
 #import "NSAttributedStringMarkdownParser.h"
@@ -18,7 +19,10 @@
 @property EditTaskViewModel *editTaskViewModel;
 
 @property (weak, nonatomic) IBOutlet UITextView *taskDescriptionTextView;
+@property (weak, nonatomic) IBOutlet UIView *toolsView;
 @property BOOL editing;
+
+@property NSAttributedStringMarkdownParser *parser;
 
 @end
 
@@ -26,44 +30,49 @@
 
 - (void)prepareViewModelWithTask:(Markdown *)task {
     self.detailTaskViewModel = [[DetailTaskViewModel alloc] initWithPresenter:self andTask:task];
-    self.editTaskViewModel = [[EditTaskViewModel alloc] initWithPresenter:self gateway:[MarkdownGatewayFactory create] andTask:task];
+    id<MarkdownGatewayProtocol> gateway = [MarkdownGatewayFactory create];
+    self.editTaskViewModel = [[EditTaskViewModel alloc] initWithPresenter:self gateway:gateway andTask:task];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.editing = NO;
     [self presentBlankState];
+    self.parser = [[NSAttributedStringMarkdownParser alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    if(self.splitViewController.collapsed){
+        self.navigationController.navigationBar.translucent = NO;
+    }
     [self.detailTaskViewModel showDetailTask];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    if(self.splitViewController.collapsed){
+        self.navigationController.navigationBar.translucent = YES;
+    }
+}
+
 - (void)presentBlankState {
+    self.toolsView.backgroundColor = [UIColor whiteColor];
     self.taskDescriptionTextView.text = @"";
-    self.navigationItem.rightBarButtonItem.title = @"";
 }
 
 - (void)presentDetailsForTask {
-    self.navigationItem.rightBarButtonItem.title = @"Edit";
-    
-    self.taskDescriptionTextView.textColor = [UIColor colorWithHexString:self.detailTaskViewModel.task.markdownColor];
-    
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHexString:self.detailTaskViewModel.task.markdownColor];
-    
-    NSString *description = self.detailTaskViewModel.task.markdownString;
-    NSAttributedStringMarkdownParser* parser = [[NSAttributedStringMarkdownParser alloc] init];
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithAttributedString:[parser attributedStringFromMarkdownString:description]];
-    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:self.detailTaskViewModel.task.markdownColor] range:NSMakeRange(0, attributedString.length)];
-    self.taskDescriptionTextView.attributedText = attributedString;
+    UIColor *color = [UIColor colorWithHexString:self.detailTaskViewModel.task.markdownColor];
+    self.navigationController.navigationBar.tintColor = color;
+    self.toolsView.backgroundColor = color;
+    NSAttributedString *attributedString = [self.parser attributedStringFromMarkdownString:self.detailTaskViewModel.task.markdownString];
+    NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithAttributedString:attributedString];
+    [mutableAttributedString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, attributedString.length)];
+    self.taskDescriptionTextView.attributedText = mutableAttributedString;
 }
 
 - (void)presentEditionForTask {
     self.editing = YES;
-    self.navigationItem.rightBarButtonItem.title = @"Done";
     self.taskDescriptionTextView.userInteractionEnabled = YES;
     self.taskDescriptionTextView.text = self.detailTaskViewModel.task.markdownString;
     self.taskDescriptionTextView.font = [UIFont systemFontOfSize:20];
@@ -75,14 +84,13 @@
 
 - (void)presentSuccesMessageForSavingTask {
     self.editing = NO;
-    self.navigationItem.rightBarButtonItem.title = @"Edit";
     self.taskDescriptionTextView.userInteractionEnabled = NO;
-    
     NSString *description = self.detailTaskViewModel.task.markdownString;
     NSAttributedStringMarkdownParser* parser = [[NSAttributedStringMarkdownParser alloc] init];
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithAttributedString:[parser attributedStringFromMarkdownString:description]];
-    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:self.detailTaskViewModel.task.markdownColor] range:NSMakeRange(0, attributedString.length)];
-    self.taskDescriptionTextView.attributedText = attributedString;
+    NSAttributedString *attributedString = [parser attributedStringFromMarkdownString:description];
+    NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc]initWithAttributedString:attributedString];
+    [mutableAttributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:self.detailTaskViewModel.task.markdownColor] range:NSMakeRange(0, mutableAttributedString.length)];
+    self.taskDescriptionTextView.attributedText = mutableAttributedString;
 }
 
 - (void)presentErrorMessageForSavingTask:(NSString *)message {

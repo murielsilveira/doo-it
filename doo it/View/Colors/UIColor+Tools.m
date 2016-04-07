@@ -55,4 +55,14 @@
             lroundf(b * 255)];
 }
 
+- (UIColor *)brighterColorWithAmount:(CGFloat)amount {
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
+    
+    CGFloat r = components[0] + amount;
+    CGFloat g = components[1] + amount;
+    CGFloat b = components[2] + amount;
+    
+    return [UIColor colorWithRed:r  green:g blue:b alpha:1];
+}
+
 @end

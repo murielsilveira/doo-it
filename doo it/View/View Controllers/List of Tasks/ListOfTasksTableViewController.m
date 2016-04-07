@@ -18,7 +18,6 @@
 @interface ListOfTasksTableViewController ()
 
 @property ListTasksViewModel *viewModel;
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -69,12 +68,21 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"detailTask"]){
+    if([segue.identifier isEqualToString:@"showMarkdown"]){
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Markdown *task = [self.viewModel taskForRowAtIndex:indexPath.row];
-        TaskViewController *detailTaskViewController = (TaskViewController*)[[segue destinationViewController] topViewController];
+        TaskViewController *detailTaskViewController = (TaskViewController*)[segue destinationViewController];
         [detailTaskViewController prepareViewModelWithTask:task];
     }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"sectionCell"];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 2;
 }
 
 @end

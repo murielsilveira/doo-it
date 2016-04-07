@@ -15,5 +15,6 @@
 + (UIColor*)ironSky;
 + (UIColor*)amber;
 + (UIColor*)nickel;
++ (UIColor*)iceGray;
 
 @end

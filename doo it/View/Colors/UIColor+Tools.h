@@ -12,5 +12,6 @@
 
 + (UIColor *)colorWithHexString:(NSString *)hexString;
 - (NSString *)hexStringFromColor;
+- (UIColor *)brighterColorWithAmount:(CGFloat)amount;
 
 @end

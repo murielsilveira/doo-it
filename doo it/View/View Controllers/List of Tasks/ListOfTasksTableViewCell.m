@@ -7,6 +7,7 @@
 //
 
 #import "ListOfTasksTableViewCell.h"
+#import "Colors.h"
 
 @interface ListOfTasksTableViewCell ()
 

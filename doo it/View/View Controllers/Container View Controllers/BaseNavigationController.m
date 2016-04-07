@@ -22,10 +22,6 @@
     [self removeBottomLineAtNavigationBar];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navBarHairlineImageView.hidden = YES;

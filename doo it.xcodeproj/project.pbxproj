@@ -332,13 +332,13 @@
 			isa = PBXGroup;
 			children = (
 				BAE43B861CA9E83F004AE9CD /* Container View Controllers */,
-				BAE43B771CA9E7D3004AE9CD /* List of Tasks */,
-				BAE43B7F1CA9E7FE004AE9CD /* Detail Task */,
+				BAE43B771CA9E7D3004AE9CD /* List Of Markdowns Screen */,
+				BAE43B7F1CA9E7FE004AE9CD /* Markdown Screen */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		BAE43B771CA9E7D3004AE9CD /* List of Tasks */ = {
+		BAE43B771CA9E7D3004AE9CD /* List Of Markdowns Screen */ = {
 			isa = PBXGroup;
 			children = (
 				BAE43B8B1CA9E8D3004AE9CD /* ListOfTasksTableViewController.h */,
@@ -346,16 +346,16 @@
 				BAE43B881CA9E88E004AE9CD /* ListOfTasksTableViewCell.h */,
 				BAE43B891CA9E88E004AE9CD /* ListOfTasksTableViewCell.m */,
 			);
-			name = "List of Tasks";
+			name = "List Of Markdowns Screen";
 			sourceTree = "<group>";
 		};
-		BAE43B7F1CA9E7FE004AE9CD /* Detail Task */ = {
+		BAE43B7F1CA9E7FE004AE9CD /* Markdown Screen */ = {
 			isa = PBXGroup;
 			children = (
 				BAE43B801CA9E810004AE9CD /* TaskViewController.h */,
 				BAE43B811CA9E810004AE9CD /* TaskViewController.m */,
 			);
-			name = "Detail Task";
+			name = "Markdown Screen";
 			sourceTree = "<group>";
 		};
 		BAE43B831CA9E819004AE9CD /* List Tasks */ = {
