@@ -12,7 +12,6 @@
 @interface ListTasksPresenterSpy : NSObject <ListTasksPresenterProtocol>
 
 @property BOOL presentListOfTasksCalled;
-
 @property BOOL presentBlankStateCalled;
 
 @end
