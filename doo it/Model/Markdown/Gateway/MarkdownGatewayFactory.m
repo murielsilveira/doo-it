@@ -15,7 +15,7 @@
 + (void)injectRandomObjects:(TaskGatewayDouble *)_sharedInstance {
     Markdown *task = [[Markdown alloc]init];
     task.markdownColor = [[Colors deepOrange] hexStringFromColor];
-    task.markdownString = @"#Open a hotel in Amsterdam\n##or maybe Barcelona.";
+    task.markdownString = @"#Open a hotel in Amsterdam\n###or maybe Barcelona.";
     [_sharedInstance saveTask:task];
     task = [[Markdown alloc]init];
     task.markdownColor = [[Colors lightBlue] hexStringFromColor];
@@ -24,6 +24,9 @@
     task = [[Markdown alloc]init];
     task.markdownColor = [[Colors amber] hexStringFromColor];
     task.markdownString = @"#Write a book about Supermassive Black Holes";
+    [_sharedInstance saveTask:task];
+    task = [[Markdown alloc] init];
+    task.markdownColor = [[Colors deepOrange] hexStringFromColor];
     [_sharedInstance saveTask:task];
 }
 

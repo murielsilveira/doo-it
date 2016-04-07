@@ -61,15 +61,15 @@ int markdownConsume(char* text, int token, yyscan_t scanner);
   if ((self = [super init])) {
     _headerFonts = [NSMutableDictionary dictionary];
 
-    self.paragraphFont = [UINSFont systemFontOfSize:12];
-    self.boldFontName = [UINSFont boldSystemFontOfSize:12].fontName;
+    self.paragraphFont = [UINSFont systemFontOfSize:14];
+    self.boldFontName = @"Helvetica-Bold";
     self.italicFontName = @"Helvetica-Oblique";
     self.boldItalicFontName = @"Helvetica-BoldOblique";
     self.codeFontName = @"Courier";
 
     NSAttributedStringMarkdownParserHeader header = NSAttributedStringMarkdownParserHeader1;
-    for (CGFloat headerFontSize = 24; headerFontSize >= 14; headerFontSize -= 2, header++) {
-      [self setFont:[UINSFont systemFontOfSize:headerFontSize] forHeader:header];
+    for (CGFloat headerFontSize = 28; headerFontSize >= 18; headerFontSize -= 2, header++) {
+      [self setFont:[UINSFont fontWithName:self.boldFontName size:headerFontSize] forHeader:header];
     }
   }
   return self;

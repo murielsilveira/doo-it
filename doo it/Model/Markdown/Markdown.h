@@ -10,8 +10,6 @@
 
 @interface Markdown : NSObject
 
-- (instancetype)initWithTitle;
-
 @property NSInteger markdownID;
 @property NSString *markdownString;
 @property NSString *markdownColor;
@@ -19,5 +17,7 @@
 @property NSDate *markdownUpdate;
 @property BOOL deleted;
 @property BOOL archived;
+
+- (NSString*)title;
 
 @end

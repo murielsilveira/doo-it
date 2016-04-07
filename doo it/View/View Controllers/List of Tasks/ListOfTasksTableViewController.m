@@ -62,7 +62,7 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListOfTasksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
     Markdown *task = [self.viewModel taskForRowAtIndex:indexPath.row];
-    cell.taskTitleLabel.text = task.markdownString;
+    cell.taskTitleLabel.text = [task title];
     [cell setColor: [UIColor colorWithHexString:task.markdownColor ]];
     return cell;
 }
@@ -71,7 +71,7 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
     if([segue.identifier isEqualToString:@"showMarkdown"]){
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Markdown *task = [self.viewModel taskForRowAtIndex:indexPath.row];
-        TaskViewController *detailTaskViewController = (TaskViewController*)[segue destinationViewController];
+        TaskViewController *detailTaskViewController = (TaskViewController*)[[segue destinationViewController] topViewController];
         [detailTaskViewController prepareViewModelWithTask:task];
     }
 }
@@ -82,7 +82,7 @@ NSString *const SECTION_IDENTIFIER = @"Task Cell Section";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 2;
+    return 0;
 }
 
 @end

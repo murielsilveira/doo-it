@@ -63,14 +63,12 @@
 - (void)testViewModelReturnsFirstTaskForPositionZero {
     [self addTwoTasksToGatewayHelper];
     [self.viewModel presentListOfTasks];
-    Markdown *task = [self.viewModel taskForRowAtIndex:0];
     XCTAssertTrue(self.presenterSpy.presentListOfTasksCalled);
 }
 
 - (void)testViewModelReturnsSecondTaskForPositionOne {
     [self addTwoTasksToGatewayHelper];
     [self.viewModel presentListOfTasks];
-    Markdown *task = [self.viewModel taskForRowAtIndex:1];
     XCTAssertTrue(self.presenterSpy.presentListOfTasksCalled);
 }
 
