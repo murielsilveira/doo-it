@@ -33,7 +33,6 @@
 		BAB8A7CA1CAC6C5200337180 /* DetailTaskViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7C91CAC6C5200337180 /* DetailTaskViewModelTests.m */; };
 		BAB8A7CE1CAD6ACB00337180 /* DetailTaskPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A7CD1CAD6ACB00337180 /* DetailTaskPresenterSpy.m */; };
 		BAE43B6E1CA9E755004AE9CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B6B1CA9E755004AE9CD /* AppDelegate.m */; };
-		BAE43B6F1CA9E755004AE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAE43B6C1CA9E755004AE9CD /* Info.plist */; };
 		BAE43B701CA9E755004AE9CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B6D1CA9E755004AE9CD /* main.m */; };
 		BAE43B821CA9E810004AE9CD /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B811CA9E810004AE9CD /* TaskViewController.m */; };
 		BAE43B8A1CA9E88E004AE9CD /* ListOfTasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE43B891CA9E88E004AE9CD /* ListOfTasksTableViewCell.m */; };
@@ -478,7 +477,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE43B6F1CA9E755004AE9CD /* Info.plist in Resources */,
 				BA5449641CA8CDA200DDFBD5 /* Main.storyboard in Resources */,
 				BA5449661CA8CDC600DDFBD5 /* Assets.xcassets in Resources */,
 				BA5449631CA8CDA200DDFBD5 /* LaunchScreen.storyboard in Resources */,
