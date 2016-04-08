@@ -87,7 +87,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="cGz-HS-Zw4">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cft-BB-wKE"/>
+                        <barButtonItem key="rightBarButtonItem" image="ic_note_add" id="Cft-BB-wKE">
+                            <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -200,7 +202,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="alphabet"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Orw-7B-Gyo">
                                 <rect key="frame" x="0.0" y="460" width="320" height="44"/>
@@ -211,7 +213,7 @@ Cg
                                             <constraint firstAttribute="height" constant="24" id="8oZ-XW-dNA"/>
                                             <constraint firstAttribute="width" constant="24" id="xkh-nA-uRF"/>
                                         </constraints>
-                                        <state key="normal" image="ic_radio_button_checked"/>
+                                        <state key="normal" image="ic_radio_button_unchecked"/>
                                         <connections>
                                             <action selector="setToDeepOrangeColor:" destination="dcI-vZ-dbD" eventType="touchUpInside" id="94r-XT-sgP"/>
                                         </connections>
@@ -222,7 +224,7 @@ Cg
                                             <constraint firstAttribute="height" constant="24" id="VK2-I2-x3c"/>
                                             <constraint firstAttribute="width" constant="24" id="aye-oj-mfb"/>
                                         </constraints>
-                                        <state key="normal" image="ic_radio_button_checked"/>
+                                        <state key="normal" image="ic_radio_button_unchecked"/>
                                         <connections>
                                             <action selector="setToLightBlueColor:" destination="dcI-vZ-dbD" eventType="touchUpInside" id="t4C-KX-3YE"/>
                                         </connections>
@@ -233,7 +235,7 @@ Cg
                                             <constraint firstAttribute="width" constant="24" id="069-FE-Opa"/>
                                             <constraint firstAttribute="height" constant="24" id="L14-Ec-Fmr"/>
                                         </constraints>
-                                        <state key="normal" image="ic_radio_button_checked"/>
+                                        <state key="normal" image="ic_radio_button_unchecked"/>
                                         <connections>
                                             <action selector="setToAmberColor:" destination="dcI-vZ-dbD" eventType="touchUpInside" id="CyE-i1-Wj5"/>
                                         </connections>
@@ -274,7 +276,7 @@ Cg
                         <outlet property="amberButton" destination="QVG-9h-5Ow" id="yuu-7P-eA1"/>
                         <outlet property="deepOrangeButton" destination="Aff-qw-RbX" id="zx9-wv-RPw"/>
                         <outlet property="lightBlueButton" destination="OXg-0Y-xQU" id="IXm-sK-51z"/>
-                        <outlet property="taskDescriptionTextView" destination="jt9-8J-hYt" id="qbZ-7D-Z0D"/>
+                        <outlet property="markdownStringTextView" destination="jt9-8J-hYt" id="Yrl-NT-uhE"/>
                         <outlet property="toolsView" destination="Orw-7B-Gyo" id="EIH-aL-phv"/>
                         <outlet property="toolsViewBottomLayoutConstraint" destination="khk-26-meq" id="NAe-dz-axd"/>
                         <outlet property="toolsViewHeightLayoutConstraint" destination="ACx-BC-15h" id="jL7-Wj-awe"/>
@@ -305,7 +307,8 @@ Cg
         </scene>
     </scenes>
     <resources>
-        <image name="ic_radio_button_checked" width="24" height="24"/>
+        <image name="ic_note_add" width="24" height="24"/>
+        <image name="ic_radio_button_unchecked" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1vh-tk-UTC"/>
